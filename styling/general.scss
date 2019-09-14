@@ -1,0 +1,10 @@
+body {
+  background: $thirdColor;
+  &.dark {
+    background: $secondaryColor;
+  }
+}
+
+.maxContainer {
+  max-width: 1400px;
+}
