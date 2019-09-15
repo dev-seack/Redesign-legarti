@@ -1,0 +1,16 @@
+.button {
+  display: flex;
+  width: 175px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  &.primaryButton {
+    background: $primaryButtonColor;
+    text-transform: lowercase;
+    color: $primaryButtonTextcolor;
+    font-size: 1.2em;
+    font-weight: 600;
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+  }
+}

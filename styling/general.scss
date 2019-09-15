@@ -1,5 +1,9 @@
 body {
   background: $thirdColor;
+  // temporary
+  background: url("https://source.unsplash.com/random");
+  background-size: cover;
+  // !temporary
   &.dark {
     background: $secondaryColor;
   }

@@ -120,12 +120,14 @@ q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after {
+blockquote:before,
+blockquote:after {
   content: "";
   content: none;
 }
 
-q:before, q:after {
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -137,5 +139,10 @@ table {
 
 img {
   pointer-events: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 /*# sourceMappingURL=reset.css.map */
