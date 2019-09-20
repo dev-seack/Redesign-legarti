@@ -3,6 +3,21 @@
   padding-top: 200px;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  .sectionBacklayer {
+    position: absolute;
+    bottom: $mobilePadding * 2;
+    right: -$mobilePadding;
+    z-index: -2;
+    @media only screen and (min-width: 980px) {
+      position: absolute;
+      bottom: -150px;
+      left: 0;
+    }
+    @media only screen and (min-width: 1400px) {
+      left: -$mobilePadding * 2.5;
+    }
+  }
   @media only screen and (min-width: 980px) {
     flex-direction: row;
     justify-content: center;
@@ -22,7 +37,6 @@
   }
   .imageContainer {
     position: relative;
-
     width: auto;
     padding-right: $mobilePadding;
     @media only screen and (min-width: 980px) {

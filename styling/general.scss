@@ -46,6 +46,10 @@ section {
   margin-top: 5em;
 }
 
+.mtsection {
+  margin-top: 120px;
+}
+
 .pt1 {
   padding-top: 1em;
 }
@@ -92,13 +96,30 @@ section {
 }
 
 .readText {
-  font-size: 16px;
+  font-size: 1.1em;
   font-weight: 400;
   color: $darkgrey;
   line-height: 25px;
   @media only screen and (min-width: 980px) {
-    font-size: 21px;
+    font-size: 1.25em;
     line-height: 30px;
+  }
+  &.quote {
+    position: relative;
+    &:before {
+      position: absolute;
+      content: url(../assets/quote-open.svg);
+      width: 2.5em;
+      display: inline-block;
+      opacity: 0.05;
+    }
+    &:after {
+      position: absolute;
+      content: url(../assets/quote-close.svg);
+      width: 2.5em;
+      display: inline-block;
+      opacity: 0.05;
+    }
   }
 }
 
@@ -115,7 +136,7 @@ section {
   }
   .subheading {
     color: $darkgrey;
-    font-size: 12px;
+    font-size: 0.9em;
     display: flex;
     font-weight: 400;
     align-items: center;
@@ -136,7 +157,7 @@ section {
 
 // Headings
 h1.bigHeading {
-  font-size: 2.5em;
+  font-size: 3em;
   text-transform: uppercase;
   @media only screen and (min-width: 600px) {
     font-size: 4em;
