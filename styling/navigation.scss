@@ -1,0 +1,138 @@
+#customScrollbar {
+  position: fixed;
+  width: 4px;
+  height: 0vh;
+  left: 0;
+  top: 0;
+  background: $primaryColor;
+}
+
+.navContainer {
+  margin-top: -$mobilePadding;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  right: $mobilePadding;
+  left: $mobilePadding;
+  z-index: 999;
+  opacity: 1;
+  transition: all 600ms;
+  &.open {
+    opacity: 0;
+    transition: all 600ms;
+  }
+  .logoContainer {
+    background: $black;
+    padding: 20px 15px;
+    width: 70px;
+  }
+  .menuToggleContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 17px;
+    width: 30px;
+    .toggleLine {
+      width: 30px;
+      height: 3px;
+      background: $black;
+      border-radius: 1px;
+    }
+    .middleLine.toggleLine {
+      width: 20px;
+      position: relative;
+      left: 5px;
+    }
+  }
+}
+
+.menuContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  right: 150vw;
+  left: -150vw;
+  top: $mobilePadding;
+  bottom: $mobilePadding;
+  z-index: 1000;
+  padding: $mobilePadding;
+  backdrop-filter: blur(25px) brightness(100%);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+  transition: all 600ms;
+  margin: -$mobileMargin;
+  @media only screen and (min-width: 980px) {
+    right: auto;
+    width: 50%;
+  }
+  &.open {
+    transition: all 600ms;
+    right: $mobilePadding;
+    left: $mobilePadding;
+  }
+  .closeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: $mobilePadding;
+    top: $mobilePadding;
+    .closeLine {
+      width: 30px;
+      height: 3px;
+      background: $black;
+      transform-origin: center;
+      position: absolute;
+      border-radius: 1px;
+      &.bottomLine {
+        transform: rotate(45deg);
+      }
+      &.topLine {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .menuItemContainer {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .menuItem {
+      position: relative;
+      z-index: 1;
+      padding: $mobilePadding/2 $mobilePadding;
+      &.active {
+        background: url("../assets/menuItemBg.svg") center center no-repeat;
+        background-size: auto;
+      }
+      .text {
+        font-size: 1.5em;
+        font-weight: 700;
+        @media only screen and (min-width: 1260px) {
+          font-size: 2em;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .contactDetailsContainer {
+    position: absolute;
+    bottom: $mobilePadding;
+    right: 0;
+    left: 0;
+    text-align: center;
+    font-weight: 500;
+    .heading {
+      color: $darkgrey;
+    }
+  }
+}

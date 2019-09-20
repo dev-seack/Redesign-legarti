@@ -8,9 +8,10 @@
     background: $primaryButtonColor;
     text-transform: lowercase;
     color: $primaryButtonTextcolor;
-    font-size: 1.2em;
-    font-weight: 600;
-    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.15);
+    font-size: 1.1em;
+    font-weight: 500;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
     border-radius: 5px;
+    letter-spacing: 1px;
   }
 }

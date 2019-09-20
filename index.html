@@ -9,28 +9,103 @@
     <title>Legarti | Startseite</title>
   </head>
   <body>
-    <div class="navContainer open">
-      <div class="navBackground"></div>
-      <div class="closeContainer">
-        <div class="topLine menuLine"></div>
-        <div class="middleLine menuLine"></div>
-        <div class="bottomLine menuLine"></div>
+    <div id="customScrollbar"></div>
+    <!-- Menu -->
+    <div id="menuContainer" class="menuContainer open">
+      <div id="closeContainer" class="closeContainer pointer">
+        <div class="topLine closeLine"></div>
+        <div class="bottomLine closeLine"></div>
       </div>
-      <div class="navItemContainer">
-        <a href="" class="navItem">
-          <span class="number">I.</span><span class="text">Startseite</span>
+      <div class="menuItemContainer">
+        <a href="" class="menuItem active">
+          <span class="number">I. </span><span class="text">Startseite</span>
         </a>
-        <a href="" class="navItem">
-          <span class="number">II.</span><span class="text">Portfolio</span>
+        <a href="" class="menuItem">
+          <span class="number">II. </span><span class="text">Portfolio</span>
         </a>
-        <a href="" class="navItem">
-          <span class="number">III.</span><span class="text">Menschen</span>
+        <a href="" class="menuItem">
+          <span class="number">III. </span><span class="text">Menschen</span>
         </a>
-        <a href="" class="navItem">
-          <span class="number">IV.</span><span class="text">Kontakt</span>
+        <a href="" class="menuItem">
+          <span class="number">IV. </span><span class="text">Kontakt</span>
         </a>
       </div>
-      <a href="" class="button primaryButton">Portfolio</a>
+      <div class="contactDetailsContainer">
+        <p class="heading">Einfach mal Hallo Sagen</p>
+        <p class="emailadress">info@legarti.agency</p>
+      </div>
     </div>
+    <!-- Navigation -->
+    <nav class="navContainer maxContainer">
+      <a href="" class="logoContainer">
+        <img
+          src="./assets/logoWhite.svg"
+          alt="Legarti Agency - Digital Marketing Agentur aus Dortmund, Bergkamen, Unna, Hamm"
+        />
+      </a>
+      <div id="menuToggleContainer" class="menuToggleContainer pointer">
+        <div class="topLine toggleLine"></div>
+        <div class="middleLine toggleLine"></div>
+        <div class="bottomLine toggleLine"></div>
+      </div>
+    </nav>
+
+    <!-- Herosection -->
+    <div id="heroSection">
+      <div class="contentContainer maxContainer">
+        <div class="linkItemContainer">
+          <div class="linkItem textCenter">
+            <span class="linkNumber">I. </span>
+            <h1 class="linkText bigHeading">Branding</h1>
+          </div>
+          <div class="linkItem textCenter">
+            <span class="linkNumber">II. </span>
+            <h1 class="linkText bigHeading">Webdesign</h1>
+          </div>
+          <div class="linkItem textCenter">
+            <span class="linkNumber">III. </span>
+            <h1 class="linkText bigHeading">Video</h1>
+          </div>
+        </div>
+        <div class="buttonContainer mauto maxContainer">
+          <a href="" class="button primaryButton portfolio">zum portfolio</a>
+          <a href="" class="button primaryButton team">zum team</a>
+          <a href="" class="button primaryButton talk">let's talk</a>
+        </div>
+        <div class="sloganContainer fullWidth maxContainer mauto">
+          <p class="subslogan medium textCenter">Nach allen Regeln der Kunst</p>
+          <div class="verticalStripe textCenter"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- what we do section -->
+    <section id="whatwedo" class="maxContainer mt100">
+      <div class="imageContainer">
+        <img src="./assets/projects/theschooloflife/titelbild.png" alt="" />
+      </div>
+      <div class="contentContainer mt3">
+        <div class="sectionHeading">
+          <h2 class="heading">
+            wir helfen dir
+          </h2>
+          <p class="subheading">deine Ideen in die Welt zu kommunizieren</p>
+        </div>
+        <p class="readText">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut sunt
+          asperiores repudiandae deleniti commodi et quam eligendi, voluptatibus
+          quod corrupti voluptatem ex aliquam non numquam, dolorem, earum
+          aliquid esse odio.
+        </p>
+        <a href="" class="button primaryButton mt2">zum Portfolio</a>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/navigation.js"></script>
   </body>
 </html>

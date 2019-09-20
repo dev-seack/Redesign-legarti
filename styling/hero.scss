@@ -1,0 +1,53 @@
+#heroSection {
+  position: absolute;
+  top: 0;
+  right: $mobilePadding;
+  left: $mobilePadding;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .contentContainer {
+    .linkItemContainer {
+      .linkItem {
+        display: block;
+        .linkText {
+          display: inline;
+          font-weight: 800;
+        }
+      }
+    }
+    .buttonContainer {
+      display: flex;
+      justify-content: center;
+      margin-top: 4em;
+      @media only screen and (min-width: 980px) {
+        justify-content: space-between;
+      }
+      .team,
+      .talk {
+        display: none;
+        @media only screen and (min-width: 980px) {
+          display: flex !important;
+        }
+      }
+    }
+    .sloganContainer {
+      position: absolute;
+      bottom: $mobilePadding * 2;
+      left: 0;
+      right: 0;
+      color: $darkgrey;
+      .verticalStripe {
+        background: $darkgrey;
+        width: 3px;
+        height: 100px;
+        position: absolute;
+        bottom: -115px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+    }
+  }
+}

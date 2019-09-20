@@ -1,14 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
+  padding: $mobilePadding;
   background: $thirdColor;
-  // temporary
-  background: url("https://source.unsplash.com/random");
-  background-size: cover;
-  // !temporary
   &.dark {
     background: $secondaryColor;
   }
 }
 
 .maxContainer {
-  max-width: 1400px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.pointer,
+button,
+a {
+  cursor: pointer;
+}
+
+section {
+  padding-top: 120px;
+}
+
+// Helper
+.mt1 {
+  margin-top: 1em;
+}
+.mt2 {
+  margin-top: 2em;
+}
+.mt3 {
+  margin-top: 3em;
+}
+.mt4 {
+  margin-top: 4em;
+}
+.mt5 {
+  margin-top: 5em;
+}
+
+.pt1 {
+  padding-top: 1em;
+}
+.pt2 {
+  padding-top: 2em;
+}
+.pt3 {
+  padding-top: 3em;
+}
+.pt4 {
+  padding-top: 4em;
+}
+.pt5 {
+  padding-top: 5em;
+}
+
+.mt100 {
+  margin-top: 100vh;
+}
+
+.mauto {
+  margin: 0 auto;
+}
+
+// Typography
+.medium {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.readText {
+  font-size: 16px;
+  font-weight: 400;
+  color: $darkgrey;
+  line-height: 25px;
+  @media only screen and (min-width: 980px) {
+    font-size: 21px;
+    line-height: 30px;
+  }
+}
+
+.sectionHeading {
+  margin-bottom: 2rem;
+  .heading {
+    font-size: 42px;
+    text-transform: lowercase;
+    font-weight: 700;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    @media only screen and (min-width: 980px) {
+      font-size: 62px;
+    }
+  }
+  .subheading {
+    color: $darkgrey;
+    font-size: 12px;
+    display: flex;
+    font-weight: 400;
+    align-items: center;
+    margin-top: 5px;
+    @media only screen and (min-width: 980px) {
+      font-size: 21px;
+    }
+    &:before {
+      content: "";
+      background: $primaryColor;
+      margin-right: 7px;
+      width: 25px;
+      height: 2px;
+      display: inline-block;
+    }
+  }
+}
+
+// Headings
+h1.bigHeading {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  @media only screen and (min-width: 600px) {
+    font-size: 4em;
+  }
+  @media only screen and (min-width: 980px) {
+    font-size: 6em;
+  }
+  @media only screen and (min-width: 1260px) {
+    font-size: 8em;
+  }
 }

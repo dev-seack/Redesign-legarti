@@ -1,5 +1,4 @@
 @import url("https://use.typekit.net/sdp7lpt.css");
-
 * {
   font-family: futura-pt, sans-serif;
 }
@@ -145,6 +144,7 @@ table {
 
 img {
   pointer-events: none;
+  max-width: 100%;
 }
 
 a {

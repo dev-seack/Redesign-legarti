@@ -1,0 +1,59 @@
+#whatwedo {
+  display: flex;
+  padding-top: 200px;
+  align-items: center;
+  flex-direction: column;
+  @media only screen and (min-width: 980px) {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .contentContainer {
+    position: relative;
+
+    @media only screen and (min-width: 980px) {
+      width: 500px;
+      order: 1;
+      left: 3rem;
+    }
+    .button {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  .imageContainer {
+    position: relative;
+
+    width: auto;
+    padding-right: $mobilePadding;
+    @media only screen and (min-width: 980px) {
+      width: 50%;
+      order: 2;
+      padding-right: $mobilePadding * 2;
+      right: 3rem;
+    }
+    &:after {
+      content: "";
+      z-index: -1;
+      display: inline-block;
+      position: absolute;
+      right: 0rem;
+      bottom: -$mobilePadding;
+      left: $mobilePadding;
+      top: $mobilePadding;
+      border: 10px solid $theschooloflifeColor;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      @media only screen and (min-width: 1260px) {
+        right: 0rem;
+        bottom: -$mobilePadding * 1.5;
+        left: $mobilePadding * 1.5;
+        top: $mobilePadding * 1.5;
+      }
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+  }
+}

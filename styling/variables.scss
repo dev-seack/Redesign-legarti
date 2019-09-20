@@ -1,7 +1,13 @@
-// Main Variables
+// colors
 $primaryColor: #ffda48;
 $secondaryColor: #000000;
 $thirdColor: #ffffff;
+$lightgrey: #f8f8f8;
+$midgrey: #e4e4e4;
+$darkgrey: #666666;
+$black: #000000;
+// Projectcolors
+$theschooloflifeColor: #fce600;
 
 // Other Variables
 $bodyBackground: $thirdColor;
@@ -10,3 +16,7 @@ $linkColor: $secondaryColor;
 // Buttons
 $primaryButtonColor: $thirdColor;
 $primaryButtonTextcolor: $secondaryColor;
+
+// Paddings & Margins
+$mobilePadding: 1.5rem;
+$mobileMargin: 1.5rem;
