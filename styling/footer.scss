@@ -18,6 +18,16 @@ footer {
     }
     .informationContainer {
       width: 100%;
+      .heading {
+        font-size: 4em;
+
+        @media only screen and (min-width: 980px) {
+          font-size: 5em;
+        }
+        @media only screen and (min-width: 1260px) {
+          font-size: 6em;
+        }
+      }
       @media only screen and (min-width: 980px) {
         width: 50%;
       }
@@ -38,6 +48,9 @@ footer {
     .logoContainer {
       width: 100%;
       display: none;
+      img {
+        width: 85%;
+      }
       @media only screen and (min-width: 980px) {
         width: 50%;
         display: inline-block;

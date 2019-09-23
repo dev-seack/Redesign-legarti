@@ -143,13 +143,6 @@ body {
   body.dark {
     background: #000000; }
 
-.maxContainer {
-  max-width: 1280px;
-  margin: 0 auto; }
-
-.fullWidth {
-  width: 100%; }
-
 .pointer,
 button,
 a {
@@ -157,6 +150,19 @@ a {
 
 .whiteText {
   color: white; }
+
+.pageSlogan {
+  margin: 50% auto; }
+  @media only screen and (min-width: 980px) {
+    .pageSlogan {
+      margin: 350px auto; } }
+
+.maxContainer {
+  max-width: 1280px; }
+
+.fullWidth {
+  width: 100%;
+  margin: 0 auto; }
 
 section,
 footer {
@@ -203,6 +209,10 @@ footer {
 
 .mauto {
   margin: 0 auto; }
+
+.mlrauto {
+  margin-left: auto;
+  margin-right: auto; }
 
 .medium {
   font-weight: 500; }
@@ -268,17 +278,17 @@ footer {
       display: inline-block; }
 
 h1.bigHeading {
-  font-size: 3em;
+  font-size: 3.5em;
   text-transform: uppercase; }
   @media only screen and (min-width: 600px) {
     h1.bigHeading {
-      font-size: 4em; } }
+      font-size: 5em; } }
   @media only screen and (min-width: 980px) {
     h1.bigHeading {
-      font-size: 6em; } }
+      font-size: 7em; } }
   @media only screen and (min-width: 1260px) {
     h1.bigHeading {
-      font-size: 8em; } }
+      font-size: 9em; } }
 
 h2.heading {
   font-size: 3em;
@@ -288,7 +298,7 @@ h2.heading {
       font-size: 4em; } }
   @media only screen and (min-width: 980px) {
     h2.heading {
-      font-size: 4em; } }
+      font-size: 5em; } }
   @media only screen and (min-width: 1260px) {
     h2.heading {
       font-size: 6em; } }
@@ -301,6 +311,11 @@ p.subheading {
   @media only screen and (min-width: 1260px) {
     p.subheading {
       font-size: 1.5em; } }
+
+h4.heading {
+  margin-top: 10px;
+  font-size: 3em;
+  font-weight: 700; }
 
 #customScrollbar {
   position: fixed;
@@ -506,9 +521,6 @@ p.subheading {
         width: 500px;
         order: 1;
         left: 3rem; } }
-    #whatwedo .contentContainer .button {
-      margin-right: auto;
-      margin-left: auto; }
   #whatwedo .imageContainer {
     position: relative;
     width: auto;
@@ -579,7 +591,8 @@ p.subheading {
   .testimonialContainer .textimonialItem .avatar {
     width: 120px;
     border-radius: 50%;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); }
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    filter: grayscale(100%); }
     @media only screen and (min-width: 980px) {
       .testimonialContainer .textimonialItem .avatar {
         width: 150px; } }
@@ -641,10 +654,6 @@ p.subheading {
           width: 25px;
           height: 2px;
           display: inline-block; }
-      #team .innerContentContainer .contentContainer .heading {
-        margin-top: 10px;
-        font-size: 2.75rem;
-        font-weight: 700; }
       #team .innerContentContainer .contentContainer .teamLink {
         font-size: 1.25em;
         font-weight: 600;
@@ -701,6 +710,14 @@ footer {
         justify-content: center; } }
     footer .innerContentContainer .informationContainer {
       width: 100%; }
+      footer .innerContentContainer .informationContainer .heading {
+        font-size: 4em; }
+        @media only screen and (min-width: 980px) {
+          footer .innerContentContainer .informationContainer .heading {
+            font-size: 5em; } }
+        @media only screen and (min-width: 1260px) {
+          footer .innerContentContainer .informationContainer .heading {
+            font-size: 6em; } }
       @media only screen and (min-width: 980px) {
         footer .innerContentContainer .informationContainer {
           width: 50%; } }
@@ -714,6 +731,8 @@ footer {
     footer .innerContentContainer .logoContainer {
       width: 100%;
       display: none; }
+      footer .innerContentContainer .logoContainer img {
+        width: 85%; }
       @media only screen and (min-width: 980px) {
         footer .innerContentContainer .logoContainer {
           width: 50%;
