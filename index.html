@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./styling/all.css" />
+    <link
+      rel="stylesheet"
+      href="./fontawesome/fontawesome-free-5.10.2-web/css/all.min.css"
+    />
     <link rel="shortcut icon" href="./assets/fav.ico" type="image/x-icon" />
     <title>Legarti | Startseite</title>
   </head>
   <body>
     <div id="customScrollbar"></div>
     <!-- Menu -->
+    <div class="toggleMenuOverlay"></div>
     <div id="menuContainer" class="menuContainer">
       <div id="closeContainer" class="closeContainer pointer">
         <div class="topLine closeLine"></div>
@@ -123,11 +128,11 @@
               <p class="name">Lisa Santos</p>
               <p class="title">CEO - Zalando</p>
             </div>
-            <p class="readText quote mt2 textCenter">
+            <p class="readText quote mt1 textCenter">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Doloribus velit alias perspiciatis? Optio laboriosam alias rem
               quasi consequatur quo quisquam, dignissimos delectus nam nemo,
-              mollitia porro iusto blanditiis molestiae inventore!
+              mollitia porro iusto blanditii
             </p>
             <div class="mt2 textCenter secondaryLink">Seite besuchen</div>
           </div>
@@ -141,7 +146,7 @@
               <p class="name">Leonie Langkabel</p>
               <p class="title">Vorstand - UCS</p>
             </div>
-            <p class="readText quote mt2 textCenter">
+            <p class="readText quote mt1 textCenter">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Doloribus velit alias perspiciatis? Optio laboriosam alias rem
               quasi consequatur quo quisquam, dignissimos delectus nam nemo,
@@ -152,6 +157,89 @@
         </div>
       </div>
     </section>
+
+    <!-- teamsection -->
+    <section id="team" class="maxContainer mtsection">
+      <div class="innerContentContainer">
+        <img src="./assets/freunde-bg.svg" alt="" />
+        <div class="contentContainer">
+          <h6 class="preHeading">Legarti</h6>
+          <h4 class="heading">Ein Team aus Freunden</h4>
+          <p class="mt1 readText whiteText">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor. clita kasd
+            gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor.
+          </p>
+          <a href="" class="mt2 teamLink whiteText">mehr zum team</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Socialbanner -->
+    <section class="socialBanner mtsection evenPaddingSection">
+      <div class="innerContentContainer maxContainer fullWidth">
+        <h2 class=" heading bold textCenter">
+          Bleib immer auf dem Laufenden
+        </h2>
+        <p class="subheading medium textCenter mt1">
+          Besuche uns in den sozialen Medien und schaue Dir an woran wir
+          arbeiten
+        </p>
+        <div class="socialIconContainer mt3">
+          <a class="socialItem"><i class="fab fa-instagram"></i></a>
+          <a class="socialItem"><i class="fab fa-facebook-square"></i></a>
+          <a class="socialItem"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="button primaryButton mt3">let's talk</div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="innerContentContainer maxContainer fullWidth">
+        <div class="informationContainer">
+          <h2 class="heading bold">Ready To Talk?</h2>
+          <p class="subheading medium">Wir freuen uns auf Deine Nachricht</p>
+          <div class="departmentContainer mt5">
+            <div class="departmentItem">
+              <p class="title medium">Design/Entwicklung</p>
+              <p class="email">ms@legarti.de</p>
+            </div>
+            <div class="departmentItem mt3">
+              <p class="title medium">Markenberatung/Videocontent</p>
+              <p class="email">rt@legarti.de</p>
+            </div>
+          </div>
+          <div class="button primaryButton mt5">Kontakt</div>
+        </div>
+        <div class="logoContainer">
+          <img src="./assets/logoWhite.svg" alt="" />
+        </div>
+        <div class="notesContainer mt5">
+          <div class="socialItemContainer">
+            <a class="socialItem whiteText"><i class="fab fa-instagram"></i></a>
+            <a class="socialItem whiteText"
+              ><i class="fab fa-facebook-square"></i
+            ></a>
+            <a class="socialItem whiteText"><i class="fab fa-linkedin"></i></a>
+          </div>
+          <p class="medium mt2">
+            Made with <i class="far fa-grin-beam"></i> and
+            <i class="fas fa-heart"></i> in Germany.
+          </p>
+        </div>
+      </div>
+      <div class="rightsContainer">
+        <a class="whiteText" href="">Datenschutzerkl&auml;rung</a>
+        <a class="whiteText" href="">Impressum</a>
+      </div>
+    </footer>
 
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"

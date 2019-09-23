@@ -1,12 +1,14 @@
 @import "./variables.scss";
 @import "reset.scss";
 
-@import "../fontawesome/fontawesome-free-5.10.2-web/scss/fontawesome.scss";
-
-@import "general.scss";
-@import "navigation.scss";
-@import "hero.scss";
-@import "whatwedo.scss";
+@import "./general.scss";
+@import "./navigation.scss";
+@import "./hero.scss";
+@import "./whatwedo.scss";
 @import "./testimonials.scss";
+@import "./team.scss";
+
+@import "./socialBanner.scss";
+@import "./footer.scss";
 
 @import "buttons.scss";

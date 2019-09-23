@@ -5,6 +5,7 @@
   left: 0;
   top: 0;
   background: $primaryColor;
+  z-index: 100000;
 }
 
 .navContainer {
@@ -58,7 +59,7 @@
   left: -150vw;
   top: $mobilePadding;
   bottom: $mobilePadding;
-  z-index: 1000;
+  z-index: 1001;
   padding: $mobilePadding;
   backdrop-filter: blur(25px) brightness(100%);
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
@@ -133,6 +134,20 @@
     font-weight: 500;
     .heading {
       color: $darkgrey;
+    }
+  }
+}
+
+.toggleMenuOverlay {
+  display: none;
+  &.open {
+    @media only screen and (min-width: 980px) {
+      display: block;
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      z-index: 1000;
+      margin: -$mobileMargin;
     }
   }
 }

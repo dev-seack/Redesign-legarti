@@ -3,8 +3,8 @@
 // Legarti 2.0
 
 // Sass Watch Command
-sass --watch ./styling/all.scss ./styling/all.css
-
+MAC: sass --watch ./styling/all.scss ./styling/all.css
+WIN: sass --watch ./styling/all.scss:./styling/all.css
 // Media Queries
 @media only screen and (min-width: 600px ) {
 …

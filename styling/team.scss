@@ -1,0 +1,80 @@
+#team {
+  margin-left: -$mobileMargin;
+  margin-right: -$mobileMargin;
+  @media only screen and (min-width: 980px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .innerContentContainer {
+    position: relative;
+    padding: $mobilePadding * 1.25 $mobilePadding;
+    background: url("../assets/team/friends-1.jpg") center center no-repeat;
+    background-size: cover;
+    @media only screen and (min-width: 980px) {
+      border-radius: 10px;
+      padding: 0;
+    }
+    img {
+      display: none;
+      @media only screen and (min-width: 980px) {
+        display: inline-block;
+        position: absolute;
+        bottom: -50px;
+        right: 2em;
+        height: 100px;
+      }
+    }
+    .contentContainer {
+      padding: $mobilePadding;
+      background: rgba(255, 218, 72, 0.9);
+      border-radius: 5px;
+      color: white;
+      @media only screen and (min-width: 980px) {
+        width: 33%;
+        position: relative;
+        left: $mobileMargin;
+        top: 4rem;
+      }
+      .preHeading {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        color: white;
+        &:before {
+          content: "";
+          background: white;
+          margin-right: 7px;
+          width: 25px;
+          height: 2px;
+          display: inline-block;
+        }
+      }
+      .heading {
+        margin-top: 10px;
+        font-size: 2.75rem;
+        font-weight: 700;
+      }
+      .teamLink {
+        font-size: 1.25em;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        color: white;
+        @media only screen and (min-width: 980px) {
+          margin-bottom: 4em;
+        }
+        &:before {
+          content: "";
+          background: white;
+          margin-right: 7px;
+          width: 25px;
+          height: 2px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
