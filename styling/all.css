@@ -136,6 +136,9 @@ a {
 
 * {
   box-sizing: border-box; }
+  *::selection {
+    background: #ffda48;
+    color: black; }
 
 body {
   padding: 1.5rem 1.5rem 0 1.5rem;
@@ -311,6 +314,14 @@ p.subheading {
   @media only screen and (min-width: 1260px) {
     p.subheading {
       font-size: 1.5em; } }
+
+h3.heading {
+  font-weight: 800;
+  font-size: 2em;
+  text-transform: uppercase; }
+  @media only screen and (min-width: 1260px) {
+    h3.heading {
+      font-size: 4em; } }
 
 h4.heading {
   margin-top: 10px;
@@ -615,7 +626,8 @@ h4.heading {
     position: relative;
     padding: 1.875rem 1.5rem;
     background: url("../assets/team/friends-1.jpg") center center no-repeat;
-    background-size: cover; }
+    background-size: cover;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); }
     @media only screen and (min-width: 980px) {
       #team .innerContentContainer {
         border-radius: 10px;
@@ -633,7 +645,8 @@ h4.heading {
       padding: 1.5rem;
       background: rgba(255, 218, 72, 0.9);
       border-radius: 5px;
-      color: white; }
+      color: white;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); }
       @media only screen and (min-width: 980px) {
         #team .innerContentContainer .contentContainer {
           width: 33%;
@@ -764,6 +777,55 @@ footer {
     justify-content: space-around;
     background: black;
     padding: 0.75rem 1.5rem; }
+
+.overviewContainer .overviewItem {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center; }
+  .overviewContainer .overviewItem:not(:first-child) {
+    margin-top: 250px; }
+  @media only screen and (min-width: 980px) {
+    .overviewContainer .overviewItem {
+      flex-direction: row; }
+      .overviewContainer .overviewItem:not(:first-child) {
+        margin-top: 400px; } }
+  .overviewContainer .overviewItem .imageContainer,
+  .overviewContainer .overviewItem .contentContainer {
+    width: 100%; }
+    @media only screen and (min-width: 980px) {
+      .overviewContainer .overviewItem .imageContainer,
+      .overviewContainer .overviewItem .contentContainer {
+        width: 50%; } }
+  .overviewContainer .overviewItem .imageContainer {
+    text-align: center; }
+    .overviewContainer .overviewItem .imageContainer img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); }
+  .overviewContainer .overviewItem .contentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    @media only screen and (min-width: 980px) {
+      .overviewContainer .overviewItem .contentContainer {
+        margin-left: 3rem; } }
+    .overviewContainer .overviewItem .contentContainer h3.heading {
+      width: 75%;
+      position: relative;
+      top: -1em;
+      left: 1em;
+      text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15); }
+      @media only screen and (min-width: 980px) {
+        .overviewContainer .overviewItem .contentContainer h3.heading {
+          top: 20px;
+          left: -100px; } }
+    .overviewContainer .overviewItem .contentContainer .task {
+      margin-bottom: 1em; }
+    .overviewContainer .overviewItem .contentContainer .readText.quote {
+      color: #333333;
+      font-style: italic;
+      font-weight: 500; }
 
 .button {
   display: flex;

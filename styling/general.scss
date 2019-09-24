@@ -1,5 +1,9 @@
 * {
   box-sizing: border-box;
+  &::selection {
+    background: $primaryColor;
+    color: black;
+  }
 }
 
 body {
@@ -209,6 +213,15 @@ p.subheading {
   }
   @media only screen and (min-width: 1260px) {
     font-size: 1.5em;
+  }
+}
+
+h3.heading {
+  font-weight: 800;
+  font-size: 2em;
+  text-transform: uppercase;
+  @media only screen and (min-width: 1260px) {
+    font-size: 4em;
   }
 }
 

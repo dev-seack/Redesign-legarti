@@ -1,0 +1,59 @@
+.overviewContainer {
+  .overviewItem {
+    display: flex;
+    flex-direction: column;
+    &:not(:first-child) {
+      margin-top: 250px;
+    }
+    @media only screen and (min-width: 980px) {
+      flex-direction: row;
+      &:not(:first-child) {
+        margin-top: 400px;
+      }
+    }
+    align-content: center;
+    justify-content: center;
+    .imageContainer,
+    .contentContainer {
+      width: 100%;
+      @media only screen and (min-width: 980px) {
+        width: 50%;
+      }
+    }
+    .imageContainer {
+      text-align: center;
+      img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba($color: #000000, $alpha: 0.15);
+      }
+    }
+    .contentContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media only screen and (min-width: 980px) {
+        margin-left: 3rem;
+      }
+      h3.heading {
+        width: 75%;
+        position: relative;
+        top: -1em;
+        left: 1em;
+        text-shadow: 5px 5px 20px rgba($color: #000000, $alpha: 0.15);
+        @media only screen and (min-width: 980px) {
+          top: 20px;
+          left: -100px;
+        }
+      }
+      .task {
+        margin-bottom: 1em;
+      }
+      .readText.quote {
+        color: #333333;
+        font-style: italic;
+        font-weight: 500;
+      }
+    }
+  }
+}
