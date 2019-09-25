@@ -827,6 +827,103 @@ footer {
       font-style: italic;
       font-weight: 500; }
 
+main {
+  margin-top: -1.5rem;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem; }
+
+.navContainer .closeButton {
+  width: 30px; }
+  .navContainer .closeButton .closeLine {
+    width: 30px;
+    height: 3px;
+    background: #ffffff;
+    transform-origin: center;
+    position: absolute;
+    border-radius: 1px; }
+    .navContainer .closeButton .closeLine.topLine {
+      transform: rotate(45deg); }
+    .navContainer .closeButton .closeLine.bottomLine {
+      transform: rotate(-45deg); }
+
+.showcaseHeader {
+  height: 100vh;
+  overflow: hidden; }
+  .showcaseHeader .backgroundOverlay {
+    background: rgba(0, 0, 0, 0.45);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; }
+  .showcaseHeader .videoBackground {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center; }
+    .showcaseHeader .videoBackground video {
+      position: absolute;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%; }
+  .showcaseHeader .showcaseLogoContainer {
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem; }
+    .showcaseHeader .showcaseLogoContainer img {
+      width: 100%;
+      max-width: 750px; }
+
+.showcaseDescription {
+  background: #c1ff2e;
+  padding: 120px 1.5rem; }
+  .showcaseDescription .innerContentContainer {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap; }
+    @media only screen and (min-width: 980px) {
+      .showcaseDescription .innerContentContainer {
+        flex-direction: row; } }
+    .showcaseDescription .innerContentContainer .taskContainer {
+      width: 100%;
+      display: flex;
+      align-content: center;
+      flex-direction: column;
+      justify-content: space-between;
+      order: 2;
+      margin-top: 3rem; }
+      @media only screen and (min-width: 980px) {
+        .showcaseDescription .innerContentContainer .taskContainer {
+          order: 1;
+          width: 30%;
+          margin-top: 0; } }
+    .showcaseDescription .innerContentContainer .descriptionContainer {
+      width: 100%;
+      order: 1; }
+      @media only screen and (min-width: 980px) {
+        .showcaseDescription .innerContentContainer .descriptionContainer {
+          order: 2;
+          width: 70%; } }
+      .showcaseDescription .innerContentContainer .descriptionContainer .readText {
+        color: black; }
+    .showcaseDescription .innerContentContainer .creditsContainer {
+      width: 100%;
+      order: 3; }
+      @media only screen and (min-width: 980px) {
+        .showcaseDescription .innerContentContainer .creditsContainer {
+          margin-left: 30%; } }
+
 .button {
   display: flex;
   width: 175px;
