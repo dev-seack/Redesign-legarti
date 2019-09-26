@@ -834,7 +834,7 @@ main {
     .showcaseContainer {
       padding: 200px 1.5rem; } }
 
-.closeContainer .icon {
+.closeContainer.closeShowcase .icon {
   color: white;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.45); }
 

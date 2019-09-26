@@ -21,7 +21,7 @@ main {
   }
 }
 
-.closeContainer .icon {
+.closeContainer.closeShowcase .icon {
   color: $closeButtonColor;
   text-shadow: 0 0 5px $headerOverlayColor;
 }
