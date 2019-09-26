@@ -1,10 +1,29 @@
+// UCS
 $accentyColorShowcase: #c1ff2e;
 $headerOverlayColor: rgba(0, 0, 0, 0.45);
+$closeButtonColor: white;
+
+*::selection {
+  background: $accentyColorShowcase;
+  color: black;
+}
 
 main {
   margin-top: -$mobileMargin;
   margin-left: -$mobileMargin;
   margin-right: -$mobileMargin;
+}
+
+.showcaseContainer {
+  padding: 120px $mobilePadding;
+  @media only screen and (min-width: 980px) {
+    padding: 200px $mobilePadding;
+  }
+}
+
+.closeContainer .icon {
+  color: $closeButtonColor;
+  text-shadow: 0 0 5px $headerOverlayColor;
 }
 
 .navContainer {
@@ -115,4 +134,78 @@ main {
       }
     }
   }
+}
+
+// testimonials
+.showcaseTestimonial {
+  .testimonialContainer {
+    display: flex;
+    align-items: center;
+    .testimonialItem {
+      box-shadow: none;
+      .secondaryLink:before {
+        background: $accentyColorShowcase;
+      }
+    }
+  }
+}
+
+// mainProjectImage
+.showcaseImageContainer {
+  line-height: 0;
+  img {
+    width: 100%;
+  }
+}
+
+// the problem
+.problemContainer {
+  .toSolve {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    li {
+      display: none;
+      position: relative;
+      @media only screen and (min-width: 980px) {
+        display: inline-block;
+      }
+      &.marked {
+        display: inline-block;
+      }
+      svg {
+        position: absolute;
+        height: 60px;
+        width: 225px;
+
+        top: calc(-60px / 4);
+
+        &.left {
+          left: calc(-225px / 3);
+        }
+        &.middle {
+          left: calc(-225px / 4);
+        }
+        &.right {
+          left: calc(-225px / 3.5);
+        }
+        path#problemMarker {
+          fill: $accentyColorShowcase;
+        }
+      }
+      p {
+        font-size: 1.25em;
+      }
+    }
+  }
+}
+
+footer.showCaseFooter {
+  margin-top: 0;
+  height: 100vh;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

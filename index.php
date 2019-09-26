@@ -18,8 +18,7 @@
     <div class="toggleMenuOverlay"></div>
     <div id="menuContainer" class="menuContainer">
       <div id="closeContainer" class="closeContainer pointer">
-        <div class="topLine closeLine"></div>
-        <div class="bottomLine closeLine"></div>
+        <i class="fas fa-times icon"></i>
       </div>
       <div class="menuItemContainer">
         <a href="/" class="menuItem active">
@@ -126,7 +125,7 @@
           <p class="subheading">uns interessiert, was Andere von uns denken</p>
         </div>
         <div class="testimonialContainer">
-          <div class="textimonialItem">
+          <div class="testimonialItem">
             <img
               class="avatar"
               src="https://source.unsplash.com/w1N1WmLDyHU/150x150"
@@ -144,7 +143,7 @@
             </p>
             <a class="mt2 textCenter secondaryLink">Seite besuchen</a>
           </div>
-          <div class="textimonialItem">
+          <div class="testimonialItem">
             <img
               class="avatar"
               src="https://source.unsplash.com/mEZ3PoFGs_k/150x150"

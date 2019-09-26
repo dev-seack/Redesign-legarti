@@ -372,6 +372,18 @@ h4.heading {
       position: relative;
       left: 5px; }
 
+.closeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem; }
+  .closeContainer .icon {
+    font-size: 1.75em; }
+
 .menuContainer {
   height: 100vh;
   display: flex;
@@ -396,26 +408,6 @@ h4.heading {
     transition: all 600ms;
     right: 1.5rem;
     left: 1.5rem; }
-  .menuContainer .closeContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    right: 1.5rem;
-    top: 1.5rem; }
-    .menuContainer .closeContainer .closeLine {
-      width: 30px;
-      height: 3px;
-      background: #000000;
-      transform-origin: center;
-      position: absolute;
-      border-radius: 1px; }
-      .menuContainer .closeContainer .closeLine.bottomLine {
-        transform: rotate(45deg); }
-      .menuContainer .closeContainer .closeLine.topLine {
-        transform: rotate(-45deg); }
   .menuContainer .menuItemContainer {
     height: 50%;
     width: 100%;
@@ -581,7 +573,7 @@ h4.heading {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1.5rem; } }
-.testimonialContainer .textimonialItem {
+.testimonialContainer .testimonialItem {
   background: #ffffff;
   border-radius: 5px;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
@@ -592,25 +584,25 @@ h4.heading {
   align-items: center;
   width: 100%; }
   @media only screen and (min-width: 980px) {
-    .testimonialContainer .textimonialItem {
+    .testimonialContainer .testimonialItem {
       padding: 2rem 1.5rem; } }
-  .testimonialContainer .textimonialItem:last-child {
+  .testimonialContainer .testimonialItem:last-child {
     margin-top: 5rem; }
     @media only screen and (min-width: 980px) {
-      .testimonialContainer .textimonialItem:last-child {
+      .testimonialContainer .testimonialItem:last-child {
         margin-top: 0; } }
-  .testimonialContainer .textimonialItem .avatar {
+  .testimonialContainer .testimonialItem .avatar {
     width: 120px;
     border-radius: 50%;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     filter: grayscale(100%); }
     @media only screen and (min-width: 980px) {
-      .testimonialContainer .textimonialItem .avatar {
+      .testimonialContainer .testimonialItem .avatar {
         width: 150px; } }
-  .testimonialContainer .textimonialItem .personDetails .name {
+  .testimonialContainer .testimonialItem .personDetails .name {
     font-weight: 600;
     font-size: 1em; }
-  .testimonialContainer .textimonialItem .personDetails .title {
+  .testimonialContainer .testimonialItem .personDetails .title {
     font-weight: 200;
     font-size: 0.9em;
     color: #666666; }
@@ -827,10 +819,24 @@ footer {
       font-style: italic;
       font-weight: 500; }
 
+*::selection {
+  background: #c1ff2e;
+  color: black; }
+
 main {
   margin-top: -1.5rem;
   margin-left: -1.5rem;
   margin-right: -1.5rem; }
+
+.showcaseContainer {
+  padding: 120px 1.5rem; }
+  @media only screen and (min-width: 980px) {
+    .showcaseContainer {
+      padding: 200px 1.5rem; } }
+
+.closeContainer .icon {
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.45); }
 
 .navContainer .closeButton {
   width: 30px; }
@@ -924,6 +930,56 @@ main {
         .showcaseDescription .innerContentContainer .creditsContainer {
           margin-left: 30%; } }
 
+.showcaseTestimonial .testimonialContainer {
+  display: flex;
+  align-items: center; }
+  .showcaseTestimonial .testimonialContainer .testimonialItem {
+    box-shadow: none; }
+    .showcaseTestimonial .testimonialContainer .testimonialItem .secondaryLink:before {
+      background: #c1ff2e; }
+
+.showcaseImageContainer {
+  line-height: 0; }
+  .showcaseImageContainer img {
+    width: 100%; }
+
+.problemContainer .toSolve {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .problemContainer .toSolve li {
+    display: none;
+    position: relative; }
+    @media only screen and (min-width: 980px) {
+      .problemContainer .toSolve li {
+        display: inline-block; } }
+    .problemContainer .toSolve li.marked {
+      display: inline-block; }
+    .problemContainer .toSolve li svg {
+      position: absolute;
+      height: 60px;
+      width: 225px;
+      top: calc(-60px / 4); }
+      .problemContainer .toSolve li svg.left {
+        left: calc(-225px / 3); }
+      .problemContainer .toSolve li svg.middle {
+        left: calc(-225px / 4); }
+      .problemContainer .toSolve li svg.right {
+        left: calc(-225px / 3.5); }
+      .problemContainer .toSolve li svg path#problemMarker {
+        fill: #c1ff2e; }
+    .problemContainer .toSolve li p {
+      font-size: 1.25em; }
+
+footer.showCaseFooter {
+  margin-top: 0;
+  height: 100vh;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 .button {
   display: flex;
   width: 175px;
@@ -938,6 +994,15 @@ main {
     font-weight: 500;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
     border-radius: 5px;
+    letter-spacing: 1px; }
+  .button.secondaryButton {
+    background: none;
+    text-transform: lowercase;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 2px solid white;
     letter-spacing: 1px; }
 
 .secondaryLink {

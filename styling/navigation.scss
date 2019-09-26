@@ -49,6 +49,20 @@
   }
 }
 
+.closeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: $mobilePadding;
+  top: $mobilePadding;
+  .icon {
+    font-size: 1.75em;
+  }
+}
+
 .menuContainer {
   height: 100vh;
   display: flex;
@@ -73,30 +87,6 @@
     transition: all 600ms;
     right: $mobilePadding;
     left: $mobilePadding;
-  }
-  .closeContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    right: $mobilePadding;
-    top: $mobilePadding;
-    .closeLine {
-      width: 30px;
-      height: 3px;
-      background: $black;
-      transform-origin: center;
-      position: absolute;
-      border-radius: 1px;
-      &.bottomLine {
-        transform: rotate(45deg);
-      }
-      &.topLine {
-        transform: rotate(-45deg);
-      }
-    }
   }
 
   .menuItemContainer {
