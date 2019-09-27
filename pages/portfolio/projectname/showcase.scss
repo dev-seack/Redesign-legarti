@@ -3,15 +3,11 @@ $accentyColorShowcase: #c1ff2e;
 $headerOverlayColor: rgba(0, 0, 0, 0.45);
 $closeButtonColor: white;
 
-*::selection {
-  background: $accentyColorShowcase;
-  color: black;
-}
-
-main {
-  margin-top: -$mobileMargin;
-  margin-left: -$mobileMargin;
-  margin-right: -$mobileMargin;
+body.showcase {
+  *::selection {
+    background: black;
+    color: $accentyColorShowcase;
+  }
 }
 
 .showcaseContainer {

@@ -27,7 +27,7 @@
         <a href="/pages/portfolio/overview.html" class="menuItem">
           <span class="number">II. </span><span class="text">Portfolio</span>
         </a>
-        <a href="" class="menuItem">
+        <a href="/pages/team.html" class="menuItem">
           <span class="number">III. </span><span class="text">Menschen</span>
         </a>
         <a href="" class="menuItem">
@@ -191,7 +191,7 @@
     <!-- Socialbanner -->
     <section class="socialBanner mtsection evenPaddingSection">
       <div class="innerContentContainer maxContainer fullWidth">
-        <h2 class="heading bold textCenter">
+        <h2 class="heading heavy textCenter">
           Bleib immer auf dem Laufenden
         </h2>
         <p class="subheading medium textCenter mt1">

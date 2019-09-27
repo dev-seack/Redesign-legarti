@@ -146,6 +146,11 @@ body {
   body.dark {
     background: #000000; }
 
+main.noPadding {
+  margin-top: -1.5rem;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem; }
+
 .pointer,
 button,
 a {
@@ -153,6 +158,9 @@ a {
 
 .whiteText {
   color: white; }
+
+.primaryText {
+  color: #ffda48; }
 
 .pageSlogan {
   margin: 50% auto; }
@@ -189,8 +197,22 @@ footer {
 .mt5 {
   margin-top: 5em; }
 
+.negativeMargin {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem; }
+
 .mtsection {
-  margin-top: 300px; }
+  margin-top: 200px; }
+
+.mt100 {
+  margin-top: 100vh; }
+
+.mauto {
+  margin: 0 auto; }
+
+.mlrauto {
+  margin-left: auto;
+  margin-right: auto; }
 
 .pt1 {
   padding-top: 1em; }
@@ -207,20 +229,13 @@ footer {
 .pt5 {
   padding-top: 5em; }
 
-.mt100 {
-  margin-top: 100vh; }
-
-.mauto {
-  margin: 0 auto; }
-
-.mlrauto {
-  margin-left: auto;
-  margin-right: auto; }
-
 .medium {
   font-weight: 500; }
 
 .bold {
+  font-weight: 700; }
+
+.heavy {
   font-weight: 900; }
 
 .textCenter {
@@ -314,6 +329,11 @@ p.subheading {
   @media only screen and (min-width: 1260px) {
     p.subheading {
       font-size: 1.5em; } }
+
+p.heading {
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase; }
 
 h3.heading {
   font-weight: 800;
@@ -819,14 +839,9 @@ footer {
       font-style: italic;
       font-weight: 500; }
 
-*::selection {
-  background: #c1ff2e;
-  color: black; }
-
-main {
-  margin-top: -1.5rem;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem; }
+body.showcase *::selection {
+  background: black;
+  color: #c1ff2e; }
 
 .showcaseContainer {
   padding: 120px 1.5rem; }
@@ -979,6 +994,120 @@ footer.showCaseFooter {
   display: flex;
   align-items: center;
   justify-content: center; }
+
+.coreValueContainer {
+  position: relative;
+  height: 600px;
+  padding: 0 1.5rem;
+  background: url("/assets/team/friends-1.jpg") bottom center no-repeat;
+  background-size: cover;
+  filter: grayscale(1); }
+  @media only screen and (min-width: 980px) {
+    .coreValueContainer {
+      background-attachment: fixed;
+      background-size: contain; } }
+  @media only screen and (min-width: 980px) {
+    .coreValueContainer {
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); } }
+  .coreValueContainer .contentContainer {
+    background: black;
+    padding: 3rem 1.5rem;
+    color: white;
+    width: 66%;
+    max-width: 350px;
+    margin-left: auto; }
+    @media only screen and (min-width: 980px) {
+      .coreValueContainer .contentContainer {
+        border-radius: 0 0 10px 10px; } }
+    .coreValueContainer .contentContainer .manageContainer {
+      display: flex; }
+      .coreValueContainer .contentContainer .manageContainer .counter,
+      .coreValueContainer .contentContainer .manageContainer .nextSlideToggle {
+        width: 50%;
+        display: inline-block;
+        font-size: 1.25em; }
+    .coreValueContainer .contentContainer .mainContentContainer p.coreValue {
+      margin-top: 10px;
+      font-size: 1.25em;
+      line-height: 1.1; }
+    .coreValueContainer .contentContainer .progressbarContainer {
+      width: 100%;
+      position: relative; }
+      .coreValueContainer .contentContainer .progressbarContainer .progress {
+        position: absolute;
+        top: -1px;
+        width: 70%;
+        height: 3px;
+        background: #f8f8f8; }
+      .coreValueContainer .contentContainer .progressbarContainer .maxProgress {
+        width: 100%;
+        height: 1px;
+        background: #cccccc; }
+  .coreValueContainer .friendsImageContainer {
+    position: absolute;
+    bottom: -30px;
+    left: 1.5rem;
+    right: 1.5rem;
+    height: 60px; }
+
+.teamSocialBanner {
+  padding-bottom: 240px; }
+
+.feedContainer {
+  margin-top: -120px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto; }
+  @media only screen and (min-width: 980px) {
+    .feedContainer {
+      grid-gap: 20px; } }
+  .feedContainer .feedItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15); }
+    .feedContainer .feedItem:after {
+      font-family: "Font Awesome 5 Brands";
+      color: white;
+      font-size: 2.5em;
+      content: "\f16d";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 600ms ease-in-out;
+      opacity: 0; }
+      @media only screen and (min-width: 980px) {
+        .feedContainer .feedItem:after {
+          font-size: 4em; } }
+    .feedContainer .feedItem:before {
+      content: "";
+      background: rgba(255, 218, 72, 0.8);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transition: all 600ms ease-in-out;
+      opacity: 0; }
+    .feedContainer .feedItem:hover {
+      cursor: pointer; }
+      .feedContainer .feedItem:hover:before, .feedContainer .feedItem:hover:after {
+        opacity: 1;
+        transition: all 600ms ease-in-out; }
+    .feedContainer .feedItem img {
+      opacity: 0;
+      width: 100%; }
+
+.footNote .innerContainer {
+  width: 100%; }
+  @media only screen and (min-width: 980px) {
+    .footNote .innerContainer {
+      width: 50%; } }
 
 .button {
   display: flex;

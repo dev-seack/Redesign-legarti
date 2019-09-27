@@ -14,6 +14,12 @@ body {
   }
 }
 
+main.noPadding {
+  margin-top: -$mobileMargin;
+  margin-left: -$mobileMargin;
+  margin-right: -$mobileMargin;
+}
+
 .pointer,
 button,
 a {
@@ -22,6 +28,10 @@ a {
 
 .whiteText {
   color: white;
+}
+
+.primaryText {
+  color: $primaryColor;
 }
 
 // container
@@ -67,8 +77,26 @@ footer {
   margin-top: 5em;
 }
 
+.negativeMargin {
+  margin-left: -$mobileMargin;
+  margin-right: -$mobileMargin;
+}
+
 .mtsection {
-  margin-top: 300px;
+  margin-top: 200px;
+}
+
+.mt100 {
+  margin-top: 100vh;
+}
+
+.mauto {
+  margin: 0 auto;
+}
+
+.mlrauto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pt1 {
@@ -87,25 +115,16 @@ footer {
   padding-top: 5em;
 }
 
-.mt100 {
-  margin-top: 100vh;
-}
-
-.mauto {
-  margin: 0 auto;
-}
-
-.mlrauto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 // Typography
 .medium {
   font-weight: 500;
 }
 
 .bold {
+  font-weight: 700;
+}
+
+.heavy {
   font-weight: 900;
 }
 
@@ -214,6 +233,12 @@ p.subheading {
   @media only screen and (min-width: 1260px) {
     font-size: 1.5em;
   }
+}
+
+p.heading {
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 h3.heading {
