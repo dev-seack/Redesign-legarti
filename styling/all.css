@@ -162,6 +162,9 @@ a {
 .primaryText {
   color: #ffda48; }
 
+.primaryText {
+  color: #ffda48; }
+
 .pageSlogan {
   margin: 50% auto; }
   @media only screen and (min-width: 980px) {
@@ -174,6 +177,12 @@ a {
 .fullWidth {
   width: 100%;
   margin: 0 auto; }
+
+.halfWidth {
+  width: 100%; }
+  @media only screen and (min-width: 980px) {
+    .halfWidth {
+      width: 50%; } }
 
 section,
 footer {
@@ -196,6 +205,9 @@ footer {
 
 .mt5 {
   margin-top: 5em; }
+
+.mb1 {
+  margin-bottom: 1em; }
 
 .negativeMargin {
   margin-left: -1.5rem;
@@ -348,6 +360,10 @@ h4.heading {
   font-size: 3em;
   font-weight: 700; }
 
+h5.heading {
+  font-size: 1.75em;
+  font-weight: 700; }
+
 #customScrollbar {
   position: fixed;
   width: 4px;
@@ -439,9 +455,6 @@ h4.heading {
       position: relative;
       z-index: 1;
       padding: 0.75rem 1.5rem; }
-      .menuContainer .menuItemContainer .menuItem.active {
-        background: url("../assets/menuItemBg.svg") center center no-repeat;
-        background-size: auto; }
       .menuContainer .menuItemContainer .menuItem .text {
         font-size: 1.5em;
         font-weight: 700; }
@@ -1108,6 +1121,77 @@ footer.showCaseFooter {
   @media only screen and (min-width: 980px) {
     .footNote .innerContainer {
       width: 50%; } }
+
+body.contact {
+  background: black; }
+  body.contact .logoContainer {
+    background: #ffda48; }
+  body.contact .menuToggleContainer .toggleLine {
+    background: white; }
+
+.contactContainer {
+  display: flex;
+  justify-content: space-between; }
+  .contactContainer .contactForm form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.5em; }
+    .contactContainer .contactForm form .formgroup {
+      padding: 0.5em;
+      position: relative; }
+      .contactContainer .contactForm form .formgroup:after {
+        content: attr(data-label);
+        color: #ffda48;
+        position: absolute;
+        left: 1.5rem;
+        font-weight: 600;
+        top: -0.75rem;
+        font-size: 0.85em;
+        opacity: 0;
+        transition: opacity 300ms ease-in-out; }
+      .contactContainer .contactForm form .formgroup.focus:after {
+        opacity: 1;
+        transition: opacity 300ms ease-in-out; }
+      .contactContainer .contactForm form .formgroup input,
+      .contactContainer .contactForm form .formgroup textarea {
+        padding: 0.75rem;
+        border-radius: 5px;
+        border: black 2px solid;
+        width: 100%; }
+        .contactContainer .contactForm form .formgroup input:focus,
+        .contactContainer .contactForm form .formgroup textarea:focus {
+          outline: none;
+          border: #ffda48 2px solid;
+          transition: all 300ms ease-in-out; }
+  @media only screen and (min-width: 980px) {
+    .contactContainer .contactInformation {
+      width: 30%; } }
+  .contactContainer .contactInformation .title {
+    font-size: 1.25em; }
+  .contactContainer .contactInformation .email {
+    font-size: 2.5em;
+    font-weight: 600; }
+
+footer.contactFooter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  bottom: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  background: black;
+  padding: 1.5rem; }
+  footer.contactFooter * {
+    width: 100%; }
+    @media only screen and (min-width: 980px) {
+      footer.contactFooter * {
+        width: 50%; } }
+  footer.contactFooter .socialItemContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    footer.contactFooter .socialItemContainer .socialItem {
+      text-align: center; }
 
 .button {
   display: flex;

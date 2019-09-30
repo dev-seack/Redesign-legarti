@@ -34,6 +34,10 @@ a {
   color: $primaryColor;
 }
 
+.primaryText {
+  color: $primaryColor;
+}
+
 // container
 .pageSlogan {
   margin: 50% auto;
@@ -50,6 +54,13 @@ a {
 .fullWidth {
   width: 100%;
   margin: 0 auto;
+}
+
+.halfWidth {
+  width: 100%;
+  @media only screen and (min-width: 980px) {
+    width: 50%;
+  }
 }
 
 section,
@@ -75,6 +86,10 @@ footer {
 }
 .mt5 {
   margin-top: 5em;
+}
+
+.mb1 {
+  margin-bottom: 1em;
 }
 
 .negativeMargin {
@@ -253,5 +268,10 @@ h3.heading {
 h4.heading {
   margin-top: 10px;
   font-size: 3em;
+  font-weight: 700;
+}
+
+h5.heading {
+  font-size: 1.75em;
   font-weight: 700;
 }

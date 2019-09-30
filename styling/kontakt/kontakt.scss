@@ -1,0 +1,91 @@
+body.contact {
+  background: black;
+  .logoContainer {
+    background: $primaryColor;
+  }
+
+  .menuToggleContainer .toggleLine {
+    background: white;
+  }
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: space-between;
+  .contactForm form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.5em;
+    .formgroup {
+      padding: 0.5em;
+      position: relative;
+      &:after {
+        content: attr(data-label);
+        color: $primaryColor;
+        position: absolute;
+        left: $mobilePadding;
+        font-weight: 600;
+        top: -$mobilePadding/2;
+        font-size: 0.85em;
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+      }
+      &.focus:after {
+        opacity: 1;
+        transition: opacity 300ms ease-in-out;
+      }
+      input,
+      textarea {
+        padding: $mobilePadding/2;
+        border-radius: 5px;
+        border: black 2px solid;
+        width: 100%;
+
+        &:focus {
+          outline: none;
+          border: $primaryColor 2px solid;
+          transition: all 300ms ease-in-out;
+        }
+      }
+    }
+  }
+  .contactInformation {
+    @media only screen and (min-width: 980px) {
+      width: 30%;
+    }
+
+    .title {
+      font-size: 1.25em;
+    }
+    .email {
+      font-size: 2.5em;
+      font-weight: 600;
+    }
+  }
+}
+
+footer.contactFooter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+
+  bottom: 0;
+  left: $mobilePadding;
+  right: $mobilePadding;
+  background: black;
+  padding: $mobilePadding;
+  * {
+    width: 100%;
+    @media only screen and (min-width: 980px) {
+      width: 50%;
+    }
+  }
+  .socialItemContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .socialItem {
+      text-align: center;
+    }
+  }
+}
