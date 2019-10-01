@@ -2,11 +2,13 @@
   position: relative;
   height: 600px;
   padding: 0 $mobilePadding;
-  background: url("/assets/team/friends-1.jpg") bottom center no-repeat;
+  background: url("/assets/team/friends-1.jpg") center center no-repeat;
   background-size: cover;
   @media only screen and (min-width: 980px) {
-    background-attachment: fixed;
-    background-size: contain;
+    // background-attachment: fixed;
+    // background-size: contain;
+    background-size: cover;
+    height: 750px;
   }
   filter: grayscale(1);
 
@@ -16,21 +18,37 @@
     border-radius: 10px;
     box-shadow: 0 0 20px $shadow;
   }
+  .overlayContainer {
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    opacity: 0;
+  }
   .contentContainer {
     background: black;
     padding: $mobilePadding * 2 $mobilePadding;
     color: white;
-    width: 66%;
-    max-width: 350px;
+    left: $mobilePadding;
+    right: $mobilePadding;
     margin-left: auto;
+    position: absolute;
+    top: 450px;
+    border-radius: 10px;
+    box-shadow: 0 20px 50px $shadow;
     @media only screen and (min-width: 980px) {
-      border-radius: 0 0 10px 10px;
+      max-width: 350px;
+      top: 600px;
     }
     .manageContainer {
       display: flex;
       .counter,
-      .nextSlideToggle {
-        width: 50%;
+      .nextSlideToggle,
+      .prevSlideToggle {
+        width: 33%;
         display: inline-block;
         font-size: 1.25em;
       }
@@ -49,7 +67,6 @@
       .progress {
         position: absolute;
         top: -1px;
-        width: 70%;
         height: 3px;
         background: $lightgrey;
       }
@@ -64,10 +81,13 @@
 
   .friendsImageContainer {
     position: absolute;
-    bottom: -30px;
+    bottom: -20px;
     left: $mobilePadding;
     right: $mobilePadding;
-    height: 60px;
+    display: none;
+    @media only screen and (min-width: 980px) {
+      display: block;
+    }
   }
 }
 

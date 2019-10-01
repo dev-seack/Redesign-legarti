@@ -21,9 +21,8 @@
       @media only screen and (min-width: 980px) {
         display: inline-block;
         position: absolute;
-        bottom: -50px;
-        right: 2em;
-        height: 100px;
+        bottom: -20px;
+        right: $mobilePadding;
       }
     }
     .contentContainer {

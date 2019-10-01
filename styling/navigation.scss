@@ -31,20 +31,34 @@
   .menuToggleContainer {
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    height: 17px;
-    width: 30px;
-    .toggleLine {
-      width: 30px;
-      height: 3px;
-      background: $black;
-      border-radius: 1px;
+    height: 50px;
+    .menuLabel {
+      margin-right: 1em;
+      display: none;
+      @media only screen and (min-width: 980px) {
+        display: inline-block;
+      }
     }
-    .middleLine.toggleLine {
-      width: 20px;
-      position: relative;
-      left: 5px;
+    .hamburgerMenu {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+      height: 17px;
+      width: 30px;
+      .toggleLine {
+        width: 30px;
+        height: 3px;
+        background: $black;
+        border-radius: 1px;
+      }
+      .middleLine.toggleLine {
+        width: 20px;
+        position: relative;
+        left: 5px;
+      }
     }
   }
 }
@@ -77,14 +91,15 @@
   padding: $mobilePadding;
   backdrop-filter: blur(25px) brightness(100%);
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
-  transition: all 600ms;
+  transition: all 1000ms ease-in-out;
   margin: -$mobileMargin;
+  background: rgba($color: #ffffff, $alpha: 0.75);
   @media only screen and (min-width: 980px) {
     right: auto;
     width: 50%;
   }
   &.open {
-    transition: all 600ms;
+    transition: all 1000ms ease-in-out;
     right: $mobilePadding;
     left: $mobilePadding;
   }

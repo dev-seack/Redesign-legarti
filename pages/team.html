@@ -48,36 +48,47 @@
         />
       </a>
       <div id="menuToggleContainer" class="menuToggleContainer pointer">
-        <div class="topLine toggleLine"></div>
-        <div class="middleLine toggleLine"></div>
-        <div class="bottomLine toggleLine"></div>
+        <p class="menuLabel">MEN&Uuml;</p>
+        <div class="hamburgerMenu">
+          <div class="topLine toggleLine"></div>
+          <div class="middleLine toggleLine"></div>
+          <div class="bottomLine toggleLine"></div>
+        </div>
       </div>
     </nav>
 
     <!-- MAIN -->
     <main>
+      <!-- Core Value Container -->
       <div class="coreValueContainer maxContainer mtsection negativeMargin">
+        <div class="overlayContainer"></div>
         <div class="contentContainer">
           <div class="manageContainer">
             <div class="counter">
               <span class="currentValue bold">01</span
               ><span class="maxValue">/09</span>
             </div>
+            <div class="prevSlideToggle textRight pointer">
+              <i class="fas fa-long-arrow-alt-left"></i>
+            </div>
             <div class="nextSlideToggle textRight pointer">
               <i class="fas fa-long-arrow-alt-right"></i>
             </div>
           </div>
+
           <div class="mainContentContainer mt4">
             <p class="heading">Unsere Werte</p>
             <p class="coreValue">
               Gute Arbeit entsteht aus &Uuml;berzeugung
             </p>
           </div>
+
           <div class="progressbarContainer mt4">
             <div class="progress"></div>
             <div class="maxProgress"></div>
           </div>
         </div>
+
         <div class="friendsImageContainer">
           <img src="/assets/freunde-bg.svg" alt="" />
         </div>
@@ -174,6 +185,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="/scripts/navigation.js"></script>
+    <script src="/scripts/teamCarousel.js"></script>
     <script src="/scripts/feed.js"></script>
   </body>
 </html>

@@ -4,8 +4,13 @@ body.contact {
     background: $primaryColor;
   }
 
-  .menuToggleContainer .toggleLine {
-    background: white;
+  .menuToggleContainer {
+    .hamburgerMenu .toggleLine {
+      background: white;
+    }
+  }
+  .menuContainer {
+    background: rgba(0, 0, 0, 0.75);
   }
 }
 
@@ -40,6 +45,7 @@ body.contact {
         border-radius: 5px;
         border: black 2px solid;
         width: 100%;
+        font-size: 1em;
 
         &:focus {
           outline: none;
