@@ -17,6 +17,7 @@ body.contact {
 .contactContainer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   .contactForm form {
     display: flex;
     flex-wrap: wrap;
@@ -56,8 +57,10 @@ body.contact {
     }
   }
   .contactInformation {
+    margin-top: 5rem;
     @media only screen and (min-width: 980px) {
       width: 30%;
+      margin-top: 0;
     }
 
     .title {
@@ -73,6 +76,7 @@ body.contact {
 footer.contactFooter {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 0;
 
   bottom: 0;
@@ -80,7 +84,7 @@ footer.contactFooter {
   right: $mobilePadding;
   background: black;
   padding: $mobilePadding;
-  * {
+  div {
     width: 100%;
     @media only screen and (min-width: 980px) {
       width: 50%;
@@ -90,8 +94,15 @@ footer.contactFooter {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 0.75rem 1.5rem;
     .socialItem {
       text-align: center;
+    }
+  }
+  .rightsContainer {
+    justify-content: space-between;
+    @media only screen and (min-width: 980px) {
+      justify-content: space-around;
     }
   }
 }

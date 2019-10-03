@@ -30,6 +30,16 @@ $(document).ready(function() {
   $(".toggleMenuOverlay").on("click", function() {
     closeMenu();
   });
+
+  // tease menu
+  $("#menuToggleContainer").hover(
+    () => {
+      $("#menuContainer").addClass("teaseMenu");
+    },
+    () => {
+      $("#menuContainer").removeClass("teaseMenu");
+    }
+  );
 });
 
 function openMenu() {

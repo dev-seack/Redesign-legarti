@@ -113,15 +113,106 @@
     align-items: center;
     .menuItem {
       position: relative;
-      z-index: 1;
       padding: $mobilePadding/2 $mobilePadding;
+      background: none;
+      outline: none;
+      border: none;
+      height: 50px;
+      width: 250px;
+      font-size: 14px;
+      z-index: 2;
+      transition: 0.01s 0.23s ease-out all;
+      overflow: hidden;
+      text-align: center;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 55%;
+        background: #dddddd;
+        z-index: -1;
+        transition: 0.3s ease-in all;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: -5%;
+        top: 0;
+        height: 100%;
+        width: 5%;
+        background: rgba($color: #ffffff, $alpha: 0.45);
+        z-index: -1;
+        transition: 0.4s 0.02s ease-in all;
+      }
+      &:hover {
+        cursor: pointer;
+        color: transparent;
+        &:before {
+          left: 100%;
+          width: 25%;
+        }
+        &:after {
+          left: 100%;
+          width: 70%;
+        }
+        .icon-right.after:after {
+          left: 0px;
+          color: $primaryColor;
+          transition: 0.2s 0.2s ease all;
+        }
+        .icon-right.after:before {
+          left: -125px;
+          top: 50%;
+          opacity: 1;
+          font-size: 2em;
+          color: black;
+          font-weight: 700;
+        }
+      }
+
       .text {
         font-size: 1.5em;
         font-weight: 700;
         @media only screen and (min-width: 1260px) {
           font-size: 2em;
-          text-transform: uppercase;
         }
+      }
+    }
+    .icon-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      &:after {
+        font-family: "Font Awesome 5 Free";
+        content: "\f068";
+        font-weight: 900;
+        font-size: 2em;
+        display: inline-block;
+        position: relative;
+        top: 30px;
+        transform: translate3D(0, -50%, 0);
+      }
+      &.after:after {
+        left: -250px;
+        color: white;
+        transition: 0.15s 0.15s ease left, 0.5s 0.05s ease color;
+      }
+      &.after:before {
+        content: attr(data-label);
+        position: absolute;
+        left: -230px;
+        top: 14px;
+        opacity: 0;
+        transition: 0.2s ease-in all;
+        top: 50%;
+        font-size: 1.5em;
+        font-weight: 700;
+        @media only screen and (min-width: 1260px) {
+          font-size: 2em;
+        }
+        color: black;
       }
     }
   }
@@ -136,6 +227,10 @@
     .heading {
       color: $darkgrey;
     }
+  }
+  &.teaseMenu {
+    left: -40vw;
+    transition: left 750ms ease-in-out;
   }
 }
 
