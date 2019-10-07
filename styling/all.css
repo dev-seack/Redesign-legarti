@@ -157,7 +157,7 @@ a {
   cursor: pointer; }
 
 .whiteText {
-  color: white; }
+  color: white !important; }
 
 .primaryText {
   color: #ffda48; }
@@ -480,6 +480,11 @@ h5.heading {
       transition: 0.01s 0.23s ease-out all;
       overflow: hidden;
       text-align: center; }
+      .menuContainer .menuItemContainer .menuItem .number,
+      .menuContainer .menuItemContainer .menuItem .text {
+        position: relative;
+        left: 0;
+        transition: all 200ms ease-in-out; }
       .menuContainer .menuItemContainer .menuItem:before {
         content: "";
         position: absolute;
@@ -487,7 +492,7 @@ h5.heading {
         top: 0;
         height: 100%;
         width: 55%;
-        background: #dddddd;
+        background: rgba(255, 218, 72, 0.75);
         z-index: -1;
         transition: 0.3s ease-in all; }
       .menuContainer .menuItemContainer .menuItem:after {
@@ -501,8 +506,11 @@ h5.heading {
         z-index: -1;
         transition: 0.4s 0.02s ease-in all; }
       .menuContainer .menuItemContainer .menuItem:hover {
-        cursor: pointer;
-        color: transparent; }
+        cursor: pointer; }
+        .menuContainer .menuItemContainer .menuItem:hover .number,
+        .menuContainer .menuItemContainer .menuItem:hover .text {
+          left: 40px;
+          transition: all 200ms ease-in-out; }
         .menuContainer .menuItemContainer .menuItem:hover:before {
           left: 100%;
           width: 25%; }
@@ -513,13 +521,6 @@ h5.heading {
           left: 0px;
           color: #ffda48;
           transition: 0.2s 0.2s ease all; }
-        .menuContainer .menuItemContainer .menuItem:hover .icon-right.after:before {
-          left: -125px;
-          top: 50%;
-          opacity: 1;
-          font-size: 2em;
-          color: black;
-          font-weight: 700; }
       .menuContainer .menuItemContainer .menuItem .text {
         font-size: 1.5em;
         font-weight: 700; }
@@ -534,29 +535,15 @@ h5.heading {
         font-family: "Font Awesome 5 Free";
         content: "\f068";
         font-weight: 900;
-        font-size: 2em;
+        font-size: 1.5em;
         display: inline-block;
         position: relative;
-        top: 30px;
-        transform: translate3D(0, -50%, 0); }
+        top: 5px;
+        transform: translate3D(0, 50%, 0); }
       .menuContainer .menuItemContainer .icon-right.after:after {
         left: -250px;
-        color: white;
+        color: #ffda48;
         transition: 0.15s 0.15s ease left, 0.5s 0.05s ease color; }
-      .menuContainer .menuItemContainer .icon-right.after:before {
-        content: attr(data-label);
-        position: absolute;
-        left: -230px;
-        top: 14px;
-        opacity: 0;
-        transition: 0.2s ease-in all;
-        top: 50%;
-        font-size: 1.5em;
-        font-weight: 700;
-        color: black; }
-        @media only screen and (min-width: 1260px) {
-          .menuContainer .menuItemContainer .icon-right.after:before {
-            font-size: 2em; } }
   .menuContainer .contactDetailsContainer {
     position: absolute;
     bottom: 1.5rem;
@@ -566,9 +553,6 @@ h5.heading {
     font-weight: 500; }
     .menuContainer .contactDetailsContainer .heading {
       color: #666666; }
-  .menuContainer.teaseMenu {
-    left: -40vw;
-    transition: left 750ms ease-in-out; }
 
 .toggleMenuOverlay {
   display: none; }
@@ -952,55 +936,51 @@ footer {
       font-style: italic;
       font-weight: 500; }
 
-body.showcase *::selection {
+body#ucs.showcase *::selection {
   background: black;
   color: #c1ff2e; }
-
-.showcaseContainer {
+body#ucs.showcase .showcaseContainer {
   padding: 120px 1.5rem; }
   @media only screen and (min-width: 980px) {
-    .showcaseContainer {
+    body#ucs.showcase .showcaseContainer {
       padding: 200px 1.5rem; } }
-
-.closeContainer.closeShowcase .icon {
+body#ucs.showcase .closeContainer.closeShowcase .icon {
   color: white;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.45); }
-
-.navContainer .closeButton {
+body#ucs.showcase .navContainer .closeButton {
   width: 30px; }
-  .navContainer .closeButton .closeLine {
+  body#ucs.showcase .navContainer .closeButton .closeLine {
     width: 30px;
     height: 3px;
     background: #ffffff;
     transform-origin: center;
     position: absolute;
     border-radius: 1px; }
-    .navContainer .closeButton .closeLine.topLine {
+    body#ucs.showcase .navContainer .closeButton .closeLine.topLine {
       transform: rotate(45deg); }
-    .navContainer .closeButton .closeLine.bottomLine {
+    body#ucs.showcase .navContainer .closeButton .closeLine.bottomLine {
       transform: rotate(-45deg); }
-
-.showcaseHeader {
+body#ucs.showcase .showcaseHeader {
   height: 100vh;
   overflow: hidden; }
-  .showcaseHeader .backgroundOverlay {
+  body#ucs.showcase .showcaseHeader .backgroundOverlay {
     background: rgba(0, 0, 0, 0.45);
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0; }
-  .showcaseHeader .videoBackground {
+  body#ucs.showcase .showcaseHeader .videoBackground {
     width: 100%;
     height: 100%;
     position: relative;
     display: flex;
     justify-content: center; }
-    .showcaseHeader .videoBackground video {
+    body#ucs.showcase .showcaseHeader .videoBackground video {
       position: absolute;
       bottom: 0;
       min-width: 100%;
       min-height: 100%; }
-  .showcaseHeader .showcaseLogoContainer {
+  body#ucs.showcase .showcaseHeader .showcaseLogoContainer {
     display: flex;
     position: absolute;
     top: 0;
@@ -1011,14 +991,13 @@ body.showcase *::selection {
     justify-content: center;
     align-items: center;
     padding: 1.5rem; }
-    .showcaseHeader .showcaseLogoContainer img {
+    body#ucs.showcase .showcaseHeader .showcaseLogoContainer img {
       width: 100%;
       max-width: 750px; }
-
-.showcaseDescription {
+body#ucs.showcase .showcaseDescription {
   background: #c1ff2e;
   padding: 120px 1.5rem; }
-  .showcaseDescription .innerContentContainer {
+  body#ucs.showcase .showcaseDescription .innerContentContainer {
     margin: 0 auto;
     max-width: 1000px;
     display: flex;
@@ -1027,9 +1006,9 @@ body.showcase *::selection {
     flex-direction: column;
     flex-wrap: wrap; }
     @media only screen and (min-width: 980px) {
-      .showcaseDescription .innerContentContainer {
+      body#ucs.showcase .showcaseDescription .innerContentContainer {
         flex-direction: row; } }
-    .showcaseDescription .innerContentContainer .taskContainer {
+    body#ucs.showcase .showcaseDescription .innerContentContainer .taskContainer {
       width: 100%;
       display: flex;
       align-content: center;
@@ -1038,68 +1017,214 @@ body.showcase *::selection {
       order: 2;
       margin-top: 3rem; }
       @media only screen and (min-width: 980px) {
-        .showcaseDescription .innerContentContainer .taskContainer {
+        body#ucs.showcase .showcaseDescription .innerContentContainer .taskContainer {
           order: 1;
           width: 30%;
           margin-top: 0; } }
-    .showcaseDescription .innerContentContainer .descriptionContainer {
+    body#ucs.showcase .showcaseDescription .innerContentContainer .descriptionContainer {
       width: 100%;
       order: 1; }
       @media only screen and (min-width: 980px) {
-        .showcaseDescription .innerContentContainer .descriptionContainer {
+        body#ucs.showcase .showcaseDescription .innerContentContainer .descriptionContainer {
           order: 2;
           width: 70%; } }
-      .showcaseDescription .innerContentContainer .descriptionContainer .readText {
+      body#ucs.showcase .showcaseDescription .innerContentContainer .descriptionContainer .readText {
         color: black; }
-    .showcaseDescription .innerContentContainer .creditsContainer {
+    body#ucs.showcase .showcaseDescription .innerContentContainer .creditsContainer {
       width: 100%;
       order: 3; }
       @media only screen and (min-width: 980px) {
-        .showcaseDescription .innerContentContainer .creditsContainer {
+        body#ucs.showcase .showcaseDescription .innerContentContainer .creditsContainer {
           margin-left: 30%; } }
-
-.showcaseTestimonial .testimonialContainer {
+body#ucs.showcase .showcaseTestimonial .testimonialContainer {
   display: flex;
   align-items: center; }
-  .showcaseTestimonial .testimonialContainer .testimonialItem {
+  body#ucs.showcase .showcaseTestimonial .testimonialContainer .testimonialItem {
     box-shadow: none; }
-    .showcaseTestimonial .testimonialContainer .testimonialItem .secondaryLink:before {
+    body#ucs.showcase .showcaseTestimonial .testimonialContainer .testimonialItem .secondaryLink:before {
       background: #c1ff2e; }
-
-.showcaseImageContainer {
+body#ucs.showcase .showcaseImageContainer {
   line-height: 0; }
-  .showcaseImageContainer img {
+  body#ucs.showcase .showcaseImageContainer img {
     width: 100%; }
-
-.problemContainer .toSolve {
+body#ucs.showcase .problemContainer .toSolve {
   display: flex;
   justify-content: space-around;
   align-items: center; }
-  .problemContainer .toSolve li {
+  body#ucs.showcase .problemContainer .toSolve li {
     display: none;
     position: relative; }
     @media only screen and (min-width: 980px) {
-      .problemContainer .toSolve li {
+      body#ucs.showcase .problemContainer .toSolve li {
         display: inline-block; } }
-    .problemContainer .toSolve li.marked {
+    body#ucs.showcase .problemContainer .toSolve li.marked {
       display: inline-block; }
-    .problemContainer .toSolve li svg {
+    body#ucs.showcase .problemContainer .toSolve li svg {
       position: absolute;
       height: 60px;
       width: 225px;
       top: calc(-60px / 4); }
-      .problemContainer .toSolve li svg.left {
+      body#ucs.showcase .problemContainer .toSolve li svg.left {
         left: calc(-225px / 3); }
-      .problemContainer .toSolve li svg.middle {
+      body#ucs.showcase .problemContainer .toSolve li svg.middle {
         left: calc(-225px / 4); }
-      .problemContainer .toSolve li svg.right {
+      body#ucs.showcase .problemContainer .toSolve li svg.right {
         left: calc(-225px / 3.5); }
-      .problemContainer .toSolve li svg path#problemMarker {
+      body#ucs.showcase .problemContainer .toSolve li svg path#problemMarker {
         fill: #c1ff2e; }
-    .problemContainer .toSolve li p {
+    body#ucs.showcase .problemContainer .toSolve li p {
       font-size: 1.25em; }
+body#ucs.showcase footer.showCaseFooter {
+  margin-top: 0;
+  height: 100vh;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
-footer.showCaseFooter {
+body#autotune.showcase *::selection {
+  background: black;
+  color: #2645f5; }
+body#autotune.showcase .showcaseContainer {
+  padding: 120px 1.5rem; }
+  @media only screen and (min-width: 980px) {
+    body#autotune.showcase .showcaseContainer {
+      padding: 200px 1.5rem; } }
+body#autotune.showcase .closeContainer.closeShowcase .icon {
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.45); }
+body#autotune.showcase .navContainer .closeButton {
+  width: 30px; }
+  body#autotune.showcase .navContainer .closeButton .closeLine {
+    width: 30px;
+    height: 3px;
+    background: #ffffff;
+    transform-origin: center;
+    position: absolute;
+    border-radius: 1px; }
+    body#autotune.showcase .navContainer .closeButton .closeLine.topLine {
+      transform: rotate(45deg); }
+    body#autotune.showcase .navContainer .closeButton .closeLine.bottomLine {
+      transform: rotate(-45deg); }
+body#autotune.showcase .showcaseHeader {
+  height: 100vh;
+  overflow: hidden; }
+  body#autotune.showcase .showcaseHeader .backgroundOverlay {
+    background: rgba(0, 0, 0, 0.45);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; }
+  body#autotune.showcase .showcaseHeader .videoBackground {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center; }
+    body#autotune.showcase .showcaseHeader .videoBackground video {
+      position: absolute;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%; }
+    body#autotune.showcase .showcaseHeader .videoBackground.poster {
+      background: url("/pages/portfolio/autotune/assets/hero-poster.jpg") center center;
+      background-size: cover; }
+  body#autotune.showcase .showcaseHeader .showcaseLogoContainer {
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem; }
+    body#autotune.showcase .showcaseHeader .showcaseLogoContainer img {
+      width: 100%;
+      max-width: 750px; }
+body#autotune.showcase .showcaseDescription {
+  background: #2645f5;
+  padding: 120px 1.5rem; }
+  body#autotune.showcase .showcaseDescription .innerContentContainer {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap; }
+    @media only screen and (min-width: 980px) {
+      body#autotune.showcase .showcaseDescription .innerContentContainer {
+        flex-direction: row; } }
+    body#autotune.showcase .showcaseDescription .innerContentContainer .taskContainer {
+      width: 100%;
+      display: flex;
+      align-content: center;
+      flex-direction: column;
+      justify-content: space-between;
+      order: 2;
+      margin-top: 3rem; }
+      @media only screen and (min-width: 980px) {
+        body#autotune.showcase .showcaseDescription .innerContentContainer .taskContainer {
+          order: 1;
+          width: 30%;
+          margin-top: 0; } }
+    body#autotune.showcase .showcaseDescription .innerContentContainer .descriptionContainer {
+      width: 100%;
+      order: 1; }
+      @media only screen and (min-width: 980px) {
+        body#autotune.showcase .showcaseDescription .innerContentContainer .descriptionContainer {
+          order: 2;
+          width: 70%; } }
+      body#autotune.showcase .showcaseDescription .innerContentContainer .descriptionContainer .readText {
+        color: black; }
+    body#autotune.showcase .showcaseDescription .innerContentContainer .creditsContainer {
+      width: 100%;
+      order: 3; }
+      @media only screen and (min-width: 980px) {
+        body#autotune.showcase .showcaseDescription .innerContentContainer .creditsContainer {
+          margin-left: 30%; } }
+body#autotune.showcase .showcaseTestimonial .testimonialContainer {
+  display: flex;
+  align-items: center; }
+  body#autotune.showcase .showcaseTestimonial .testimonialContainer .testimonialItem {
+    box-shadow: none; }
+    body#autotune.showcase .showcaseTestimonial .testimonialContainer .testimonialItem .secondaryLink span:before {
+      background: #2645f5; }
+body#autotune.showcase .showcaseImageContainer {
+  line-height: 0; }
+  body#autotune.showcase .showcaseImageContainer img {
+    width: 100%; }
+body#autotune.showcase .problemContainer .toSolve {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  body#autotune.showcase .problemContainer .toSolve li {
+    display: none;
+    position: relative; }
+    @media only screen and (min-width: 980px) {
+      body#autotune.showcase .problemContainer .toSolve li {
+        display: inline-block; } }
+    body#autotune.showcase .problemContainer .toSolve li.marked {
+      display: inline-block; }
+    body#autotune.showcase .problemContainer .toSolve li svg {
+      position: absolute;
+      height: 60px;
+      width: 225px;
+      top: calc(-60px / 4); }
+      body#autotune.showcase .problemContainer .toSolve li svg.left {
+        left: calc(-225px / 3); }
+      body#autotune.showcase .problemContainer .toSolve li svg.middle {
+        left: calc(-225px / 4); }
+      body#autotune.showcase .problemContainer .toSolve li svg.right {
+        left: calc(-225px / 3.5); }
+      body#autotune.showcase .problemContainer .toSolve li svg path#problemMarker {
+        fill: #2645f5; }
+    body#autotune.showcase .problemContainer .toSolve li p {
+      font-size: 1.25em; }
+body#autotune.showcase footer.showCaseFooter {
   margin-top: 0;
   height: 100vh;
   background: black;

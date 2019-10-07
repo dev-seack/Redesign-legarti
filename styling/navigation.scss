@@ -124,6 +124,12 @@
       transition: 0.01s 0.23s ease-out all;
       overflow: hidden;
       text-align: center;
+      .number,
+      .text {
+        position: relative;
+        left: 0;
+        transition: all 200ms ease-in-out;
+      }
       &:before {
         content: "";
         position: absolute;
@@ -131,7 +137,7 @@
         top: 0;
         height: 100%;
         width: 55%;
-        background: #dddddd;
+        background: rgba($color: $primaryColor, $alpha: 0.75);
         z-index: -1;
         transition: 0.3s ease-in all;
       }
@@ -148,7 +154,11 @@
       }
       &:hover {
         cursor: pointer;
-        color: transparent;
+        .number,
+        .text {
+          left: 40px;
+          transition: all 200ms ease-in-out;
+        }
         &:before {
           left: 100%;
           width: 25%;
@@ -161,14 +171,6 @@
           left: 0px;
           color: $primaryColor;
           transition: 0.2s 0.2s ease all;
-        }
-        .icon-right.after:before {
-          left: -125px;
-          top: 50%;
-          opacity: 1;
-          font-size: 2em;
-          color: black;
-          font-weight: 700;
         }
       }
 
@@ -188,31 +190,16 @@
         font-family: "Font Awesome 5 Free";
         content: "\f068";
         font-weight: 900;
-        font-size: 2em;
+        font-size: 1.5em;
         display: inline-block;
         position: relative;
-        top: 30px;
-        transform: translate3D(0, -50%, 0);
+        top: 5px;
+        transform: translate3D(0, 50%, 0);
       }
       &.after:after {
         left: -250px;
-        color: white;
+        color: $primaryColor;
         transition: 0.15s 0.15s ease left, 0.5s 0.05s ease color;
-      }
-      &.after:before {
-        content: attr(data-label);
-        position: absolute;
-        left: -230px;
-        top: 14px;
-        opacity: 0;
-        transition: 0.2s ease-in all;
-        top: 50%;
-        font-size: 1.5em;
-        font-weight: 700;
-        @media only screen and (min-width: 1260px) {
-          font-size: 2em;
-        }
-        color: black;
       }
     }
   }
@@ -227,10 +214,6 @@
     .heading {
       color: $darkgrey;
     }
-  }
-  &.teaseMenu {
-    left: -40vw;
-    transition: left 750ms ease-in-out;
   }
 }
 

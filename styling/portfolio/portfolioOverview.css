@@ -1,0 +1,98 @@
+.overviewContainer .overviewItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.overviewContainer .overviewItem:not(:first-child) {
+  margin-top: 250px;
+}
+
+@media only screen and (min-width: 980px) {
+  .overviewContainer .overviewItem {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .overviewContainer .overviewItem:not(:first-child) {
+    margin-top: 400px;
+  }
+}
+
+.overviewContainer .overviewItem .imageContainer,
+.overviewContainer .overviewItem .contentContainer {
+  width: 100%;
+}
+
+@media only screen and (min-width: 980px) {
+  .overviewContainer .overviewItem .imageContainer,
+  .overviewContainer .overviewItem .contentContainer {
+    width: 50%;
+  }
+}
+
+.overviewContainer .overviewItem .imageContainer {
+  text-align: center;
+}
+
+.overviewContainer .overviewItem .imageContainer img {
+  width: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.overviewContainer .overviewItem .contentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media only screen and (min-width: 980px) {
+  .overviewContainer .overviewItem .contentContainer {
+    margin-left: 3rem;
+  }
+}
+
+.overviewContainer .overviewItem .contentContainer h3.heading {
+  width: 75%;
+  position: relative;
+  top: -1em;
+  left: 1em;
+  text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media only screen and (min-width: 980px) {
+  .overviewContainer .overviewItem .contentContainer h3.heading {
+    top: 20px;
+    left: -100px;
+  }
+}
+
+.overviewContainer .overviewItem .contentContainer .task {
+  margin-bottom: 1em;
+}
+
+.overviewContainer .overviewItem .contentContainer .readText.quote {
+  color: #333333;
+  font-style: italic;
+  font-weight: 500;
+}
+/*# sourceMappingURL=portfolioOverview.css.map */
