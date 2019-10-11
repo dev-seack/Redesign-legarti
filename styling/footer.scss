@@ -1,11 +1,14 @@
 footer {
-  margin-top: 250px;
+  margin-top: 0px;
   background: $primaryColor;
   margin-right: -$mobileMargin;
   margin-left: -$mobileMargin;
   color: white;
   @media only screen and (min-width: 980px) {
     margin-top: 500px;
+  }
+  &.no-margin {
+    margin-top: 0 !important;
   }
   .innerContentContainer {
     display: flex;

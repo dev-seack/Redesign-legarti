@@ -23,7 +23,7 @@ main.noPadding {
 .pointer,
 button,
 a {
-  cursor: pointer;
+  cursor: crosshair;
 }
 
 .whiteText {
@@ -216,7 +216,7 @@ footer {
 
 // Headings
 h1.bigHeading {
-  font-size: 3.5em;
+  font-size: 3em;
   text-transform: uppercase;
   @media only screen and (min-width: 600px) {
     font-size: 5em;

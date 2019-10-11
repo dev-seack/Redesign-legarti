@@ -10,7 +10,9 @@
   .contentContainer {
     .linkItemContainer {
       .linkItem {
+        position: relative;
         display: block;
+        cursor: crosshair;
         .linkText {
           display: inline;
           font-weight: 800;

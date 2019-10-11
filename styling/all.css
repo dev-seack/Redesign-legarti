@@ -154,7 +154,7 @@ main.noPadding {
 .pointer,
 button,
 a {
-  cursor: pointer; }
+  cursor: crosshair; }
 
 .whiteText {
   color: white !important; }
@@ -311,7 +311,7 @@ footer {
       display: inline-block; }
 
 h1.bigHeading {
-  font-size: 3.5em;
+  font-size: 3em;
   text-transform: uppercase; }
   @media only screen and (min-width: 600px) {
     h1.bigHeading {
@@ -496,18 +496,23 @@ h5.heading {
           top: 30px;
           transition: 300ms ease-out all; }
       .menuContainer .menuItemContainer .menuItem:hover {
-        opacity: 1;
-        left: 30px;
-        transition: 300ms ease-out all; }
+        opacity: 1; }
+        @media only screen and (min-width: 980px) {
+          .menuContainer .menuItemContainer .menuItem:hover {
+            left: 30px;
+            transition: 300ms ease-out all; } }
         .menuContainer .menuItemContainer .menuItem:hover.active span:after {
           content: attr(data-menulabel);
           left: 0px;
           top: 15px;
           transition: 300ms ease-out all; }
       .menuContainer .menuItemContainer .menuItem .number {
-        font-size: 0.5em; }
+        font-size: 0.25em; }
+        @media only screen and (min-width: 980px) {
+          .menuContainer .menuItemContainer .menuItem .number {
+            font-size: 0.25em; } }
       .menuContainer .menuItemContainer .menuItem .text {
-        font-size: 1em;
+        font-size: 0.9em;
         font-weight: 900;
         text-transform: uppercase; }
         @media only screen and (min-width: 600px) {
@@ -547,7 +552,9 @@ h5.heading {
   justify-content: center;
   align-items: center; }
   #heroSection .contentContainer .linkItemContainer .linkItem {
-    display: block; }
+    position: relative;
+    display: block;
+    cursor: crosshair; }
     #heroSection .contentContainer .linkItemContainer .linkItem .linkText {
       display: inline;
       font-weight: 800; }
@@ -775,10 +782,19 @@ h5.heading {
     justify-content: center;
     flex-direction: column;
     padding: 1.5rem; }
+    .socialBanner .innerContentContainer .socialbannerHeading {
+      font-size: 2.25em; }
+      @media only screen and (min-width: 980px) {
+        .socialBanner .innerContentContainer .socialbannerHeading {
+          font-size: 3.5em; } }
+      @media only screen and (min-width: 1260px) {
+        .socialBanner .innerContentContainer .socialbannerHeading {
+          font-size: 4em; } }
     .socialBanner .innerContentContainer .socialIconContainer {
       display: flex;
       justify-content: space-around;
-      width: 400px; }
+      width: 100%;
+      max-width: 400px; }
       .socialBanner .innerContentContainer .socialIconContainer .socialItem i {
         font-size: 1.5em; }
         @media only screen and (min-width: 1260px) {
@@ -786,7 +802,7 @@ h5.heading {
             font-size: 2em; } }
 
 footer {
-  margin-top: 250px;
+  margin-top: 0px;
   background: #ffda48;
   margin-right: -1.5rem;
   margin-left: -1.5rem;
@@ -794,6 +810,8 @@ footer {
   @media only screen and (min-width: 980px) {
     footer {
       margin-top: 500px; } }
+  footer.no-margin {
+    margin-top: 0 !important; }
   footer .innerContentContainer {
     display: flex;
     flex-wrap: wrap;
