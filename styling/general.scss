@@ -215,7 +215,8 @@ footer {
 }
 
 // Headings
-h1.bigHeading {
+h1.bigHeading,
+h2.bigHeading {
   font-size: 3em;
   text-transform: uppercase;
   @media only screen and (min-width: 600px) {

@@ -7,12 +7,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 100px;
   .contentContainer {
+    width: 100%;
     .linkItemContainer {
       .linkItem {
         position: relative;
         display: block;
         cursor: crosshair;
+        &:hover {
+          background: url("/assets/herosection/heroCursor.svg") center center
+            no-repeat;
+        }
         .linkText {
           display: inline;
           font-weight: 800;
@@ -23,15 +29,15 @@
       display: flex;
       justify-content: center;
       margin-top: 4em;
-      @media only screen and (min-width: 980px) {
-        justify-content: space-between;
-      }
       .team,
       .talk {
         display: none;
         @media only screen and (min-width: 980px) {
           display: flex !important;
         }
+      }
+      .team {
+        margin: 0 10%;
       }
     }
     .sloganContainer {

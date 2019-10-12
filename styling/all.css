@@ -310,17 +310,21 @@ footer {
       height: 2px;
       display: inline-block; }
 
-h1.bigHeading {
+h1.bigHeading,
+h2.bigHeading {
   font-size: 3em;
   text-transform: uppercase; }
   @media only screen and (min-width: 600px) {
-    h1.bigHeading {
+    h1.bigHeading,
+    h2.bigHeading {
       font-size: 5em; } }
   @media only screen and (min-width: 980px) {
-    h1.bigHeading {
+    h1.bigHeading,
+    h2.bigHeading {
       font-size: 7em; } }
   @media only screen and (min-width: 1260px) {
-    h1.bigHeading {
+    h1.bigHeading,
+    h2.bigHeading {
       font-size: 9em; } }
 
 h2.heading {
@@ -550,43 +554,47 @@ h5.heading {
   bottom: 0;
   display: flex;
   justify-content: center;
-  align-items: center; }
-  #heroSection .contentContainer .linkItemContainer .linkItem {
-    position: relative;
-    display: block;
-    cursor: crosshair; }
-    #heroSection .contentContainer .linkItemContainer .linkItem .linkText {
-      display: inline;
-      font-weight: 800; }
-  #heroSection .contentContainer .buttonContainer {
-    display: flex;
-    justify-content: center;
-    margin-top: 4em; }
-    @media only screen and (min-width: 980px) {
-      #heroSection .contentContainer .buttonContainer {
-        justify-content: space-between; } }
-    #heroSection .contentContainer .buttonContainer .team,
-    #heroSection .contentContainer .buttonContainer .talk {
-      display: none; }
-      @media only screen and (min-width: 980px) {
-        #heroSection .contentContainer .buttonContainer .team,
-        #heroSection .contentContainer .buttonContainer .talk {
-          display: flex !important; } }
-  #heroSection .contentContainer .sloganContainer {
-    position: absolute;
-    bottom: 3rem;
-    left: 0;
-    right: 0;
-    color: #666666; }
-    #heroSection .contentContainer .sloganContainer .verticalStripe {
-      background: #666666;
-      width: 3px;
-      height: 100px;
+  align-items: center;
+  padding-top: 100px; }
+  #heroSection .contentContainer {
+    width: 100%; }
+    #heroSection .contentContainer .linkItemContainer .linkItem {
+      position: relative;
+      display: block;
+      cursor: crosshair; }
+      #heroSection .contentContainer .linkItemContainer .linkItem:hover {
+        background: url("/assets/herosection/heroCursor.svg") center center no-repeat; }
+      #heroSection .contentContainer .linkItemContainer .linkItem .linkText {
+        display: inline;
+        font-weight: 800; }
+    #heroSection .contentContainer .buttonContainer {
+      display: flex;
+      justify-content: center;
+      margin-top: 4em; }
+      #heroSection .contentContainer .buttonContainer .team,
+      #heroSection .contentContainer .buttonContainer .talk {
+        display: none; }
+        @media only screen and (min-width: 980px) {
+          #heroSection .contentContainer .buttonContainer .team,
+          #heroSection .contentContainer .buttonContainer .talk {
+            display: flex !important; } }
+      #heroSection .contentContainer .buttonContainer .team {
+        margin: 0 10%; }
+    #heroSection .contentContainer .sloganContainer {
       position: absolute;
-      bottom: -115px;
+      bottom: 3rem;
       left: 0;
       right: 0;
-      margin: 0 auto; }
+      color: #666666; }
+      #heroSection .contentContainer .sloganContainer .verticalStripe {
+        background: #666666;
+        width: 3px;
+        height: 100px;
+        position: absolute;
+        bottom: -115px;
+        left: 0;
+        right: 0;
+        margin: 0 auto; }
 
 #whatwedo {
   display: flex;
