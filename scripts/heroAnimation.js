@@ -21,7 +21,7 @@ const categoryPool = [
   {
     id: "topCategory",
     main: "Branding",
-    subcategories: ["Strategy", "Idenität", "Coporate", "Erfahrung"]
+    subcategories: ["Strategy", "Idenitiät", "Coporate", "Erfahrung"]
   },
   {
     id: "middleCategory",
@@ -35,9 +35,9 @@ const categoryPool = [
   }
 ];
 
-const speed = 250; // in ms
+const speed = 500; // in ms
 const delay = 0; // after hover-trigger
-const isLooping = true; // loop on hover or not
+const isLooping = false; // loop on hover or not
 let timerID; // deklaration, um ihn ausserhalb der mouseenter-funkiton zu benutzen
 let index = 0; // gloabl, damit er nicht bei jedem mousleave resetet bzw. bei mouseenter von vorne startet, sondern seine aktuelle position behaelt
 
