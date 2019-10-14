@@ -1,7 +1,12 @@
 .overviewContainer {
+  margin-top: -200px;
+  @media only screen and (min-width: 980px) {
+    margin-top: -250px;
+  }
   .overviewItem {
     display: flex;
     flex-direction: column;
+
     &:not(:first-child) {
       margin-top: 250px;
     }

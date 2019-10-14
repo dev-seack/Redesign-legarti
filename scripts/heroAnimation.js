@@ -40,43 +40,31 @@ const delay = 0; // after hover-trigger
 const isLooping = false; // loop on hover or not
 let timerID; // deklaration, um ihn ausserhalb der mouseenter-funkiton zu benutzen
 let index = 0; // gloabl, damit er nicht bei jedem mousleave resetet bzw. bei mouseenter von vorne startet, sondern seine aktuelle position behaelt
+let counter = 0;
+const maxCounter = 3;
+let firstPlay = true;
 
 // Functionalitaet
 $(document).ready(function() {
+  // start animation once the page was load
   // Init
   setup();
+  switchAnimation($(".heroCategory:eq(" + counter + ")"));
 
   // trigger
   $(".heroCategory")
     .mouseenter(function() {
       // start animation
-      // get right element
-      let currentCategoryObj = categoryPool.find((cat) => {
-        return $(this).attr("id") === cat.id;
-      });
-      let currentCategoryEle = $("#" + currentCategoryObj.id);
-
-      // get all categories together
-      const allCategories = [...currentCategoryObj.subcategories];
-      allCategories.push(currentCategoryObj.main);
-      const maxLength = allCategories.length;
-
-      // start switching categories = animation
-      timerID = setInterval(function() {
-        currentCategoryEle.text(allCategories[index]);
-        if (index == maxLength - 1) {
-          index = 0;
-          if (!isLooping) {
-            abortTimer(timerID);
-          }
-        } else {
-          index++;
-        }
-      }, speed);
+      if (!firstPlay) {
+        switchAnimation($(this));
+      }
     })
     .mouseleave(function() {
-      // stop animation = stop timer
-      abortTimer(timerID);
+      if (!firstPlay) {
+        // stop animation = stop timer and set value back to initial state
+        abortTimer(timerID);
+        setup();
+      }
     });
 });
 
@@ -84,21 +72,41 @@ function setup() {
   topCategory.text(categoryPool[0].main);
   middleCategory.text(categoryPool[1].main);
   bottomCategory.text(categoryPool[2].main);
+  index = 0;
+  counter = 0;
+}
+
+function switchAnimation(element) {
+  let currentCategoryObj = categoryPool.find((cat) => {
+    return element.attr("id") === cat.id;
+  });
+  let currentCategoryEle = $("#" + currentCategoryObj.id);
+  // get all categories together
+  const allCategories = [...currentCategoryObj.subcategories];
+  allCategories.push(currentCategoryObj.main);
+  const maxLength = allCategories.length;
+
+  // start switching categories = animation
+  timerID = setInterval(function() {
+    currentCategoryEle.text(allCategories[index]);
+    if (index == maxLength - 1) {
+      index = 0;
+      if (!isLooping) {
+        counter++;
+        abortTimer(timerID);
+      }
+    } else {
+      index++;
+    }
+  }, speed);
 }
 
 function abortTimer(tid) {
   // to be called when you want to stop the timer
   clearInterval(tid);
+  if (counter !== maxCounter && firstPlay) {
+    switchAnimation($(".heroCategory:eq(" + counter + ")"));
+  } else {
+    firstPlay = false;
+  }
 }
-
-/*
-// set interval
-var tid = setInterval(mycode, 2000);
-function mycode() {
-  // do some stuff...
-  // no need to recall the function (it's an interval, it'll loop forever)
-}
-function abortTimer() { // to be called when you want to stop the timer
-  clearInterval(tid);
-}
-*/
