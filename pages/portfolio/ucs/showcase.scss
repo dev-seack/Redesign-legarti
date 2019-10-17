@@ -2,13 +2,10 @@
 $accentyColorShowcase: #c1ff2e;
 $headerOverlayColor: rgba(0, 0, 0, 0.45);
 $closeButtonColor: white;
+$gradientLight: #424242;
+$gradientDark: #111111;
 
 body#ucs.showcase {
-  *::selection {
-    background: black;
-    color: $accentyColorShowcase;
-  }
-
   .showcaseContainer {
     padding: 120px $mobilePadding;
     @media only screen and (min-width: 980px) {
@@ -83,8 +80,15 @@ body#ucs.showcase {
   }
 
   .showcaseDescription {
-    background: $accentyColorShowcase;
     padding: 120px $mobilePadding;
+    background: $gradientDark;
+    background: linear-gradient(45deg, $gradientLight 0%, $gradientDark 100%);
+    background: -webkit-linear-gradient(
+      135deg,
+      $gradientLight 0%,
+      $gradientDark 100%
+    );
+    color: white;
     .innerContentContainer {
       margin: 0 auto;
       max-width: 1000px;
@@ -118,7 +122,7 @@ body#ucs.showcase {
           width: 70%;
         }
         .readText {
-          color: black;
+          color: white;
         }
       }
       .creditsContainer {
@@ -131,70 +135,91 @@ body#ucs.showcase {
     }
   }
 
-  // testimonials
-  .showcaseTestimonial {
-    .testimonialContainer {
+  // main showcase styling
+  .showcaseContainer {
+    max-width: 1920px;
+    width: 100%;
+    padding: 120px $mobilePadding;
+    @media only screen and (min-width: 980px) {
+      padding: 250px 40px;
+    }
+    .showcaseTestimonialContainer {
       display: flex;
-      align-items: center;
-      .testimonialItem {
-        box-shadow: none;
-        .secondaryLink:before {
-          background: $accentyColorShowcase;
+      flex-direction: column;
+      @media only screen and (min-width: 980px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      .avatar {
+        img {
+          width: 100%;
+          max-width: 450px;
+          border-radius: 5px;
+          box-shadow: 0 0 20px $shadow;
         }
       }
-    }
-  }
 
-  // mainProjectImage
-  .showcaseImageContainer {
-    line-height: 0;
-    img {
-      width: 100%;
-    }
-  }
-
-  // the problem
-  .problemContainer {
-    .toSolve {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      li {
-        display: none;
-        position: relative;
+      .showcaseTestimonialContentContainer {
         @media only screen and (min-width: 980px) {
-          display: inline-block;
+          margin-left: 3em;
+          width: 60%;
         }
-        &.marked {
-          display: inline-block;
+        .name {
+          text-transform: initial;
         }
-        svg {
-          position: absolute;
-          height: 60px;
-          width: 225px;
 
-          top: calc(-60px / 4);
-
-          &.left {
-            left: calc(-225px / 3);
-          }
-          &.middle {
-            left: calc(-225px / 4);
-          }
-          &.right {
-            left: calc(-225px / 3.5);
-          }
-          path#problemMarker {
-            fill: $accentyColorShowcase;
+        .name,
+        .title {
+          @media only screen and (min-width: 980px) {
+            position: relative;
+            left: -65px;
           }
         }
-        p {
-          font-size: 1.25em;
+      }
+    }
+    .showcaseWebContainer {
+      .targetContainer .targetList {
+        li {
+          position: relative;
+          &:not(.marked) {
+            display: none;
+            @media only screen and (min-width: 980px) {
+              display: initial;
+            }
+          }
+          &.marked:after {
+            content: "";
+            background: url(/pages/portfolio/ucs/assets/marker.svg) center
+              center no-repeat;
+            display: inline-block;
+            width: 200%;
+            position: absolute;
+            left: -50%;
+            top: -20px;
+            height: 60px;
+            background-size: contain;
+          }
+        }
+      }
+      .imageContainer {
+        .showcaseImagecontainer {
+          margin-bottom: $mobilePadding;
+          @media only screen and (min-width: 980px) {
+            margin-bottom: 20px;
+          }
+          &.fullShowcaseImage {
+            width: 100%;
+            img {
+              width: 100%;
+            }
+          }
         }
       }
     }
   }
 
+  // footer styling
   footer.showCaseFooter {
     margin-top: 0;
     height: 100vh;

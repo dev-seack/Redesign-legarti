@@ -63,6 +63,7 @@ a {
   }
 }
 
+.section,
 section,
 footer {
   padding-top: 120px;
@@ -90,6 +91,10 @@ footer {
 
 .mb1 {
   margin-bottom: 1em;
+}
+
+.mb-5 {
+  margin-bottom: 5em;
 }
 
 .negativeMargin {
@@ -133,6 +138,19 @@ footer {
   padding-top: 5em;
 }
 
+.plr {
+  padding-right: $mobilePadding;
+  padding-left: $mobilePadding;
+}
+
+.horizontalList {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  font-size: 1.125em;
+}
+
 // Typography
 .medium {
   font-weight: 500;
@@ -144,6 +162,10 @@ footer {
 
 .heavy {
   font-weight: 900;
+}
+
+.justifyCenter {
+  justify-content: center;
 }
 
 .textCenter {
@@ -278,4 +300,14 @@ h4.heading {
 h5.heading {
   font-size: 1.75em;
   font-weight: 700;
+}
+
+// container
+.halfContainer {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+  @media only screen and (min-width: 980px) {
+    grid-template-columns: 1fr 1fr;
+  }
 }

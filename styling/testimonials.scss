@@ -39,11 +39,13 @@
 
     .avatar {
       width: 120px;
+      height: 120px;
       border-radius: 50%;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
       filter: grayscale(100%);
       @media only screen and (min-width: 980px) {
         width: 150px;
+        height: 150px;
       }
     }
     .personDetails {

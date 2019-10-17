@@ -184,9 +184,11 @@ a {
     .halfWidth {
       width: 50%; } }
 
+.section,
 section,
 footer {
   padding-top: 120px; }
+  .section.evenPaddingSection,
   section.evenPaddingSection,
   footer.evenPaddingSection {
     padding-bottom: 120px; }
@@ -208,6 +210,9 @@ footer {
 
 .mb1 {
   margin-bottom: 1em; }
+
+.mb-5 {
+  margin-bottom: 5em; }
 
 .negativeMargin {
   margin-left: -1.5rem;
@@ -244,6 +249,17 @@ footer {
 .pt5 {
   padding-top: 5em; }
 
+.plr {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem; }
+
+.horizontalList {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  font-size: 1.125em; }
+
 .medium {
   font-weight: 500; }
 
@@ -252,6 +268,9 @@ footer {
 
 .heavy {
   font-weight: 900; }
+
+.justifyCenter {
+  justify-content: center; }
 
 .textCenter {
   text-align: center; }
@@ -370,6 +389,14 @@ h4.heading {
 h5.heading {
   font-size: 1.75em;
   font-weight: 700; }
+
+.halfContainer {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 20px; }
+  @media only screen and (min-width: 980px) {
+    .halfContainer {
+      grid-template-columns: 1fr 1fr; } }
 
 #customScrollbar {
   position: fixed;
@@ -701,12 +728,14 @@ h5.heading {
         margin-top: 0; } }
   .testimonialContainer .testimonialItem .avatar {
     width: 120px;
+    height: 120px;
     border-radius: 50%;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     filter: grayscale(100%); }
     @media only screen and (min-width: 980px) {
       .testimonialContainer .testimonialItem .avatar {
-        width: 150px; } }
+        width: 150px;
+        height: 150px; } }
   .testimonialContainer .testimonialItem .personDetails .name {
     font-weight: 600;
     font-size: 1em; }
@@ -893,6 +922,13 @@ footer {
     background: black;
     padding: 0.75rem 1.5rem; }
 
+.socialItem {
+  transition: all 500ms; }
+
+.socialItem:hover {
+  transform: scale(1.2);
+  transition: all 500ms; }
+
 .overviewContainer {
   margin-top: -200px; }
   @media only screen and (min-width: 980px) {
@@ -947,9 +983,6 @@ footer {
         font-style: italic;
         font-weight: 500; }
 
-body#ucs.showcase *::selection {
-  background: black;
-  color: #c1ff2e; }
 body#ucs.showcase .showcaseContainer {
   padding: 120px 1.5rem; }
   @media only screen and (min-width: 980px) {
@@ -1006,8 +1039,11 @@ body#ucs.showcase .showcaseHeader {
       width: 100%;
       max-width: 750px; }
 body#ucs.showcase .showcaseDescription {
-  background: #c1ff2e;
-  padding: 120px 1.5rem; }
+  padding: 120px 1.5rem;
+  background: #111111;
+  background: linear-gradient(45deg, #424242 0%, #111111 100%);
+  background: -webkit-linear-gradient(135deg, #424242 0%, #111111 100%);
+  color: white; }
   body#ucs.showcase .showcaseDescription .innerContentContainer {
     margin: 0 auto;
     max-width: 1000px;
@@ -1040,202 +1076,71 @@ body#ucs.showcase .showcaseDescription {
           order: 2;
           width: 70%; } }
       body#ucs.showcase .showcaseDescription .innerContentContainer .descriptionContainer .readText {
-        color: black; }
+        color: white; }
     body#ucs.showcase .showcaseDescription .innerContentContainer .creditsContainer {
       width: 100%;
       order: 3; }
       @media only screen and (min-width: 980px) {
         body#ucs.showcase .showcaseDescription .innerContentContainer .creditsContainer {
           margin-left: 30%; } }
-body#ucs.showcase .showcaseTestimonial .testimonialContainer {
-  display: flex;
-  align-items: center; }
-  body#ucs.showcase .showcaseTestimonial .testimonialContainer .testimonialItem {
-    box-shadow: none; }
-    body#ucs.showcase .showcaseTestimonial .testimonialContainer .testimonialItem .secondaryLink:before {
-      background: #c1ff2e; }
-body#ucs.showcase .showcaseImageContainer {
-  line-height: 0; }
-  body#ucs.showcase .showcaseImageContainer img {
-    width: 100%; }
-body#ucs.showcase .problemContainer .toSolve {
-  display: flex;
-  justify-content: space-around;
-  align-items: center; }
-  body#ucs.showcase .problemContainer .toSolve li {
-    display: none;
-    position: relative; }
-    @media only screen and (min-width: 980px) {
-      body#ucs.showcase .problemContainer .toSolve li {
-        display: inline-block; } }
-    body#ucs.showcase .problemContainer .toSolve li.marked {
-      display: inline-block; }
-    body#ucs.showcase .problemContainer .toSolve li svg {
-      position: absolute;
-      height: 60px;
-      width: 225px;
-      top: calc(-60px / 4); }
-      body#ucs.showcase .problemContainer .toSolve li svg.left {
-        left: calc(-225px / 3); }
-      body#ucs.showcase .problemContainer .toSolve li svg.middle {
-        left: calc(-225px / 4); }
-      body#ucs.showcase .problemContainer .toSolve li svg.right {
-        left: calc(-225px / 3.5); }
-      body#ucs.showcase .problemContainer .toSolve li svg path#problemMarker {
-        fill: #c1ff2e; }
-    body#ucs.showcase .problemContainer .toSolve li p {
-      font-size: 1.25em; }
-body#ucs.showcase footer.showCaseFooter {
-  margin-top: 0;
-  height: 100vh;
-  background: black;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-body#autotune.showcase *::selection {
-  background: black;
-  color: #2645f5; }
-body#autotune.showcase .showcaseContainer {
+body#ucs.showcase .showcaseContainer {
+  max-width: 1920px;
+  width: 100%;
   padding: 120px 1.5rem; }
   @media only screen and (min-width: 980px) {
-    body#autotune.showcase .showcaseContainer {
-      padding: 200px 1.5rem; } }
-body#autotune.showcase .closeContainer.closeShowcase .icon {
-  color: white;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.45); }
-body#autotune.showcase .navContainer .closeButton {
-  width: 30px; }
-  body#autotune.showcase .navContainer .closeButton .closeLine {
-    width: 30px;
-    height: 3px;
-    background: #ffffff;
-    transform-origin: center;
-    position: absolute;
-    border-radius: 1px; }
-    body#autotune.showcase .navContainer .closeButton .closeLine.topLine {
-      transform: rotate(45deg); }
-    body#autotune.showcase .navContainer .closeButton .closeLine.bottomLine {
-      transform: rotate(-45deg); }
-body#autotune.showcase .showcaseHeader {
-  height: 100vh;
-  overflow: hidden; }
-  body#autotune.showcase .showcaseHeader .backgroundOverlay {
-    background: rgba(0, 0, 0, 0.45);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0; }
-  body#autotune.showcase .showcaseHeader .videoBackground {
-    width: 100%;
-    height: 100%;
-    position: relative;
+    body#ucs.showcase .showcaseContainer {
+      padding: 250px 40px; } }
+  body#ucs.showcase .showcaseContainer .showcaseTestimonialContainer {
     display: flex;
-    justify-content: center; }
-    body#autotune.showcase .showcaseHeader .videoBackground video {
-      position: absolute;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%; }
-    body#autotune.showcase .showcaseHeader .videoBackground.poster {
-      background: url("/pages/portfolio/autotune/assets/hero-poster.jpg") center center;
-      background-size: cover; }
-  body#autotune.showcase .showcaseHeader .showcaseLogoContainer {
-    display: flex;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0px;
-    right: 0px;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem; }
-    body#autotune.showcase .showcaseHeader .showcaseLogoContainer img {
-      width: 100%;
-      max-width: 750px; }
-body#autotune.showcase .showcaseDescription {
-  background: #2645f5;
-  padding: 120px 1.5rem; }
-  body#autotune.showcase .showcaseDescription .innerContentContainer {
-    margin: 0 auto;
-    max-width: 1000px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-    flex-wrap: wrap; }
+    flex-direction: column; }
     @media only screen and (min-width: 980px) {
-      body#autotune.showcase .showcaseDescription .innerContentContainer {
-        flex-direction: row; } }
-    body#autotune.showcase .showcaseDescription .innerContentContainer .taskContainer {
+      body#ucs.showcase .showcaseContainer .showcaseTestimonialContainer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; } }
+    body#ucs.showcase .showcaseContainer .showcaseTestimonialContainer .avatar img {
       width: 100%;
-      display: flex;
-      align-content: center;
-      flex-direction: column;
-      justify-content: space-between;
-      order: 2;
-      margin-top: 3rem; }
-      @media only screen and (min-width: 980px) {
-        body#autotune.showcase .showcaseDescription .innerContentContainer .taskContainer {
-          order: 1;
-          width: 30%;
-          margin-top: 0; } }
-    body#autotune.showcase .showcaseDescription .innerContentContainer .descriptionContainer {
-      width: 100%;
-      order: 1; }
-      @media only screen and (min-width: 980px) {
-        body#autotune.showcase .showcaseDescription .innerContentContainer .descriptionContainer {
-          order: 2;
-          width: 70%; } }
-      body#autotune.showcase .showcaseDescription .innerContentContainer .descriptionContainer .readText {
-        color: black; }
-    body#autotune.showcase .showcaseDescription .innerContentContainer .creditsContainer {
-      width: 100%;
-      order: 3; }
-      @media only screen and (min-width: 980px) {
-        body#autotune.showcase .showcaseDescription .innerContentContainer .creditsContainer {
-          margin-left: 30%; } }
-body#autotune.showcase .showcaseTestimonial .testimonialContainer {
-  display: flex;
-  align-items: center; }
-  body#autotune.showcase .showcaseTestimonial .testimonialContainer .testimonialItem {
-    box-shadow: none; }
-    body#autotune.showcase .showcaseTestimonial .testimonialContainer .testimonialItem .secondaryLink span:before {
-      background: #2645f5; }
-body#autotune.showcase .showcaseImageContainer {
-  line-height: 0; }
-  body#autotune.showcase .showcaseImageContainer img {
-    width: 100%; }
-body#autotune.showcase .problemContainer .toSolve {
-  display: flex;
-  justify-content: space-around;
-  align-items: center; }
-  body#autotune.showcase .problemContainer .toSolve li {
-    display: none;
+      max-width: 450px;
+      border-radius: 5px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); }
+    @media only screen and (min-width: 980px) {
+      body#ucs.showcase .showcaseContainer .showcaseTestimonialContainer .showcaseTestimonialContentContainer {
+        margin-left: 3em;
+        width: 60%; } }
+    body#ucs.showcase .showcaseContainer .showcaseTestimonialContainer .showcaseTestimonialContentContainer .name {
+      text-transform: initial; }
+    @media only screen and (min-width: 980px) {
+      body#ucs.showcase .showcaseContainer .showcaseTestimonialContainer .showcaseTestimonialContentContainer .name,
+      body#ucs.showcase .showcaseContainer .showcaseTestimonialContainer .showcaseTestimonialContentContainer .title {
+        position: relative;
+        left: -65px; } }
+  body#ucs.showcase .showcaseContainer .showcaseWebContainer .targetContainer .targetList li {
     position: relative; }
-    @media only screen and (min-width: 980px) {
-      body#autotune.showcase .problemContainer .toSolve li {
-        display: inline-block; } }
-    body#autotune.showcase .problemContainer .toSolve li.marked {
-      display: inline-block; }
-    body#autotune.showcase .problemContainer .toSolve li svg {
+    body#ucs.showcase .showcaseContainer .showcaseWebContainer .targetContainer .targetList li:not(.marked) {
+      display: none; }
+      @media only screen and (min-width: 980px) {
+        body#ucs.showcase .showcaseContainer .showcaseWebContainer .targetContainer .targetList li:not(.marked) {
+          display: initial; } }
+    body#ucs.showcase .showcaseContainer .showcaseWebContainer .targetContainer .targetList li.marked:after {
+      content: "";
+      background: url(/pages/portfolio/ucs/assets/marker.svg) center center no-repeat;
+      display: inline-block;
+      width: 200%;
       position: absolute;
+      left: -50%;
+      top: -20px;
       height: 60px;
-      width: 225px;
-      top: calc(-60px / 4); }
-      body#autotune.showcase .problemContainer .toSolve li svg.left {
-        left: calc(-225px / 3); }
-      body#autotune.showcase .problemContainer .toSolve li svg.middle {
-        left: calc(-225px / 4); }
-      body#autotune.showcase .problemContainer .toSolve li svg.right {
-        left: calc(-225px / 3.5); }
-      body#autotune.showcase .problemContainer .toSolve li svg path#problemMarker {
-        fill: #2645f5; }
-    body#autotune.showcase .problemContainer .toSolve li p {
-      font-size: 1.25em; }
-body#autotune.showcase footer.showCaseFooter {
+      background-size: contain; }
+  body#ucs.showcase .showcaseContainer .showcaseWebContainer .imageContainer .showcaseImagecontainer {
+    margin-bottom: 1.5rem; }
+    @media only screen and (min-width: 980px) {
+      body#ucs.showcase .showcaseContainer .showcaseWebContainer .imageContainer .showcaseImagecontainer {
+        margin-bottom: 20px; } }
+    body#ucs.showcase .showcaseContainer .showcaseWebContainer .imageContainer .showcaseImagecontainer.fullShowcaseImage {
+      width: 100%; }
+      body#ucs.showcase .showcaseContainer .showcaseWebContainer .imageContainer .showcaseImagecontainer.fullShowcaseImage img {
+        width: 100%; }
+body#ucs.showcase footer.showCaseFooter {
   margin-top: 0;
   height: 100vh;
   background: black;
@@ -1361,7 +1266,7 @@ body#autotune.showcase footer.showCaseFooter {
       transition: all 600ms ease-in-out;
       opacity: 0; }
     .feedContainer .feedItem:hover {
-      cursor: pointer; }
+      cursor: crosshair; }
       .feedContainer .feedItem:hover:before, .feedContainer .feedItem:hover:after {
         opacity: 1;
         transition: all 600ms ease-in-out; }

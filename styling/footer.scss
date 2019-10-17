@@ -100,3 +100,11 @@ footer {
     padding: $mobilePadding/2 $mobilePadding;
   }
 }
+
+.socialItem {
+  transition: all 500ms;
+}
+.socialItem:hover {
+  transform: scale(1.2);
+  transition: all 500ms;
+}

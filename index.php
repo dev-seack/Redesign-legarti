@@ -164,11 +164,11 @@
             >
           </div>
           <div class="testimonialItem">
-            <img
+            <div
               class="avatar"
-              src="./pages/portfolio/ucs/assets/testimonials-avatar.jpg"
-              alt=""
-            />
+              style="    background: url(./pages/portfolio/ucs/assets/avatar.png) center center no-repeat; background-size: cover;"
+            ></div>
+
             <div class="personDetails textCenter mt1">
               <p class="name">Leonie Langkabel</p>
               <p class="title">Vorstand - UCS</p>
