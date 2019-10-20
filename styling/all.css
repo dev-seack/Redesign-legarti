@@ -187,11 +187,20 @@ a {
 .section,
 section,
 footer {
-  padding-top: 120px; }
+  padding-top: 3em; }
   .section.evenPaddingSection,
   section.evenPaddingSection,
   footer.evenPaddingSection {
-    padding-bottom: 120px; }
+    padding-bottom: 3em; }
+  @media only screen and (min-width: 980px) {
+    .section,
+    section,
+    footer {
+      padding-top: 120px; }
+      .section.evenPaddingSection,
+      section.evenPaddingSection,
+      footer.evenPaddingSection {
+        padding-bottom: 120px; } }
 
 .mt1 {
   margin-top: 1em; }
@@ -397,6 +406,15 @@ h5.heading {
   @media only screen and (min-width: 980px) {
     .halfContainer {
       grid-template-columns: 1fr 1fr; } }
+
+.quarterContainer {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 20px; }
+  @media only screen and (min-width: 980px) {
+    .quarterContainer {
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 10px; } }
 
 #customScrollbar {
   position: fixed;
@@ -967,15 +985,14 @@ footer {
         .overviewContainer .overviewItem .contentContainer {
           margin-left: 3rem; } }
       .overviewContainer .overviewItem .contentContainer h3.heading {
-        width: 75%;
         position: relative;
-        top: -1em;
-        left: 1em;
+        margin: 1em 0;
         text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15); }
         @media only screen and (min-width: 980px) {
           .overviewContainer .overviewItem .contentContainer h3.heading {
             top: 20px;
-            left: -100px; } }
+            left: -100px;
+            margin: 0; } }
       .overviewContainer .overviewItem .contentContainer .task {
         margin-bottom: 1em; }
       .overviewContainer .overviewItem .contentContainer .readText.quote {
@@ -983,48 +1000,48 @@ footer {
         font-style: italic;
         font-weight: 500; }
 
-body#ucs.showcase .showcaseContainer {
+body.showcase .showcaseContainer {
   padding: 120px 1.5rem; }
   @media only screen and (min-width: 980px) {
-    body#ucs.showcase .showcaseContainer {
+    body.showcase .showcaseContainer {
       padding: 200px 1.5rem; } }
-body#ucs.showcase .closeContainer.closeShowcase .icon {
+body.showcase .closeContainer.closeShowcase .icon {
   color: white;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.45); }
-body#ucs.showcase .navContainer .closeButton {
+body.showcase .navContainer .closeButton {
   width: 30px; }
-  body#ucs.showcase .navContainer .closeButton .closeLine {
+  body.showcase .navContainer .closeButton .closeLine {
     width: 30px;
     height: 3px;
     background: #ffffff;
     transform-origin: center;
     position: absolute;
     border-radius: 1px; }
-    body#ucs.showcase .navContainer .closeButton .closeLine.topLine {
+    body.showcase .navContainer .closeButton .closeLine.topLine {
       transform: rotate(45deg); }
-    body#ucs.showcase .navContainer .closeButton .closeLine.bottomLine {
+    body.showcase .navContainer .closeButton .closeLine.bottomLine {
       transform: rotate(-45deg); }
-body#ucs.showcase .showcaseHeader {
+body.showcase .showcaseHeader {
   height: 100vh;
   overflow: hidden; }
-  body#ucs.showcase .showcaseHeader .backgroundOverlay {
+  body.showcase .showcaseHeader .backgroundOverlay {
     background: rgba(0, 0, 0, 0.45);
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0; }
-  body#ucs.showcase .showcaseHeader .videoBackground {
+  body.showcase .showcaseHeader .videoBackground {
     width: 100%;
     height: 100%;
     position: relative;
     display: flex;
     justify-content: center; }
-    body#ucs.showcase .showcaseHeader .videoBackground video {
+    body.showcase .showcaseHeader .videoBackground video {
       position: absolute;
       bottom: 0;
       min-width: 100%;
       min-height: 100%; }
-  body#ucs.showcase .showcaseHeader .showcaseLogoContainer {
+  body.showcase .showcaseHeader .showcaseLogoContainer {
     display: flex;
     position: absolute;
     top: 0;
@@ -1035,16 +1052,17 @@ body#ucs.showcase .showcaseHeader {
     justify-content: center;
     align-items: center;
     padding: 1.5rem; }
-    body#ucs.showcase .showcaseHeader .showcaseLogoContainer img {
+    body.showcase .showcaseHeader .showcaseLogoContainer img {
       width: 100%;
       max-width: 750px; }
-body#ucs.showcase .showcaseDescription {
+body.showcase .showcaseDescription {
+  border-radius: 20px 20px 0 0;
   padding: 120px 1.5rem;
-  background: #111111;
-  background: linear-gradient(45deg, #424242 0%, #111111 100%);
-  background: -webkit-linear-gradient(135deg, #424242 0%, #111111 100%);
+  background: #009933;
+  background: linear-gradient(45deg, rgba(0, 153, 51, 0.75) 0%, #009933 100%);
+  background: -webkit-linear-gradient(135deg, rgba(0, 153, 51, 0.75) 0%, #009933 100%);
   color: white; }
-  body#ucs.showcase .showcaseDescription .innerContentContainer {
+  body.showcase .showcaseDescription .innerContentContainer {
     margin: 0 auto;
     max-width: 1000px;
     display: flex;
@@ -1053,9 +1071,9 @@ body#ucs.showcase .showcaseDescription {
     flex-direction: column;
     flex-wrap: wrap; }
     @media only screen and (min-width: 980px) {
-      body#ucs.showcase .showcaseDescription .innerContentContainer {
+      body.showcase .showcaseDescription .innerContentContainer {
         flex-direction: row; } }
-    body#ucs.showcase .showcaseDescription .innerContentContainer .taskContainer {
+    body.showcase .showcaseDescription .innerContentContainer .taskContainer {
       width: 100%;
       display: flex;
       align-content: center;
@@ -1064,66 +1082,65 @@ body#ucs.showcase .showcaseDescription {
       order: 2;
       margin-top: 3rem; }
       @media only screen and (min-width: 980px) {
-        body#ucs.showcase .showcaseDescription .innerContentContainer .taskContainer {
+        body.showcase .showcaseDescription .innerContentContainer .taskContainer {
           order: 1;
           width: 30%;
           margin-top: 0; } }
-    body#ucs.showcase .showcaseDescription .innerContentContainer .descriptionContainer {
+    body.showcase .showcaseDescription .innerContentContainer .descriptionContainer {
       width: 100%;
       order: 1; }
       @media only screen and (min-width: 980px) {
-        body#ucs.showcase .showcaseDescription .innerContentContainer .descriptionContainer {
+        body.showcase .showcaseDescription .innerContentContainer .descriptionContainer {
           order: 2;
           width: 70%; } }
-      body#ucs.showcase .showcaseDescription .innerContentContainer .descriptionContainer .readText {
+      body.showcase .showcaseDescription .innerContentContainer .descriptionContainer .readText {
         color: white; }
-    body#ucs.showcase .showcaseDescription .innerContentContainer .creditsContainer {
+    body.showcase .showcaseDescription .innerContentContainer .creditsContainer {
       width: 100%;
       order: 3; }
       @media only screen and (min-width: 980px) {
-        body#ucs.showcase .showcaseDescription .innerContentContainer .creditsContainer {
+        body.showcase .showcaseDescription .innerContentContainer .creditsContainer {
           margin-left: 30%; } }
-body#ucs.showcase .showcaseContainer {
+body.showcase .showcaseContainer {
   max-width: 1920px;
   width: 100%;
   padding: 120px 1.5rem; }
   @media only screen and (min-width: 980px) {
-    body#ucs.showcase .showcaseContainer {
+    body.showcase .showcaseContainer {
       padding: 250px 40px; } }
-  body#ucs.showcase .showcaseContainer .showcaseTestimonialContainer {
+  body.showcase .showcaseContainer .showcaseTestimonialContainer {
     display: flex;
     flex-direction: column; }
     @media only screen and (min-width: 980px) {
-      body#ucs.showcase .showcaseContainer .showcaseTestimonialContainer {
+      body.showcase .showcaseContainer .showcaseTestimonialContainer {
         flex-direction: row;
         align-items: center;
         justify-content: center; } }
-    body#ucs.showcase .showcaseContainer .showcaseTestimonialContainer .avatar img {
+    body.showcase .showcaseContainer .showcaseTestimonialContainer .avatar img {
       width: 100%;
       max-width: 450px;
       border-radius: 5px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); }
     @media only screen and (min-width: 980px) {
-      body#ucs.showcase .showcaseContainer .showcaseTestimonialContainer .showcaseTestimonialContentContainer {
+      body.showcase .showcaseContainer .showcaseTestimonialContainer .showcaseTestimonialContentContainer {
         margin-left: 3em;
         width: 60%; } }
-    body#ucs.showcase .showcaseContainer .showcaseTestimonialContainer .showcaseTestimonialContentContainer .name {
+    body.showcase .showcaseContainer .showcaseTestimonialContainer .showcaseTestimonialContentContainer .name {
       text-transform: initial; }
     @media only screen and (min-width: 980px) {
-      body#ucs.showcase .showcaseContainer .showcaseTestimonialContainer .showcaseTestimonialContentContainer .name,
-      body#ucs.showcase .showcaseContainer .showcaseTestimonialContainer .showcaseTestimonialContentContainer .title {
+      body.showcase .showcaseContainer .showcaseTestimonialContainer .showcaseTestimonialContentContainer .name,
+      body.showcase .showcaseContainer .showcaseTestimonialContainer .showcaseTestimonialContentContainer .title {
         position: relative;
         left: -65px; } }
-  body#ucs.showcase .showcaseContainer .showcaseWebContainer .targetContainer .targetList li {
+  body.showcase .showcaseContainer .showcaseWebContainer .targetContainer .targetList li {
     position: relative; }
-    body#ucs.showcase .showcaseContainer .showcaseWebContainer .targetContainer .targetList li:not(.marked) {
+    body.showcase .showcaseContainer .showcaseWebContainer .targetContainer .targetList li:not(.marked) {
       display: none; }
       @media only screen and (min-width: 980px) {
-        body#ucs.showcase .showcaseContainer .showcaseWebContainer .targetContainer .targetList li:not(.marked) {
+        body.showcase .showcaseContainer .showcaseWebContainer .targetContainer .targetList li:not(.marked) {
           display: initial; } }
-    body#ucs.showcase .showcaseContainer .showcaseWebContainer .targetContainer .targetList li.marked:after {
+    body.showcase .showcaseContainer .showcaseWebContainer .targetContainer .targetList li.marked:after {
       content: "";
-      background: url(/pages/portfolio/ucs/assets/marker.svg) center center no-repeat;
       display: inline-block;
       width: 200%;
       position: absolute;
@@ -1131,16 +1148,16 @@ body#ucs.showcase .showcaseContainer {
       top: -20px;
       height: 60px;
       background-size: contain; }
-  body#ucs.showcase .showcaseContainer .showcaseWebContainer .imageContainer .showcaseImagecontainer {
+  body.showcase .showcaseContainer .showcaseWebContainer .imageContainer .showcaseImagecontainer {
     margin-bottom: 1.5rem; }
     @media only screen and (min-width: 980px) {
-      body#ucs.showcase .showcaseContainer .showcaseWebContainer .imageContainer .showcaseImagecontainer {
+      body.showcase .showcaseContainer .showcaseWebContainer .imageContainer .showcaseImagecontainer {
         margin-bottom: 20px; } }
-    body#ucs.showcase .showcaseContainer .showcaseWebContainer .imageContainer .showcaseImagecontainer.fullShowcaseImage {
+    body.showcase .showcaseContainer .showcaseWebContainer .imageContainer .showcaseImagecontainer.fullShowcaseImage {
       width: 100%; }
-      body#ucs.showcase .showcaseContainer .showcaseWebContainer .imageContainer .showcaseImagecontainer.fullShowcaseImage img {
+      body.showcase .showcaseContainer .showcaseWebContainer .imageContainer .showcaseImagecontainer.fullShowcaseImage img {
         width: 100%; }
-body#ucs.showcase footer.showCaseFooter {
+body.showcase footer.showCaseFooter {
   margin-top: 0;
   height: 100vh;
   background: black;
@@ -1148,6 +1165,42 @@ body#ucs.showcase footer.showCaseFooter {
   display: flex;
   align-items: center;
   justify-content: center; }
+
+.mainContentContainer {
+  position: relative;
+  z-index: 10;
+  max-width: 1920px;
+  margin: -50px 1.5rem -50px 1.5rem;
+  border-radius: 20px 20px;
+  background: white;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15); }
+  @media screen and (min-width: 980px) {
+    .mainContentContainer {
+      margin: -100px 3rem -100px 3rem; } }
+
+body#ucs.showcase .showcaseContainer .sectionHeading .subheading:before,
+body#ucs.showcase .showcaseContainer .secondaryLink span:before,
+body#ucs.showcase .showcaseContainer .button.primaryButton:after {
+  background: #c1ff2e; }
+body#ucs.showcase .showcaseDescription {
+  background: #111111;
+  background: linear-gradient(45deg, #424242 0%, #111111 100%);
+  background: -webkit-linear-gradient(135deg, #424242 0%, #111111 100%);
+  color: white; }
+body#ucs.showcase .showcaseContainer .showcaseWebContainer .targetContainer .targetList li.marked:after {
+  background: url("/pages/portfolio/ucs/assets/marker.svg") center center no-repeat; }
+
+body#gzk.showcase .showcaseContainer .sectionHeading .subheading:before,
+body#gzk.showcase .showcaseContainer .secondaryLink span:before,
+body#gzk.showcase .showcaseContainer .button.primaryButton:after {
+  background: #009933; }
+body#gzk.showcase .showcaseDescription {
+  background: #009933;
+  background: linear-gradient(45deg, rgba(0, 153, 51, 0.75) 0%, #009933 100%);
+  background: -webkit-linear-gradient(135deg, rgba(0, 153, 51, 0.75) 0%, #009933 100%);
+  color: white; }
+body#gzk.showcase .showcaseContainer .showcaseWebContainer .targetContainer .targetList li.marked:after {
+  background: url("/pages/portfolio/gzk/assets/marker.svg") center center no-repeat; }
 
 .coreValueContainer {
   position: relative;

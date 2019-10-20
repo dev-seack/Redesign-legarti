@@ -15,7 +15,9 @@
 @import "./portfolio/portfolioOverview.scss";
 
 // showcases
+@import "../styling/portfolio/showcase.scss";
 @import "../pages/portfolio/ucs/showcase.scss";
+@import "../pages/portfolio/gzk/showcase.scss";
 
 // team
 @import "./team/team.scss";

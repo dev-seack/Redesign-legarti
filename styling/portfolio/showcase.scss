@@ -1,0 +1,246 @@
+// GZK
+$accentyColorShowcase: #009933;
+$gradientLight: rgba(0, 153, 51, 0.75);
+$gradientDark: $accentyColorShowcase;
+
+// General Showcase
+$headerOverlayColor: rgba(0, 0, 0, 0.45);
+$closeButtonColor: white;
+
+body.showcase {
+  .showcaseContainer {
+    padding: 120px $mobilePadding;
+    @media only screen and (min-width: 980px) {
+      padding: 200px $mobilePadding;
+    }
+  }
+
+  .closeContainer.closeShowcase .icon {
+    color: $closeButtonColor;
+    text-shadow: 0 0 5px $headerOverlayColor;
+  }
+
+  .navContainer {
+    .closeButton {
+      width: 30px;
+      .closeLine {
+        width: 30px;
+        height: 3px;
+        background: #ffffff;
+        transform-origin: center;
+        position: absolute;
+        border-radius: 1px;
+        &.topLine {
+          transform: rotate(45deg);
+        }
+        &.bottomLine {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .showcaseHeader {
+    height: 100vh;
+    overflow: hidden;
+    .backgroundOverlay {
+      background: $headerOverlayColor;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+    }
+    .videoBackground {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      video {
+        position: absolute;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+      }
+    }
+    .showcaseLogoContainer {
+      display: flex;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0px;
+      right: 0px;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+      padding: $mobilePadding;
+      img {
+        width: 100%;
+        max-width: 750px;
+      }
+    }
+  }
+
+  .showcaseDescription {
+    border-radius: 20px 20px 0 0;
+    padding: 120px $mobilePadding;
+    background: $gradientDark;
+    background: linear-gradient(45deg, $gradientLight 0%, $gradientDark 100%);
+    background: -webkit-linear-gradient(
+      135deg,
+      $gradientLight 0%,
+      $gradientDark 100%
+    );
+    color: white;
+    .innerContentContainer {
+      margin: 0 auto;
+      max-width: 1000px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+      flex-wrap: wrap;
+      @media only screen and (min-width: 980px) {
+        flex-direction: row;
+      }
+      .taskContainer {
+        width: 100%;
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        justify-content: space-between;
+        order: 2;
+        margin-top: 3rem;
+        @media only screen and (min-width: 980px) {
+          order: 1;
+          width: 30%;
+          margin-top: 0;
+        }
+      }
+      .descriptionContainer {
+        width: 100%;
+        order: 1;
+        @media only screen and (min-width: 980px) {
+          order: 2;
+          width: 70%;
+        }
+        .readText {
+          color: white;
+        }
+      }
+      .creditsContainer {
+        width: 100%;
+        order: 3;
+        @media only screen and (min-width: 980px) {
+          margin-left: 30%;
+        }
+      }
+    }
+  }
+
+  // main showcase styling
+  .showcaseContainer {
+    max-width: 1920px;
+    width: 100%;
+    padding: 120px $mobilePadding;
+    @media only screen and (min-width: 980px) {
+      padding: 250px 40px;
+    }
+    .showcaseTestimonialContainer {
+      display: flex;
+      flex-direction: column;
+      @media only screen and (min-width: 980px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      .avatar {
+        img {
+          width: 100%;
+          max-width: 450px;
+          border-radius: 5px;
+          box-shadow: 0 0 20px $shadow;
+        }
+      }
+
+      .showcaseTestimonialContentContainer {
+        @media only screen and (min-width: 980px) {
+          margin-left: 3em;
+          width: 60%;
+        }
+        .name {
+          text-transform: initial;
+        }
+
+        .name,
+        .title {
+          @media only screen and (min-width: 980px) {
+            position: relative;
+            left: -65px;
+          }
+        }
+      }
+    }
+    .showcaseWebContainer {
+      .targetContainer .targetList {
+        li {
+          position: relative;
+          &:not(.marked) {
+            display: none;
+            @media only screen and (min-width: 980px) {
+              display: initial;
+            }
+          }
+          &.marked:after {
+            content: "";
+            display: inline-block;
+            width: 200%;
+            position: absolute;
+            left: -50%;
+            top: -20px;
+            height: 60px;
+            background-size: contain;
+          }
+        }
+      }
+      .imageContainer {
+        .showcaseImagecontainer {
+          margin-bottom: $mobilePadding;
+          @media only screen and (min-width: 980px) {
+            margin-bottom: 20px;
+          }
+          &.fullShowcaseImage {
+            width: 100%;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // footer styling
+  footer.showCaseFooter {
+    margin-top: 0;
+    height: 100vh;
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.mainContentContainer {
+  position: relative;
+  z-index: 10;
+  max-width: 1920px;
+  margin: -50px $mobileMargin -50px $mobileMargin;
+  border-radius: 20px 20px;
+  background: white;
+  box-shadow: 0 20px 50px $shadow;
+  @media screen and (min-width: 980px) {
+    margin: -100px $mobileMargin * 2 -100px $mobileMargin * 2;
+  }
+}

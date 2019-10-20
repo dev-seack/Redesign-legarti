@@ -1,12 +1,12 @@
-// UCS
-$accentyColorShowcase: #c1ff2e;
+// GZK
+$accentyColorShowcase: #009933;
 $headerOverlayColor: rgba(0, 0, 0, 0.45);
 $closeButtonColor: white;
-$gradientLight: #424242;
-$gradientDark: #111111;
-$markerURL: "/pages/portfolio/ucs/assets/marker.svg";
+$gradientLight: rgba(0, 153, 51, 0.75);
+$gradientDark: $accentyColorShowcase;
+$markerURL: "/pages/portfolio/gzk/assets/marker.svg";
 
-body#ucs.showcase {
+body#gzk.showcase {
   .showcaseContainer {
     .sectionHeading .subheading:before,
     .secondaryLink span:before,
