@@ -15,8 +15,18 @@
       type="image/x-icon"
     />
     <title>Legarti | Showcase - United Cheer Sports e.V. Dortmund</title>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/scripts/loadingScreen.js"></script>
   </head>
   <body id="ucs" class="showcase">
+    <div class="loadingScreen">
+      <img src="/assets/logoBlack.svg" alt="" />
+      <div class="progressBar"></div>
+    </div>
     <div id="customScrollbar"></div>
     <!-- Navigation -->
     <nav class="navContainer maxContainer mlrauto">
@@ -45,7 +55,7 @@
           <img src="./assets/logo.svg" alt="" />
         </div>
       </div>
-      <div class="mainContentContainer">
+      <div class="showcaseContent mainContentContainer">
         <!-- Description -->
         <div class="showcaseDescription">
           <div class="innerContentContainer">
@@ -213,12 +223,6 @@
         >
       </div>
     </footer>
-
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
     <script src="../../../scripts/navigation.js"></script>
   </body>
 </html>

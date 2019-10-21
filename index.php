@@ -11,8 +11,19 @@
     />
     <link rel="shortcut icon" href="./assets/fav.ico" type="image/x-icon" />
     <title>Legarti | Startseite</title>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/scripts/loadingScreen.js"></script>
   </head>
   <body>
+    <div class="loadingScreen">
+      <img src="/assets/logoBlack.svg" alt="" />
+      <div class="progressBar"></div>
+    </div>
     <div id="customScrollbar"></div>
     <!-- Menu -->
     <div class="toggleMenuOverlay "></div>

@@ -79,6 +79,9 @@ footer {
 }
 
 // Helper
+.visibilityHidden {
+  visibility: hidden;
+}
 .mt1 {
   margin-top: 1em;
 }
@@ -325,5 +328,29 @@ h5.heading {
   @media only screen and (min-width: 980px) {
     grid-template-rows: 1fr 1fr;
     grid-gap: 10px;
+  }
+}
+
+// loading screen
+.loadingScreen {
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  img {
+    width: 50px;
+    margin-bottom: 2em;
+  }
+  .progressBar {
+    background: #111111;
+    width: 0px;
+    height: 2px;
   }
 }

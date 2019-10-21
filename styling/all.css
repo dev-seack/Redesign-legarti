@@ -202,6 +202,9 @@ footer {
       footer.evenPaddingSection {
         padding-bottom: 120px; } }
 
+.visibilityHidden {
+  visibility: hidden; }
+
 .mt1 {
   margin-top: 1em; }
 
@@ -415,6 +418,26 @@ h5.heading {
     .quarterContainer {
       grid-template-rows: 1fr 1fr;
       grid-gap: 10px; } }
+
+.loadingScreen {
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .loadingScreen img {
+    width: 50px;
+    margin-bottom: 2em; }
+  .loadingScreen .progressBar {
+    background: #111111;
+    width: 0px;
+    height: 2px; }
 
 #customScrollbar {
   position: fixed;
@@ -1166,7 +1189,7 @@ body.showcase footer.showCaseFooter {
   align-items: center;
   justify-content: center; }
 
-.mainContentContainer {
+.showcaseContent.mainContentContainer {
   position: relative;
   z-index: 10;
   max-width: 1920px;
@@ -1175,7 +1198,7 @@ body.showcase footer.showCaseFooter {
   background: white;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15); }
   @media screen and (min-width: 980px) {
-    .mainContentContainer {
+    .showcaseContent.mainContentContainer {
       margin: -100px 3rem -100px 3rem; } }
 
 body#ucs.showcase .showcaseContainer .sectionHeading .subheading:before,
