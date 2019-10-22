@@ -117,7 +117,11 @@
 
     <!-- what we do section -->
     <section id="whatwedo" class="maxContainer mt100 mlrauto">
-      <img src="assets/ideen-bg.svg" alt="" class="sectionBacklayer" />
+      <img
+        src="assets/ideen-handwritten-90deg.svg"
+        alt=""
+        class="sectionBacklayer"
+      />
       <div class="imageContainer">
         <img src="./assets/projects/theschooloflife/titelbild.png" alt="" />
       </div>
@@ -143,7 +147,11 @@
 
     <!-- testimonials -->
     <section id="testimonials" class="maxContainer mtsection fullWidth">
-      <img src="assets/menschen-bg.svg" alt="" class="sectionBacklayer" />
+      <img
+        src="assets/menschen-handwritten-90deg.svg"
+        alt=""
+        class="sectionBacklayer"
+      />
       <div class="contentContainer mt3">
         <div class="sectionHeading">
           <h2 class="heading">
@@ -203,7 +211,7 @@
     <!-- teamsection -->
     <section id="team" class="maxContainer mtsection">
       <div class="innerContentContainer">
-        <img src="./assets/freunde-bg.svg" alt="" />
+        <img src="./assets/freunde-handwritten-white.svg" alt="" />
         <div class="contentContainer">
           <h6 class="preHeading">Legarti</h6>
           <h4 class="heading">Ein Team aus Freunden</h4>
@@ -226,7 +234,7 @@
     </section>
 
     <!-- Socialbanner -->
-    <section class="socialBanner mtsection evenPaddingSection">
+    <section class="socialBanner mtsection evenPaddingSection mb-3">
       <div class="innerContentContainer maxContainer fullWidth">
         <h2 class="socialbannerHeading bold textCenter">
           Bleib immer auf dem Laufenden

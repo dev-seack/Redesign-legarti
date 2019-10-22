@@ -1,12 +1,15 @@
 #testimonials {
   position: relative;
   .sectionBacklayer {
+    display: none;
     position: absolute;
     top: $mobilePadding * 2;
     right: -$mobilePadding;
     z-index: -2;
     @media only screen and (min-width: 1400px) {
-      right: -$mobilePadding * 2.5;
+      right: -175px;
+      display: initial;
+      height: 110%;
     }
   }
 }

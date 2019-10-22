@@ -141,10 +141,14 @@ a {
     color: black; }
 
 body {
+  overflow-x: hidden;
   padding: 1.5rem 1.5rem 0 1.5rem;
   background: #ffffff; }
   body.dark {
     background: #000000; }
+
+.dobbleUnderline {
+  background: url("/assets/dobble-underline.svg") center bottom no-repeat; }
 
 main.noPadding {
   margin-top: -1.5rem;
@@ -226,6 +230,9 @@ footer {
 .mb-5 {
   margin-bottom: 5em; }
 
+.mb-3 {
+  margin-bottom: 3em; }
+
 .negativeMargin {
   margin-left: -1.5rem;
   margin-right: -1.5rem; }
@@ -292,6 +299,9 @@ footer {
 
 .textLeft {
   text-align: left; }
+
+textarea {
+  resize: vertical; }
 
 .readText {
   font-size: 1.1em;
@@ -623,7 +633,8 @@ h5.heading {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 40px; }
+  padding-top: 40px;
+  background: url("/assets/herosection/marker.svg") center center no-repeat; }
   #heroSection .contentContainer {
     width: 100%; }
     #heroSection .contentContainer .linkItemContainer .linkItem {
@@ -636,8 +647,7 @@ h5.heading {
         #heroSection .contentContainer .linkItemContainer .linkItem .linkText:hover {
           -webkit-text-stroke: 5px black;
           color: transparent;
-          text-shadow: 3px 3px 0 #000, 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-          background: url("/assets/herosection/heroCursor.svg") center center no-repeat; }
+          text-shadow: 3px 3px 0 #000, 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
     #heroSection .contentContainer .buttonContainer {
       display: flex;
       justify-content: center;
@@ -677,6 +687,7 @@ h5.heading {
     #whatwedo {
       padding-top: 200px; } }
   #whatwedo .sectionBacklayer {
+    height: 85%;
     position: absolute;
     bottom: 3rem;
     right: -1.5rem;
@@ -736,13 +747,16 @@ h5.heading {
 #testimonials {
   position: relative; }
   #testimonials .sectionBacklayer {
+    display: none;
     position: absolute;
     top: 3rem;
     right: -1.5rem;
     z-index: -2; }
     @media only screen and (min-width: 1400px) {
       #testimonials .sectionBacklayer {
-        right: -3.75rem; } }
+        right: -175px;
+        display: initial;
+        height: 110%; } }
 
 @media screen and (min-width: 980px) {
   .testimonialContainer {
@@ -806,9 +820,10 @@ h5.heading {
       display: none; }
       @media only screen and (min-width: 980px) {
         #team .innerContentContainer img {
+          width: 45%;
+          bottom: -30px;
           display: inline-block;
           position: absolute;
-          bottom: -20px;
           right: 1.5rem; } }
     #team .innerContentContainer .contentContainer {
       padding: 1.5rem;
@@ -854,9 +869,13 @@ h5.heading {
           display: inline-block; }
 
 .socialBanner {
-  background: #f8f8f8;
+  background: url("/assets/grey-background-texture.svg") center center no-repeat;
+  background-size: cover;
   margin-right: -1.5rem;
   margin-left: -1.5rem; }
+  @media only screen and (min-width: 980px) {
+    .socialBanner {
+      background-size: contain; } }
   .socialBanner .innerContentContainer {
     display: flex;
     align-items: center;
@@ -1252,6 +1271,7 @@ body#gzk.showcase .showcaseContainer .showcaseWebContainer .targetContainer .tar
     border-radius: 10px;
     opacity: 0; }
   .coreValueContainer .contentContainer {
+    z-index: 10;
     background: black;
     padding: 3rem 1.5rem;
     color: white;
@@ -1292,10 +1312,11 @@ body#gzk.showcase .showcaseContainer .showcaseWebContainer .targetContainer .tar
         background: #cccccc; }
   .coreValueContainer .friendsImageContainer {
     position: absolute;
-    bottom: -20px;
+    bottom: -30px;
     left: 1.5rem;
     right: 1.5rem;
-    display: none; }
+    display: none;
+    width: 60%; }
     @media only screen and (min-width: 980px) {
       .coreValueContainer .friendsImageContainer {
         display: block; } }

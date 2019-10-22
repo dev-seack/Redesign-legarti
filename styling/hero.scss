@@ -8,6 +8,7 @@
   justify-content: center;
   align-items: center;
   padding-top: 40px;
+  background: url("/assets/herosection/marker.svg") center center no-repeat;
   .contentContainer {
     width: 100%;
     .linkItemContainer {
@@ -23,8 +24,8 @@
             color: transparent;
             text-shadow: 3px 3px 0 #000, 0 #000, 1px -1px 0 #000,
               -1px 1px 0 #000, 1px 1px 0 #000;
-            background: url("/assets/herosection/heroCursor.svg") center center
-              no-repeat;
+            //background: url("/assets/herosection/marker.svg") center center
+            //  no-repeat;
           }
         }
       }

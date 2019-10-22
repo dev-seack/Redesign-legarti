@@ -1,7 +1,11 @@
 .socialBanner {
-  background: $lightgrey;
+  background: url("/assets/grey-background-texture.svg") center center no-repeat;
+  background-size: cover;
   margin-right: -$mobileMargin;
   margin-left: -$mobileMargin;
+  @media only screen and (min-width: 980px) {
+    background-size: contain;
+  }
   .innerContentContainer {
     display: flex;
     align-items: center;

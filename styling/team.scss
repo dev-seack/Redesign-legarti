@@ -19,9 +19,11 @@
     img {
       display: none;
       @media only screen and (min-width: 980px) {
+        width: 45%;
+        bottom: -30px;
         display: inline-block;
         position: absolute;
-        bottom: -20px;
+
         right: $mobilePadding;
       }
     }

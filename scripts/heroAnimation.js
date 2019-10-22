@@ -31,12 +31,12 @@ const categoryPool = [
   {
     id: "bottomCategory",
     main: "Video",
-    subcategories: ["Slowmotion", "Transition", "B-Roll", "Produktion"]
+    subcategories: ["Slowmo", "Transition", "B-Roll", "Produktion"]
   }
 ];
 
 const speed = 500; // in ms
-const delay = 0; // after hover-trigger
+const delay = 850; // after hover-trigger
 const isLooping = false; // loop on hover or not
 let timerID; // deklaration, um ihn ausserhalb der mouseenter-funkiton zu benutzen
 let index = 0; // gloabl, damit er nicht bei jedem mousleave resetet bzw. bei mouseenter von vorne startet, sondern seine aktuelle position behaelt
@@ -49,7 +49,10 @@ $(document).ready(function() {
   // start animation once the page was load
   // Init
   setup();
-  switchAnimation($(".heroCategory:eq(" + counter + ")"));
+
+  setTimeout(() => {
+    switchAnimation($(".heroCategory:eq(" + counter + ")"));
+  }, delay);
 
   // trigger
   $(".heroCategory")
