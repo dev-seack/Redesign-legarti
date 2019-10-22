@@ -147,8 +147,8 @@ body {
   body.dark {
     background: #000000; }
 
-.dobbleUnderline {
-  background: url("/assets/dobble-underline.svg") center bottom no-repeat; }
+.doubleUnderline {
+  background: url("/assets/double-underline.svg") center bottom no-repeat; }
 
 main.noPadding {
   margin-top: -1.5rem;
@@ -566,10 +566,9 @@ h5.heading {
       opacity: 0.5;
       left: 0; }
       .menuContainer .menuItemContainer .menuItem.active {
-        opacity: 1;
-        left: 30px; }
+        opacity: 1; }
         .menuContainer .menuItemContainer .menuItem.active span:after {
-          content: attr(data-menulabel);
+          content: url("/assets/navigation-menu/marker-2.svg");
           width: 100%;
           position: absolute;
           color: #ffda48;
@@ -577,17 +576,14 @@ h5.heading {
           left: 5px;
           top: 30px;
           transition: 300ms ease-out all; }
-      .menuContainer .menuItemContainer .menuItem:hover {
+      .menuContainer .menuItemContainer .menuItem:hover:not(.active) {
         opacity: 1; }
         @media only screen and (min-width: 980px) {
-          .menuContainer .menuItemContainer .menuItem:hover {
+          .menuContainer .menuItemContainer .menuItem:hover:not(.active) {
             left: 30px;
             transition: 300ms ease-out all; } }
-        .menuContainer .menuItemContainer .menuItem:hover.active span:after {
-          content: attr(data-menulabel);
-          left: 0px;
-          top: 15px;
-          transition: 300ms ease-out all; }
+      .menuContainer .menuItemContainer .menuItem.active .text[data-menulabel]:after {
+        content: none !important; }
       .menuContainer .menuItemContainer .menuItem .number {
         font-size: 0.25em; }
         @media only screen and (min-width: 980px) {
@@ -603,6 +599,26 @@ h5.heading {
         @media only screen and (min-width: 980px) {
           .menuContainer .menuItemContainer .menuItem .text {
             font-size: 2em; } }
+        .menuContainer .menuItemContainer .menuItem .text[data-menulabel]:after {
+          width: 100%;
+          position: absolute;
+          color: rgba(255, 218, 72, 0);
+          z-index: -1;
+          left: 5px;
+          top: 30px;
+          opacity: 0;
+          transition: 300ms ease-out all; }
+        .menuContainer .menuItemContainer .menuItem .text:hover[data-menulabel]:after {
+          opacity: 1;
+          transition: 300ms ease-out all; }
+        .menuContainer .menuItemContainer .menuItem .text[data-menulabel="Startseite"]:after {
+          content: url("/assets/navigation-menu/marker-2.svg"); }
+        .menuContainer .menuItemContainer .menuItem .text[data-menulabel="Portfolio"]:after {
+          content: url("/assets/navigation-menu/marker-3.svg"); }
+        .menuContainer .menuItemContainer .menuItem .text[data-menulabel="Team"]:after {
+          content: url("/assets/navigation-menu/marker-4.svg"); }
+        .menuContainer .menuItemContainer .menuItem .text[data-menulabel="Kontakt"]:after {
+          content: url("/assets/navigation-menu/marker-1.svg"); }
   .menuContainer .contactDetailsContainer {
     position: absolute;
     bottom: 1.5rem;

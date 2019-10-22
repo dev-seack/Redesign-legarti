@@ -134,9 +134,8 @@
       left: 0;
       &.active {
         opacity: 1;
-        left: 30px;
         span:after {
-          content: attr(data-menulabel);
+          content: url("/assets/navigation-menu/marker-2.svg");
           width: 100%;
           position: absolute;
           color: #ffda48;
@@ -146,18 +145,18 @@
           transition: 300ms ease-out all;
         }
       }
-      &:hover {
+      &:hover:not(.active) {
         opacity: 1;
         @media only screen and (min-width: 980px) {
           left: 30px;
           transition: 300ms ease-out all;
         }
-
-        &.active span:after {
-          content: attr(data-menulabel);
-          left: 0px;
-          top: 15px;
-          transition: 300ms ease-out all;
+      }
+      &.active {
+        .text {
+          &[data-menulabel]:after {
+            content: none !important;
+          }
         }
       }
       .number {
@@ -175,6 +174,32 @@
         }
         @media only screen and (min-width: 980px) {
           font-size: 2em;
+        }
+        &[data-menulabel]:after {
+          width: 100%;
+          position: absolute;
+          color: rgba(255, 218, 72, 0);
+          z-index: -1;
+          left: 5px;
+          top: 30px;
+          opacity: 0;
+          transition: 300ms ease-out all;
+        }
+        &:hover[data-menulabel]:after {
+          opacity: 1;
+          transition: 300ms ease-out all;
+        }
+        &[data-menulabel="Startseite"]:after {
+          content: url("/assets/navigation-menu/marker-2.svg");
+        }
+        &[data-menulabel="Portfolio"]:after {
+          content: url("/assets/navigation-menu/marker-3.svg");
+        }
+        &[data-menulabel="Team"]:after {
+          content: url("/assets/navigation-menu/marker-4.svg");
+        }
+        &[data-menulabel="Kontakt"]:after {
+          content: url("/assets/navigation-menu/marker-1.svg");
         }
       }
     }
