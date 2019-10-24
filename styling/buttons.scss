@@ -74,6 +74,7 @@
     &:before {
       content: "";
       background: $primaryColor;
+      z-index: -1;
       position: relative;
       left: -7px;
       width: 25px;

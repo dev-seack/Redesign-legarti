@@ -95,6 +95,7 @@
   right: 150vw;
   left: -150vw;
   top: $mobilePadding;
+  opacity: 0;
   bottom: $mobilePadding;
   z-index: 1001;
   padding: $mobilePadding;
@@ -110,8 +111,9 @@
   }
   &.open {
     transition: all 1000ms ease-in-out;
-    right: $mobilePadding;
-    left: $mobilePadding;
+    right: 0;
+    left: 0;
+    opacity: 1;
   }
 
   .menuItemContainer {

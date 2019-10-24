@@ -65,13 +65,25 @@
         @media only screen and (min-width: 980px) {
           margin-bottom: 4em;
         }
-        &:before {
+        & span {
+          display: flex;
+          align-items: center;
+        }
+        & span:hover {
+          &:before {
+            transition: 300ms ease-in-out;
+            left: calc(100% + 7px);
+          }
+        }
+        & span:before {
           content: "";
           background: white;
-          margin-right: 7px;
+          position: relative;
+          left: -7px;
           width: 25px;
           height: 2px;
           display: inline-block;
+          transition: 300ms ease-in-out;
         }
       }
     }
