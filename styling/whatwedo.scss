@@ -1,6 +1,14 @@
 #whatwedo {
   position: relative;
   padding-top: 300px;
+  @media only screen and (min-width: 980px) {
+    padding-bottom: 100px;
+  }
+  .imageContainer {
+    img {
+      width: 100%;
+    }
+  }
   .ideenImage {
     display: none;
     position: absolute;
@@ -14,9 +22,7 @@
       z-index: -1;
     }
   }
-  @media only screen and (min-width: 980px) {
-    padding-bottom: 100px;
-  }
+
   .sectionHeading {
     margin-bottom: 0;
   }

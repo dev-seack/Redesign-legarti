@@ -1,4 +1,5 @@
 #team {
+  position: relative;
   margin-left: -$mobileMargin;
   margin-right: -$mobileMargin;
   @media only screen and (min-width: 980px) {
@@ -6,25 +7,16 @@
     margin-right: auto;
   }
 
+  .homeMarker {
+    position: absolute;
+    top: -150px;
+  }
+
   .innerContentContainer {
     position: relative;
     padding: $mobilePadding * 1.25 $mobilePadding;
-    background: url("/assets/team/teamfoto.png") center center no-repeat;
-    background-size: cover;
     @media only screen and (min-width: 980px) {
-      border-radius: 10px;
       padding: 0;
-    }
-    img {
-      display: none;
-      @media only screen and (min-width: 980px) {
-        width: 45%;
-        bottom: -30px;
-        display: inline-block;
-        position: absolute;
-
-        right: $mobilePadding;
-      }
     }
     .contentContainer {
       padding: $mobilePadding;
@@ -33,10 +25,10 @@
       color: white;
       box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.15);
       @media only screen and (min-width: 980px) {
-        width: 33%;
+        width: 50%;
         position: relative;
-        left: $mobileMargin;
-        top: 4rem;
+        margin: 0 auto;
+        top: -250px;
       }
       .preHeading {
         font-size: 0.85rem;

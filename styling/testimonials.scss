@@ -3,9 +3,12 @@
   .menschenImage {
     position: absolute;
     top: 0;
-    width: 75%;
+    width: 100%;
     right: 0;
     left: 0;
+    @media only screen and (min-width: 980px) {
+      width: 75%;
+    }
   }
   .sectionHeading {
     margin-bottom: 0;
@@ -19,9 +22,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 75%;
+      width: 100%;
       @media only screen and (min-width: 980px) {
         padding: 2rem 1.5rem;
+        width: 75%;
       }
 
       .avatar {
@@ -47,6 +51,36 @@
       .profilInformation {
         background: url("/assets/herosection/marker.svg") center center
           no-repeat;
+      }
+    }
+  }
+  .pagiContainer {
+    display: none;
+    @media only screen and (min-width: 980px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      position: absolute;
+      right: 0;
+    }
+    .pagiInnerContainer {
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: crosshair;
+      .pagiItem {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        box-shadow: 0 0 20px $shadow;
+        background-color: rgba(0, 0, 0, 0.1);
+        transition: background-color 1000ms;
+        &.active {
+          background-color: $primaryColor;
+          transition: background-color 1000ms;
+        }
       }
     }
   }

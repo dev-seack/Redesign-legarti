@@ -1,0 +1,110 @@
+footer {
+  margin-top: 0px;
+  background: $primaryColor;
+  margin-right: -$mobileMargin;
+  margin-left: -$mobileMargin;
+  color: white;
+  @media only screen and (min-width: 980px) {
+    margin-top: 500px;
+  }
+  &.no-margin {
+    margin-top: 0 !important;
+  }
+  .innerContentContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    padding: 0 $mobilePadding;
+    @media only screen and (min-width: 980px) {
+      justify-content: center;
+    }
+    .informationContainer {
+      width: 100%;
+      .heading {
+        font-size: 4em;
+
+        @media only screen and (min-width: 980px) {
+          font-size: 5em;
+        }
+        @media only screen and (min-width: 1260px) {
+          font-size: 6em;
+        }
+      }
+      @media only screen and (min-width: 980px) {
+        width: 50%;
+      }
+      .departmentContainer {
+        .departmentItem {
+          .title {
+            color: $black;
+            opacity: 0.25;
+            font-size: 1.25em;
+          }
+          .email {
+            font-size: 2.5em;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    .logoContainer {
+      width: 100%;
+      display: none;
+      img {
+        width: 85%;
+      }
+      @media only screen and (min-width: 980px) {
+        width: 50%;
+        display: inline-block;
+      }
+    }
+    .notesContainer {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      padding: $mobilePadding 0;
+      font-size: 1.25em;
+      div {
+        width: 33%;
+      }
+      .socialItemContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        .socialItem i {
+          font-size: 1.25em;
+          transform: scale(1.1);
+          transition: all 300ms;
+          @media only screen and (min-width: 1260px) {
+            font-size: 1.5em;
+          }
+          &:hover {
+            transform: scale(1.1);
+            transition: all 300ms;
+          }
+        }
+      }
+    }
+  }
+
+  .rightsContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: black;
+    padding: $mobilePadding/2 $mobilePadding;
+  }
+}
+
+.socialItem {
+  transition: all 500ms;
+}
+.socialItem:hover {
+  transform: scale(1.2);
+  transition: all 500ms;
+}

@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1935" height="1330" viewBox="0 0 1935 1330">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1935" height="1193" viewBox="0 0 1935 1193">
   <defs>
     <clipPath id="clip-path">
-      <rect id="Rechteck_433" data-name="Rechteck 433" width="1935" height="1330" transform="translate(16032)" fill="#fff" stroke="#707070" stroke-width="1"/>
+      <rect id="Rechteck_433" data-name="Rechteck 433" width="1935" height="1193" transform="translate(16066 121)" fill="#fff" stroke="#707070" stroke-width="1"/>
     </clipPath>
   </defs>
-  <g id="Gruppe_maskieren_70" data-name="Gruppe maskieren 70" transform="translate(-16032)" clip-path="url(#clip-path)">
+  <g id="Gruppe_maskieren_70" data-name="Gruppe maskieren 70" transform="translate(-16066 -121)" clip-path="url(#clip-path)">
     <g id="Gruppe_575" data-name="Gruppe 575" transform="translate(14326.745 -2836.805)">
       <path id="Pfad_156" data-name="Pfad 156" d="M2075.957,2719.036c-3.845-6.492-8.429-16.96-17.084-20.089l17.039,23.708,3.466-2.5c1.753-1.285-.781-5.726-3.4-4.738C2076.928,2716.933,2077.732,2718.4,2075.957,2719.036Z" transform="translate(59.653 124.48)" fill="#ffda48"/>
       <path id="Pfad_157" data-name="Pfad 157" d="M2048.1,2685.349c-9.289-7.539-6.517-20.248-11.674-20.365,2.536,16.259,28.421,45.171,35.4,50.088-11.054-19.033-20.832-35.093-25.275-39.364C2047.683,2679.149,2048.5,2682.454,2048.1,2685.349Z" transform="translate(45.039 102.367)" fill="#ffda48"/>

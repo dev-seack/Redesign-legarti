@@ -169,6 +169,11 @@ a {
 .primaryText {
   color: #ffda48; }
 
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
 .pageSlogan {
   margin: 250px auto; }
   @media only screen and (min-width: 980px) {
@@ -185,22 +190,11 @@ a {
       width: 50%; } }
 
 .section,
-section,
-footer {
-  margin-top: 200px; }
+section {
+  margin-top: 300px; }
   .section.evenMarginSection,
-  section.evenMarginSection,
-  footer.evenMarginSection {
-    margin-bottom: 200px; }
-  @media only screen and (min-width: 980px) {
-    .section,
-    section,
-    footer {
-      margin-top: 300px; }
-      .section.evenMarginSection,
-      section.evenMarginSection,
-      footer.evenMarginSection {
-        margin-bottom: 300px; } }
+  section.evenMarginSection {
+    margin-bottom: 300px; }
 
 .visibilityHidden {
   visibility: hidden; }
@@ -632,8 +626,10 @@ h5.heading {
       z-index: 1000;
       margin: -1.5rem; } }
 
-body#home {
-  background: url("/assets/home-x-bg.svg") top center no-repeat; }
+@media only screen and (min-width: 1260px) {
+  body#home {
+    background: url("/assets/herosection/home-hero-background.svg") top center no-repeat;
+    background-size: contain; } }
 
 #heroSection {
   position: absolute;
@@ -644,7 +640,11 @@ body#home {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 40px; }
+  padding-top: 40px;
+  background: url("/assets/herosection/marker.svg") center center no-repeat; }
+  @media only screen and (min-width: 1260px) {
+    #heroSection {
+      background: none; } }
   #heroSection .contentContainer {
     width: 100%; }
     #heroSection .contentContainer .linkItemContainer .linkItem {
@@ -690,6 +690,11 @@ body#home {
 #whatwedo {
   position: relative;
   padding-top: 300px; }
+  @media only screen and (min-width: 980px) {
+    #whatwedo {
+      padding-bottom: 100px; } }
+  #whatwedo .imageContainer img {
+    width: 100%; }
   #whatwedo .ideenImage {
     display: none;
     position: absolute; }
@@ -702,9 +707,6 @@ body#home {
         left: 0;
         right: 0;
         z-index: -1; } }
-  @media only screen and (min-width: 980px) {
-    #whatwedo {
-      padding-bottom: 100px; } }
   #whatwedo .sectionHeading {
     margin-bottom: 0; }
   @media only screen and (min-width: 980px) {
@@ -719,9 +721,12 @@ body#home {
   #testimonials .menschenImage {
     position: absolute;
     top: 0;
-    width: 75%;
+    width: 100%;
     right: 0;
     left: 0; }
+    @media only screen and (min-width: 980px) {
+      #testimonials .menschenImage {
+        width: 75%; } }
   #testimonials .sectionHeading {
     margin-bottom: 0; }
   #testimonials .testimonialContainer {
@@ -733,10 +738,11 @@ body#home {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 75%; }
+      width: 100%; }
       @media only screen and (min-width: 980px) {
         #testimonials .testimonialContainer .testimonialItem {
-          padding: 2rem 1.5rem; } }
+          padding: 2rem 1.5rem;
+          width: 75%; } }
       #testimonials .testimonialContainer .testimonialItem .avatar {
         width: 200px;
         height: 200px;
@@ -754,32 +760,50 @@ body#home {
         color: #666666; }
       #testimonials .testimonialContainer .testimonialItem .profilInformation {
         background: url("/assets/herosection/marker.svg") center center no-repeat; }
+  #testimonials .pagiContainer {
+    display: none; }
+    @media only screen and (min-width: 980px) {
+      #testimonials .pagiContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        position: absolute;
+        right: 0; } }
+    #testimonials .pagiContainer .pagiInnerContainer {
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: crosshair; }
+      #testimonials .pagiContainer .pagiInnerContainer .pagiItem {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        background-color: rgba(0, 0, 0, 0.1);
+        transition: background-color 1000ms; }
+        #testimonials .pagiContainer .pagiInnerContainer .pagiItem.active {
+          background-color: #ffda48;
+          transition: background-color 1000ms; }
 
 #team {
+  position: relative;
   margin-left: -1.5rem;
   margin-right: -1.5rem; }
   @media only screen and (min-width: 980px) {
     #team {
       margin-left: auto;
       margin-right: auto; } }
+  #team .homeMarker {
+    position: absolute;
+    top: -150px; }
   #team .innerContentContainer {
     position: relative;
-    padding: 1.875rem 1.5rem;
-    background: url("/assets/team/teamfoto.png") center center no-repeat;
-    background-size: cover; }
+    padding: 1.875rem 1.5rem; }
     @media only screen and (min-width: 980px) {
       #team .innerContentContainer {
-        border-radius: 10px;
         padding: 0; } }
-    #team .innerContentContainer img {
-      display: none; }
-      @media only screen and (min-width: 980px) {
-        #team .innerContentContainer img {
-          width: 45%;
-          bottom: -30px;
-          display: inline-block;
-          position: absolute;
-          right: 1.5rem; } }
     #team .innerContentContainer .contentContainer {
       padding: 1.5rem;
       background: rgba(255, 218, 72, 0.9);
@@ -788,10 +812,10 @@ body#home {
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); }
       @media only screen and (min-width: 980px) {
         #team .innerContentContainer .contentContainer {
-          width: 33%;
+          width: 50%;
           position: relative;
-          left: 1.5rem;
-          top: 4rem; } }
+          margin: 0 auto;
+          top: -250px; } }
       #team .innerContentContainer .contentContainer .preHeading {
         font-size: 0.85rem;
         text-transform: uppercase;
@@ -864,91 +888,60 @@ body#home {
           .socialBanner .innerContentContainer .socialIconContainer .socialItem i {
             font-size: 2em; } }
 
-footer {
-  margin-top: 0px;
-  background: #ffda48;
-  margin-right: -1.5rem;
-  margin-left: -1.5rem;
-  color: white; }
+footer#readytotalk {
+  margin-top: 300px; }
   @media only screen and (min-width: 980px) {
-    footer {
-      margin-top: 500px; } }
-  footer.no-margin {
-    margin-top: 0 !important; }
-  footer .innerContentContainer {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 0 1.5rem; }
-    @media only screen and (min-width: 980px) {
-      footer .innerContentContainer {
-        justify-content: center; } }
-    footer .innerContentContainer .informationContainer {
-      width: 100%; }
-      footer .innerContentContainer .informationContainer .heading {
-        font-size: 4em; }
-        @media only screen and (min-width: 980px) {
-          footer .innerContentContainer .informationContainer .heading {
-            font-size: 5em; } }
-        @media only screen and (min-width: 1260px) {
-          footer .innerContentContainer .informationContainer .heading {
-            font-size: 6em; } }
-      @media only screen and (min-width: 980px) {
-        footer .innerContentContainer .informationContainer {
-          width: 50%; } }
-      footer .innerContentContainer .informationContainer .departmentContainer .departmentItem .title {
-        color: #000000;
-        opacity: 0.25;
-        font-size: 1.25em; }
-      footer .innerContentContainer .informationContainer .departmentContainer .departmentItem .email {
-        font-size: 2.5em;
-        font-weight: 600; }
-    footer .innerContentContainer .logoContainer {
-      width: 100%;
-      display: none; }
-      footer .innerContentContainer .logoContainer img {
-        width: 85%; }
-      @media only screen and (min-width: 980px) {
-        footer .innerContentContainer .logoContainer {
-          width: 50%;
-          display: inline-block; } }
-    footer .innerContentContainer .notesContainer {
-      width: 100%;
+    footer#readytotalk {
+      margin-top: 150px;
+      padding-top: 450px;
+      z-index: 10;
+      position: relative;
+      background: url("/assets/home-footer-background.png") top center no-repeat;
+      background-size: cover; } }
+  @media only screen and (min-width: 980px) {
+    footer#readytotalk .contactDetailsContainer {
+      width: 60%;
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      flex-direction: column;
-      padding: 1.5rem 0;
-      font-size: 1.25em; }
-      footer .innerContentContainer .notesContainer div {
-        width: 33%; }
-      footer .innerContentContainer .notesContainer .socialItemContainer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 100%; }
-        footer .innerContentContainer .notesContainer .socialItemContainer .socialItem i {
-          font-size: 1.25em;
-          transform: scale(1.1);
-          transition: all 300ms; }
-          @media only screen and (min-width: 1260px) {
-            footer .innerContentContainer .notesContainer .socialItemContainer .socialItem i {
-              font-size: 1.5em; } }
-          footer .innerContentContainer .notesContainer .socialItemContainer .socialItem i:hover {
-            transform: scale(1.1);
-            transition: all 300ms; }
-  footer .rightsContainer {
+      align-items: center; } }
+  footer#readytotalk .contactDetailsContainer .detailItem {
+    margin-top: 3em; }
+    footer#readytotalk .contactDetailsContainer .detailItem .subheading {
+      color: #aaaaaa; }
+      @media only screen and (min-width: 980px) {
+        footer#readytotalk .contactDetailsContainer .detailItem .subheading {
+          font-size: 1.25em; } }
+    @media only screen and (min-width: 980px) {
+      footer#readytotalk .contactDetailsContainer .detailItem .heading {
+        font-size: 2.5em; } }
+  footer#readytotalk .rightsContainer {
+    margin-top: 120px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: black;
-    padding: 0.75rem 1.5rem; }
+    padding: 0.75rem 1.5rem;
+    flex-wrap: wrap; }
+    @media only screen and (min-width: 980px) {
+      footer#readytotalk .rightsContainer {
+        margin-top: 250px; } }
+    footer#readytotalk .rightsContainer .rightsItem {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      margin: 10px 0; }
+      @media only screen and (min-width: 980px) {
+        footer#readytotalk .rightsContainer .rightsItem {
+          width: 33%;
+          margin: 0; } }
+    footer#readytotalk .rightsContainer .socialItem {
+      margin: 0 10px; }
 
-.socialItem {
-  transition: all 500ms; }
+.socialItem i {
+  transition: all 500ms;
+  font-size: 1.25em; }
 
-.socialItem:hover {
+.socialItem:hover i {
   transform: scale(1.2);
   transition: all 500ms; }
 

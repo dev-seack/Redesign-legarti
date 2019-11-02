@@ -44,6 +44,11 @@ a {
 }
 
 // container
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 .pageSlogan {
   margin: 250px auto;
 
@@ -64,17 +69,10 @@ a {
 }
 
 .section,
-section,
-footer {
-  margin-top: 200px;
+section {
+  margin-top: 300px;
   &.evenMarginSection {
-    margin-bottom: 200px;
-  }
-  @media only screen and (min-width: 980px) {
-    margin-top: 300px;
-    &.evenMarginSection {
-      margin-bottom: 300px;
-    }
+    margin-bottom: 300px;
   }
 }
 
