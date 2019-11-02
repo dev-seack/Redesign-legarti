@@ -143,9 +143,7 @@
             class="button primaryButton mt2 mlrauto"
             >zum Portfolio</a
           >
-          <a
-            href="/pages/portfolio/overview.html"
-            class="button primaryButton mt2 mlrauto"
+          <a href="/pages/team.html" class="button primaryButton mt2 mlrauto"
             >zum Team</a
           >
         </div>

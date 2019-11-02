@@ -192,9 +192,17 @@ a {
 .section,
 section {
   margin-top: 300px; }
+  @media only screen and (min-width: 980px) {
+    .section,
+    section {
+      margin-top: 400px; } }
   .section.evenMarginSection,
   section.evenMarginSection {
     margin-bottom: 300px; }
+    @media only screen and (min-width: 980px) {
+      .section.evenMarginSection,
+      section.evenMarginSection {
+        margin-bottom: 400px; } }
 
 .visibilityHidden {
   visibility: hidden; }
@@ -613,7 +621,7 @@ h5.heading {
     text-align: center;
     font-weight: 500; }
     .menuContainer .contactDetailsContainer .heading {
-      color: #666666; }
+      color: #aaaaaa; }
 
 .toggleMenuOverlay {
   display: none; }
@@ -689,10 +697,11 @@ h5.heading {
 
 #whatwedo {
   position: relative;
-  padding-top: 300px; }
+  padding-top: 210px; }
   @media only screen and (min-width: 980px) {
     #whatwedo {
-      padding-bottom: 100px; } }
+      padding-bottom: 100px;
+      padding-top: 450px; } }
   #whatwedo .imageContainer img {
     width: 100%; }
   #whatwedo .ideenImage {
@@ -714,7 +723,11 @@ h5.heading {
       width: 75%;
       max-width: 950px; } }
   #whatwedo .imageContainer {
-    display: block; }
+    display: block;
+    margin: 2em 0 1em 0; }
+    @media only screen and (min-width: 980px) {
+      #whatwedo .imageContainer {
+        margin: 0; } }
 
 #testimonials {
   position: relative; }
@@ -733,7 +746,7 @@ h5.heading {
     display: flex; }
     #testimonials .testimonialContainer .testimonialItem {
       background: transparent;
-      padding: 2rem 1rem;
+      padding: 2rem 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -935,15 +948,16 @@ footer#readytotalk {
           width: 33%;
           margin: 0; } }
     footer#readytotalk .rightsContainer .socialItem {
-      margin: 0 10px; }
+      margin: 0 15px; }
 
 .socialItem i {
-  transition: all 500ms;
-  font-size: 1.25em; }
+  transition: all 300ms;
+  font-size: 1.5em; }
 
 .socialItem:hover i {
   transform: scale(1.2);
-  transition: all 500ms; }
+  color: #ffda48;
+  transition: all 300ms; }
 
 .overviewContainer {
   margin-top: -200px; }

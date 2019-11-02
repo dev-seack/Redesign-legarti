@@ -8,6 +8,13 @@ const testimonials = [
   },
   {
     projectName: "gzk",
+    name: "Klaus Herr",
+    title: "Gründer - The Free Ager",
+    quote:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Doloribus velit alias perspiciatis? Optio laboriosam alias remquasi consequatur quo quisquam, dignissimos delectus nam nemo,mollitia porro iusto blanditii"
+  },
+  {
+    projectName: "gzk",
     name: "Leonie Langkabel",
     title: "Vorstand - UCS",
     quote:
@@ -22,6 +29,14 @@ const testimonials = [
   }
 ];
 
+// looping settings
+const looping = true;
+const loopDelay = 7500; // in ms
+// global variables - do not change!
+let testiCounter = 1;
+const testiMaxCounter = testimonials.length;
+let testiTimer = null;
+
 $(document).ready(function() {
   const pagiContainer = $(".pagiContainer .pagiInnerContainer");
   const testiContainer = $(
@@ -31,10 +46,28 @@ $(document).ready(function() {
   setupPaginations(pagiContainer);
   setupTestimonial(testiContainer, 0);
 
+  if (looping) {
+    startTestiTimer(testiContainer, pagiContainer);
+  }
+
   pagiContainer.children().click(function(item) {
     switchTestimonial(testiContainer, pagiContainer, $(this).data("index"));
+    if (looping) {
+      startTestiTimer(testiContainer, pagiContainer);
+    }
   });
 });
+
+startTestiTimer = (testiContainer, pagiContainer) => {
+  clearInterval(testiTimer);
+  testiTimer = setInterval(function() {
+    switchTestimonial(
+      testiContainer,
+      pagiContainer,
+      testiCounter % testiMaxCounter
+    );
+  }, loopDelay);
+};
 
 switchTestimonial = (testiContainer, pagiContainer, index) => {
   // animation
@@ -43,6 +76,8 @@ switchTestimonial = (testiContainer, pagiContainer, index) => {
     setupTestimonial(testiContainer, index);
     // pagination update!
     pagiContainer.children().each(function(i, ele) {
+      testiCounter = index + 1;
+
       $(ele).removeClass("active");
       if (i === index) {
         $(ele).addClass("active");
