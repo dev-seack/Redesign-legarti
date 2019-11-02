@@ -9,9 +9,8 @@
   .innerContentContainer {
     position: relative;
     padding: $mobilePadding * 1.25 $mobilePadding;
-    background: url("../assets/team/friends-1.jpg") center center no-repeat;
+    background: url("/assets/team/teamfoto.png") center center no-repeat;
     background-size: cover;
-    box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.15);
     @media only screen and (min-width: 980px) {
       border-radius: 10px;
       padding: 0;

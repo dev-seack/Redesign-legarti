@@ -1,3 +1,7 @@
+body#home {
+  background: url("/assets/home-x-bg.svg") top center no-repeat;
+}
+
 #heroSection {
   position: absolute;
   top: 0;
@@ -8,7 +12,6 @@
   justify-content: center;
   align-items: center;
   padding-top: 40px;
-  background: url("/assets/herosection/marker.svg") center center no-repeat;
   .contentContainer {
     width: 100%;
     .linkItemContainer {

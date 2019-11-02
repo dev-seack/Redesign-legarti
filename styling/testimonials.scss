@@ -1,65 +1,52 @@
 #testimonials {
   position: relative;
-  .sectionBacklayer {
-    display: none;
+  .menschenImage {
     position: absolute;
-    top: $mobilePadding * 2;
-    right: -$mobilePadding;
-    z-index: -2;
-    @media only screen and (min-width: 1400px) {
-      right: -175px;
-      display: initial;
-      height: 110%;
-    }
+    top: 0;
+    width: 75%;
+    right: 0;
+    left: 0;
   }
-}
-
-.testimonialContainer {
-  @media screen and(min-width: 980px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: $mobilePadding;
+  .sectionHeading {
+    margin-bottom: 0;
   }
-  .testimonialItem {
-    background: transparent;
-    border-radius: 5px;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
-    padding: 2rem 1rem;
+  .testimonialContainer {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    @media only screen and (min-width: 980px) {
-      padding: 2rem 1.5rem;
-    }
-    &:last-child {
-      margin-top: 5rem;
+    .testimonialItem {
+      background: transparent;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 75%;
       @media only screen and (min-width: 980px) {
-        margin-top: 0;
+        padding: 2rem 1.5rem;
       }
-    }
 
-    .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-      filter: grayscale(100%);
-      @media only screen and (min-width: 980px) {
-        width: 150px;
-        height: 150px;
+      .avatar {
+        width: 200px;
+        height: 200px;
+        filter: grayscale(100%);
+        @media only screen and (min-width: 980px) {
+          width: 250px;
+          height: 250px;
+        }
       }
-    }
-    .personDetails {
-      .name {
-        font-weight: 600;
-        font-size: 1em;
+      .personDetails {
+        .name {
+          font-weight: 600;
+          font-size: 1em;
+        }
+        .title {
+          font-weight: 200;
+          font-size: 0.9em;
+          color: $darkgrey;
+        }
       }
-      .title {
-        font-weight: 200;
-        font-size: 0.9em;
-        color: $darkgrey;
+      .profilInformation {
+        background: url("/assets/herosection/marker.svg") center center
+          no-repeat;
       }
     }
   }

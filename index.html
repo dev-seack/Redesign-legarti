@@ -19,7 +19,7 @@
     ></script>
     <script src="/scripts/loadingScreen.js"></script>
   </head>
-  <body>
+  <body id="home">
     <div class="loadingScreen">
       <img src="/assets/logoBlack.svg" alt="" />
       <div class="progressBar"></div>
@@ -117,61 +117,59 @@
 
     <!-- what we do section -->
     <section id="whatwedo" class="maxContainer mt100 mlrauto">
-      <img
-        src="assets/ideen-handwritten-90deg.svg"
-        alt=""
-        class="sectionBacklayer"
-      />
+      <div class="sectionHeading">
+        <h2 class="heading">
+          wir helfen dir
+        </h2>
+        <p class="subheading">deine Ideen in die Welt zu kommunizieren</p>
+      </div>
       <a class="imageContainer" href="/pages/portfolio/overview.html">
-        <img
-          src="/pages/portfolio/gzk/assets/branding/cosmetics/CremeCollection.jpg"
-          alt=""
-        />
+        <img src="/assets/whatwedo-overview.png" alt="" />
       </a>
-      <div class="contentContainer mt3">
-        <div class="sectionHeading">
-          <h2 class="heading">
-            wir helfen dir
-          </h2>
-          <p class="subheading">deine Ideen in die Welt zu kommunizieren</p>
-        </div>
-        <p class="readText">
+      <div class="contentContainer">
+        <p class="readText mlrauto textCenter">
+          Guter Eindruck ist kein Zufall - Wir haben Bock etwas zu schaffen,
+          dass die Werte & Identität unserer Kunden wiederspiegelt und ihnen ein
+          sicheres Gefühl gibt ihre Idee nach Außen zu kommunizieren. <br />
           Guter Eindruck ist kein Zufall - Wir haben Bock etwas zu schaffen,
           dass die Werte & Identität unserer Kunden wiederspiegelt und ihnen ein
           sicheres Gefühl gibt ihre Idee nach Außen zu kommunizieren.
         </p>
         <a
           href="/pages/portfolio/overview.html"
-          class="button primaryButton mt2"
+          class="button primaryButton mt2 mlrauto"
           >zum Portfolio</a
         >
       </div>
+      <img
+        src="/assets/ideen-handwritten.svg"
+        alt=""
+        class="ideenImage mlrauto"
+      />
     </section>
 
     <!-- testimonials -->
-    <section id="testimonials" class="maxContainer mtsection fullWidth">
+    <section id="testimonials" class="maxContainer mtsection mlrauto">
       <img
-        src="assets/menschen-handwritten-90deg.svg"
+        src="/assets/menschen-handwritten.svg"
         alt=""
-        class="sectionBacklayer"
+        class="menschenImage mlrauto"
       />
-      <div class="contentContainer mt3">
-        <div class="sectionHeading">
-          <h2 class="heading">
-            und anderen
-          </h2>
-          <p class="subheading">uns interessiert, was Andere von uns denken</p>
-        </div>
+      <div class="sectionHeading">
+        <h2 class="heading">
+          und anderen
+        </h2>
+        <p class="subheading">uns interessiert, was Andere von uns denken</p>
+      </div>
+      <div class="contentContainer">
         <div class="testimonialContainer">
-          <div class="testimonialItem">
-            <img
-              class="avatar"
-              src="https://source.unsplash.com/w1N1WmLDyHU/150x150"
-              alt=""
-            />
-            <div class="personDetails textCenter mt1">
-              <p class="name">Johannes Koch</p>
-              <p class="title">Gesch&auml;ftsf. - GZ Koch</p>
+          <div class="testimonialItem mlrauto">
+            <div class="profilInformation">
+              <img class="avatar" src="/assets/testimonial-profil.png" alt="" />
+              <div class="personDetails textCenter">
+                <p class="name">Johannes Koch</p>
+                <p class="title">Gesch&auml;ftsf. - GZ Koch</p>
+              </div>
             </div>
             <p class="readText quote mt1 textCenter">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -179,33 +177,6 @@
               quasi consequatur quo quisquam, dignissimos delectus nam nemo,
               mollitia porro iusto blanditii
             </p>
-            <a
-              class="mt2 textCenter secondaryLink"
-              href="./pages/portfolio/ucs/showcase.html"
-              ><span>Projekt ansehen</span></a
-            >
-          </div>
-          <div class="testimonialItem">
-            <div
-              class="avatar"
-              style="    background: url(./pages/portfolio/ucs/assets/avatar.png) center center no-repeat; background-size: cover;"
-            ></div>
-
-            <div class="personDetails textCenter mt1">
-              <p class="name">Leonie Langkabel</p>
-              <p class="title">Vorstand - UCS</p>
-            </div>
-            <p class="readText quote mt1 textCenter">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Doloribus velit alias perspiciatis? Optio laboriosam alias rem
-              quasi consequatur quo quisquam, dignissimos delectus nam nemo,
-              mollitia porro iusto blanditiis molestiae inventore!
-            </p>
-            <a
-              class="mt2 textCenter secondaryLink"
-              href="./pages/portfolio/ucs/showcase.html"
-              ><span>Projekt ansehen</span></a
-            >
           </div>
         </div>
         <a

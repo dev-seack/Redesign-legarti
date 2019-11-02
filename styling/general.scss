@@ -56,11 +56,6 @@ a {
   max-width: 1280px;
 }
 
-.fullWidth {
-  width: 100%;
-  margin: 0 auto;
-}
-
 .halfWidth {
   width: 100%;
   @media only screen and (min-width: 980px) {
@@ -71,14 +66,14 @@ a {
 .section,
 section,
 footer {
-  padding-top: 3em;
-  &.evenPaddingSection {
-    padding-bottom: 3em;
+  margin-top: 200px;
+  &.evenMarginSection {
+    margin-bottom: 200px;
   }
   @media only screen and (min-width: 980px) {
-    padding-top: 120px;
-    &.evenPaddingSection {
-      padding-bottom: 120px;
+    margin-top: 300px;
+    &.evenMarginSection {
+      margin-bottom: 300px;
     }
   }
 }
@@ -118,13 +113,6 @@ footer {
 .negativeMargin {
   margin-left: -$mobileMargin;
   margin-right: -$mobileMargin;
-}
-
-.mtsection {
-  margin-top: 200px;
-  @media only screen and (min-width: 980px) {
-    margin-top: 300px;
-  }
 }
 
 .mt100 {
