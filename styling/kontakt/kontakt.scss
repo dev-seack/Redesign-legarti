@@ -14,6 +14,10 @@ body.contact {
   }
 }
 
+.contactMain {
+  margin-top: 200px;
+}
+
 .contactContainer {
   display: flex;
   justify-content: space-between;
@@ -25,6 +29,9 @@ body.contact {
     .formgroup {
       padding: 0.5em;
       position: relative;
+      &.fullWidth {
+        width: 100%;
+      }
       &:after {
         content: attr(data-label);
         color: $primaryColor;
@@ -74,16 +81,26 @@ body.contact {
 }
 
 footer.contactFooter {
+  position: relative;
+  margin-top: 75px;
+  @media only screen and (min-width: 980px) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+.contactFooter {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
-  margin-top: 0;
+  margin-top: 50px;
 
   bottom: 0;
   left: $mobilePadding;
   right: $mobilePadding;
-  background: black;
-  padding: $mobilePadding;
+  padding-bottom: $mobilePadding;
   div {
     width: 100%;
     @media only screen and (min-width: 980px) {
@@ -94,12 +111,13 @@ footer.contactFooter {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0.75rem 1.5rem;
+    padding: 1rem 1.5rem;
     .socialItem {
       text-align: center;
     }
   }
   .rightsContainer {
+    display: flex;
     justify-content: space-between;
     @media only screen and (min-width: 980px) {
       justify-content: space-around;

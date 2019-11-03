@@ -50,10 +50,15 @@ a {
   justify-content: space-around;
 }
 .pageSlogan {
-  margin: 250px auto;
-
-  @media only screen and (min-width: 980px) {
-    margin: 350px auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  img {
+    max-width: 1000px;
+    width: 100%;
   }
 }
 

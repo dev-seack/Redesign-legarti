@@ -149,7 +149,7 @@
         </div>
       </div>
       <img
-        src="/assets/ideen-handwritten.svg"
+        src="/assets/ideen-handwritting.svg"
         alt=""
         class="ideenImage mlrauto"
       />

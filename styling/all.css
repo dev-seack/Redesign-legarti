@@ -175,10 +175,15 @@ a {
   justify-content: space-around; }
 
 .pageSlogan {
-  margin: 250px auto; }
-  @media only screen and (min-width: 980px) {
-    .pageSlogan {
-      margin: 350px auto; } }
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto; }
+  .pageSlogan img {
+    max-width: 1000px;
+    width: 100%; }
 
 .maxContainer {
   max-width: 1280px; }
@@ -869,19 +874,16 @@ h5.heading {
           transition: 300ms ease-in-out; }
 
 .socialBanner {
-  background: url("/assets/grey-background-texture.svg") center center no-repeat;
-  background-size: cover;
   margin-right: -1.5rem;
-  margin-left: -1.5rem; }
-  @media only screen and (min-width: 980px) {
-    .socialBanner {
-      background-size: contain; } }
+  margin-left: -1.5rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem; }
   .socialBanner .innerContentContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 1.5rem; }
+    padding: 1.5rem 0; }
     .socialBanner .innerContentContainer .socialbannerHeading {
       font-size: 2.25em; }
       @media only screen and (min-width: 980px) {
@@ -960,10 +962,10 @@ footer#readytotalk {
   transition: all 300ms; }
 
 .overviewContainer {
-  margin-top: -200px; }
+  margin-top: -100px; }
   @media only screen and (min-width: 980px) {
     .overviewContainer {
-      margin-top: -250px; } }
+      margin-top: -150px; } }
   .overviewContainer .overviewItem {
     display: flex;
     flex-direction: column;
@@ -1291,7 +1293,13 @@ body#gzk.showcase .showcaseContainer .showcaseWebContainer .targetContainer .tar
         display: block; } }
 
 .teamSocialBanner {
+  background: url("/assets/herosection/marker.svg") top center no-repeat;
+  background-size: cover;
+  margin-top: 250px;
+  padding-top: 250px;
   padding-bottom: 240px; }
+  .teamSocialBanner .innerContentContainer {
+    margin-bottom: 200px; }
 
 .feedContainer {
   margin-top: -120px;
@@ -1346,6 +1354,11 @@ body#gzk.showcase .showcaseContainer .showcaseWebContainer .targetContainer .tar
     .footNote .innerContainer {
       width: 50%; } }
 
+.instagramLink {
+  display: block; }
+  .instagramLink .subheading {
+    color: black; }
+
 body.contact {
   background: black; }
   body.contact .logoContainer {
@@ -1354,6 +1367,9 @@ body.contact {
     background: white; }
   body.contact .menuContainer {
     background: rgba(0, 0, 0, 0.75); }
+
+.contactMain {
+  margin-top: 200px; }
 
 .contactContainer {
   display: flex;
@@ -1366,6 +1382,8 @@ body.contact {
     .contactContainer .contactForm form .formgroup {
       padding: 0.5em;
       position: relative; }
+      .contactContainer .contactForm form .formgroup.fullWidth {
+        width: 100%; }
       .contactContainer .contactForm form .formgroup:after {
         content: attr(data-label);
         color: #ffda48;
@@ -1404,31 +1422,42 @@ body.contact {
       font-weight: 600; }
 
 footer.contactFooter {
+  position: relative;
+  margin-top: 75px; }
+  @media only screen and (min-width: 980px) {
+    footer.contactFooter {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0; } }
+
+.contactFooter {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
-  margin-top: 0;
+  margin-top: 50px;
   bottom: 0;
   left: 1.5rem;
   right: 1.5rem;
-  background: black;
-  padding: 1.5rem; }
-  footer.contactFooter div {
+  padding-bottom: 1.5rem; }
+  .contactFooter div {
     width: 100%; }
     @media only screen and (min-width: 980px) {
-      footer.contactFooter div {
+      .contactFooter div {
         width: 50%; } }
-  footer.contactFooter .socialItemContainer {
+  .contactFooter .socialItemContainer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0.75rem 1.5rem; }
-    footer.contactFooter .socialItemContainer .socialItem {
+    padding: 1rem 1.5rem; }
+    .contactFooter .socialItemContainer .socialItem {
       text-align: center; }
-  footer.contactFooter .rightsContainer {
+  .contactFooter .rightsContainer {
+    display: flex;
     justify-content: space-between; }
     @media only screen and (min-width: 980px) {
-      footer.contactFooter .rightsContainer {
+      .contactFooter .rightsContainer {
         justify-content: space-around; } }
 
 .button {

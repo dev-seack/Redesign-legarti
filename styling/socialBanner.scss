@@ -1,17 +1,14 @@
 .socialBanner {
-  background: url("/assets/grey-background-texture.svg") center center no-repeat;
-  background-size: cover;
   margin-right: -$mobileMargin;
   margin-left: -$mobileMargin;
-  @media only screen and (min-width: 980px) {
-    background-size: contain;
-  }
+  padding-right: $mobilePadding;
+  padding-left: $mobilePadding;
   .innerContentContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: $mobilePadding;
+    padding: $mobilePadding 0;
     .socialbannerHeading {
       font-size: 2.25em;
       @media only screen and (min-width: 980px) {
