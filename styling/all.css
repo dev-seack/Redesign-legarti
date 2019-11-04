@@ -1423,7 +1423,8 @@ body.contact {
 
 footer.contactFooter {
   position: relative;
-  margin-top: 75px; }
+  margin-top: 75px;
+  bottom: 1em; }
   @media only screen and (min-width: 980px) {
     footer.contactFooter {
       position: absolute;
@@ -1436,11 +1437,7 @@ footer.contactFooter {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 50px;
-  bottom: 0;
-  left: 1.5rem;
-  right: 1.5rem;
-  padding-bottom: 1.5rem; }
+  bottom: 0; }
   .contactFooter div {
     width: 100%; }
     @media only screen and (min-width: 980px) {

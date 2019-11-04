@@ -83,6 +83,7 @@ body.contact {
 footer.contactFooter {
   position: relative;
   margin-top: 75px;
+  bottom: 1em;
   @media only screen and (min-width: 980px) {
     position: absolute;
     bottom: 0;
@@ -95,12 +96,8 @@ footer.contactFooter {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 50px;
 
   bottom: 0;
-  left: $mobilePadding;
-  right: $mobilePadding;
-  padding-bottom: $mobilePadding;
   div {
     width: 100%;
     @media only screen and (min-width: 980px) {
