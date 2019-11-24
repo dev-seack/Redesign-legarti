@@ -9,6 +9,12 @@ footer#readytotalk {
     background: url("/assets/home-footer-background.png") top center no-repeat;
     background-size: cover;
   }
+  img {
+    margin-bottom: 30px;
+    @media only screen and (min-width: 980px) {
+      margin-bottom: 50px;
+    }
+  }
   .contactDetailsContainer {
     @media only screen and (min-width: 980px) {
       width: 60%;

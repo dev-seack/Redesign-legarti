@@ -717,7 +717,7 @@ h5.heading {
         width: 55%;
         max-width: 900px;
         display: inline-block;
-        bottom: -10px;
+        bottom: 40px;
         left: 0;
         right: 0;
         z-index: -1; } }
@@ -913,6 +913,11 @@ footer#readytotalk {
       position: relative;
       background: url("/assets/home-footer-background.png") top center no-repeat;
       background-size: cover; } }
+  footer#readytotalk img {
+    margin-bottom: 30px; }
+    @media only screen and (min-width: 980px) {
+      footer#readytotalk img {
+        margin-bottom: 50px; } }
   @media only screen and (min-width: 980px) {
     footer#readytotalk .contactDetailsContainer {
       width: 60%;
