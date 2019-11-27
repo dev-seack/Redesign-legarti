@@ -227,6 +227,9 @@ section {
 .mt5 {
   margin-top: 5em; }
 
+.mt150 {
+  margin-top: 150px; }
+
 .mb1 {
   margin-bottom: 1em; }
 
@@ -409,6 +412,18 @@ h5.heading {
   font-size: 1.75em;
   font-weight: 700; }
 
+.heading a {
+  transition: color 200ms; }
+  .heading a:hover {
+    color: #ffda48;
+    transition: color 200ms; }
+
+a.email {
+  transition: color 200ms; }
+  a.email:hover {
+    color: #ffda48 !important;
+    transition: color 200ms; }
+
 .halfContainer {
   display: grid;
   grid-template-rows: 1fr;
@@ -445,6 +460,11 @@ h5.heading {
     background: #111111;
     width: 0px;
     height: 2px; }
+
+.impressumContainer h2 {
+  margin-top: 2em; }
+.impressumContainer h3 {
+  margin-top: 1.25em; }
 
 #customScrollbar {
   position: fixed;
@@ -1432,7 +1452,6 @@ footer.contactFooter {
   bottom: 1em; }
   @media only screen and (min-width: 980px) {
     footer.contactFooter {
-      position: absolute;
       bottom: 0;
       left: 0;
       right: 0; } }

@@ -1,6 +1,6 @@
 // Hero Animation
 /*
-Wenn der Benutzer ueber eines der Kategorien (Branding, Webdesign, Video)
+Wenn der Benutzer ueber eins der Kategorien (Branding, Webdesign, Video)
 hovered, wird eine Animation getriggered. Diese Animation laesst alle
 Unterkategorien, der jeweiligen Ueberkategorie, schnell wechseln.
 
@@ -36,7 +36,7 @@ const categoryPool = [
 ];
 
 const speed = 500; // in ms
-const delay = 850; // after hover-trigger
+const delay = 1000; // after hover-trigger
 const isLooping = false; // loop on hover or not
 let timerID; // deklaration, um ihn ausserhalb der mouseenter-funkiton zu benutzen
 let index = 0; // gloabl, damit er nicht bei jedem mousleave resetet bzw. bei mouseenter von vorne startet, sondern seine aktuelle position behaelt
@@ -80,7 +80,7 @@ function setup() {
 }
 
 function switchAnimation(element) {
-  let currentCategoryObj = categoryPool.find((cat) => {
+  let currentCategoryObj = categoryPool.find(cat => {
     return element.attr("id") === cat.id;
   });
   let currentCategoryEle = $("#" + currentCategoryObj.id);

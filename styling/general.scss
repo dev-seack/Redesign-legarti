@@ -107,6 +107,10 @@ section {
   margin-top: 5em;
 }
 
+.mt150 {
+  margin-top: 150px;
+}
+
 .mb1 {
   margin-bottom: 1em;
 }
@@ -321,6 +325,24 @@ h5.heading {
   font-weight: 700;
 }
 
+.heading {
+  a {
+    transition: color 200ms;
+    &:hover {
+      color: $primaryColor;
+      transition: color 200ms;
+    }
+  }
+}
+
+a.email {
+  transition: color 200ms;
+  &:hover {
+    color: $primaryColor !important;
+    transition: color 200ms;
+  }
+}
+
 // container
 .halfContainer {
   display: grid;
@@ -362,5 +384,14 @@ h5.heading {
     background: #111111;
     width: 0px;
     height: 2px;
+  }
+}
+
+.impressumContainer {
+  h2 {
+    margin-top: 2em;
+  }
+  h3 {
+    margin-top: 1.25em;
   }
 }
