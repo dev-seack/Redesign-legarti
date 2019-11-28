@@ -1013,8 +1013,7 @@ footer#readytotalk {
     .overviewContainer .overviewItem .imageContainer {
       text-align: center; }
       .overviewContainer .overviewItem .imageContainer img {
-        width: 100%;
-        border-radius: 10px; }
+        width: 100%; }
     .overviewContainer .overviewItem .contentContainer {
       display: flex;
       flex-direction: column;
@@ -1156,9 +1155,7 @@ body.showcase .showcaseContainer {
         justify-content: center; } }
     body.showcase .showcaseContainer .showcaseTestimonialContainer .avatar img {
       width: 100%;
-      max-width: 450px;
-      border-radius: 5px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); }
+      max-width: 450px; }
     @media only screen and (min-width: 980px) {
       body.showcase .showcaseContainer .showcaseTestimonialContainer .showcaseTestimonialContentContainer {
         margin-left: 3em;

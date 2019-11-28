@@ -1,6 +1,6 @@
 const testimonials = [
   {
-    projectName: "gzk",
+    projectName: "ucs",
     name: "Johannes Koch",
     title: "Geschäftsführer - GZ Koch",
     quote:
@@ -14,7 +14,7 @@ const testimonials = [
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Doloribus velit alias perspiciatis? Optio laboriosam alias remquasi consequatur quo quisquam, dignissimos delectus nam nemo,mollitia porro iusto blanditii"
   },
   {
-    projectName: "gzk",
+    projectName: "ucs",
     name: "Leonie Langkabel",
     title: "Vorstand - UCS",
     quote:
@@ -113,7 +113,7 @@ setupTestimonial = (testiContainer, index) => {
 };
 
 // create pagination-items dynamically
-setupPaginations = (pagiContainer) => {
+setupPaginations = pagiContainer => {
   testimonials.forEach((ele, index) => {
     newPagiItem = $(`<div data-index="${index}" class="pagiItem"></div>`);
 
