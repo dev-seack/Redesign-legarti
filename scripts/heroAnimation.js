@@ -31,7 +31,7 @@ const categoryPool = [
   {
     id: "bottomCategory",
     main: "Video",
-    subcategories: ["Slowmo", "Transition", "B-Roll", "Produktion"]
+    subcategories: ["Slowmo", "Transition", "B-Roll", "Schnitt"]
   }
 ];
 

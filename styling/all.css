@@ -466,6 +466,9 @@ a.email {
 .impressumContainer h3 {
   margin-top: 1.25em; }
 
+.link-text {
+  color: #ffda48 !important; }
+
 #customScrollbar {
   position: fixed;
   width: 4px;
