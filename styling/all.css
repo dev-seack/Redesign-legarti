@@ -1225,6 +1225,20 @@ body#ucs.showcase .showcaseDescription {
 body#ucs.showcase .showcaseContainer .showcaseWebContainer .targetContainer .targetList li.marked:after {
   background: url("/pages/portfolio/ucs/assets/marker.svg") center center no-repeat; }
 
+body#fl.showcase .showcaseContainer .sectionHeading .subheading:before,
+body#fl.showcase .showcaseContainer .secondaryLink span:before,
+body#fl.showcase .showcaseContainer .button.primaryButton:after {
+  background: #dc001b; }
+body#fl.showcase .showcaseDescription {
+  background: #111111;
+  background: linear-gradient(45deg, #dc001b 0%, #111111 100%);
+  background: -webkit-linear-gradient(135deg, #dc001b 0%, #111111 100%);
+  color: white; }
+body#fl.showcase .showcaseContainer .showcaseWebContainer .targetContainer .targetList li.marked:after {
+  background: url("/pages/portfolio/fl/assets/marker.svg") center center no-repeat; }
+body#fl.showcase .showcaseHeader .showcaseLogoContainer img {
+  max-width: 650px; }
+
 body#gzk.showcase .showcaseContainer .sectionHeading .subheading:before,
 body#gzk.showcase .showcaseContainer .secondaryLink span:before,
 body#gzk.showcase .showcaseContainer .button.primaryButton:after {

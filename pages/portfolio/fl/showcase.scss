@@ -1,0 +1,45 @@
+// FL
+$accentyColorShowcase: #dc001b;
+$headerOverlayColor: rgba(0, 0, 0, 0.45);
+$closeButtonColor: white;
+$gradientLight: #dc001b;
+$gradientDark: #111111;
+$markerURL: "/pages/portfolio/fl/assets/marker.svg";
+
+body#fl.showcase {
+  .showcaseContainer {
+    .sectionHeading .subheading:before,
+    .secondaryLink span:before,
+    .button.primaryButton:after {
+      background: $accentyColorShowcase;
+    }
+  }
+
+  .showcaseDescription {
+    background: $gradientDark;
+    background: linear-gradient(45deg, $gradientLight 0%, $gradientDark 100%);
+    background: -webkit-linear-gradient(
+      135deg,
+      $gradientLight 0%,
+      $gradientDark 100%
+    );
+    color: white;
+  }
+
+  // main showcase styling
+  .showcaseContainer {
+    .showcaseWebContainer {
+      .targetContainer .targetList {
+        li {
+          &.marked:after {
+            background: url($markerURL) center center no-repeat;
+          }
+        }
+      }
+    }
+  }
+
+  .showcaseHeader .showcaseLogoContainer img {
+    max-width: 650px;
+  }
+}

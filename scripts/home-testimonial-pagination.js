@@ -1,15 +1,16 @@
 const testimonials = [
   {
-    projectName: "ucs",
+    projectName: "fl",
     name: "Johannes Koch",
     title: "Geschäftsführer - GZ Koch",
     quote:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Doloribus velit alias perspiciatis? Optio laboriosam alias remquasi consequatur quo quisquam, dignissimos delectus nam nemo,mollitia porro iusto blanditii"
   },
+
   {
-    projectName: "gzk",
-    name: "Klaus Herr",
-    title: "Gründer - The Free Ager",
+    projectName: "fl",
+    name: "Mark Buchholz",
+    title: "Chefcoach - Fight Lounge",
     quote:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Doloribus velit alias perspiciatis? Optio laboriosam alias remquasi consequatur quo quisquam, dignissimos delectus nam nemo,mollitia porro iusto blanditii"
   },
@@ -17,13 +18,6 @@ const testimonials = [
     projectName: "ucs",
     name: "Leonie Langkabel",
     title: "Vorstand - UCS",
-    quote:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Doloribus velit alias perspiciatis? Optio laboriosam alias remquasi consequatur quo quisquam, dignissimos delectus nam nemo,mollitia porro iusto blanditii"
-  },
-  {
-    projectName: "gzk",
-    name: "Mark Buchholz",
-    title: "Geschäftsführer - Fight Lounge",
     quote:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Doloribus velit alias perspiciatis? Optio laboriosam alias remquasi consequatur quo quisquam, dignissimos delectus nam nemo,mollitia porro iusto blanditii"
   }
