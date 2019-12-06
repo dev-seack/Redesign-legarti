@@ -1,6 +1,6 @@
 const testimonials = [
   {
-    projectName: "fl",
+    projectName: "gzk",
     name: "Johannes Koch",
     title: "Geschäftsführer - GZ Koch",
     quote:
