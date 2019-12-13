@@ -222,13 +222,16 @@ body.showcase {
 
   // footer styling
   footer.showCaseFooter {
-    margin-top: 0;
+    margin: 0 -$mobileMargin;
     height: 100vh;
     background: black;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (min-width: 980px) {
+      margin: 0;
+    }
   }
 }
 
@@ -236,7 +239,7 @@ body.showcase {
   position: relative;
   z-index: 10;
   max-width: 1920px;
-  margin: -50px $mobileMargin -50px $mobileMargin;
+  margin: -50px $mobileMargin/2 -50px $mobileMargin/2;
   border-radius: 20px 20px;
   background: white;
   box-shadow: 0 20px 50px $shadow;
