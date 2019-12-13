@@ -12,7 +12,7 @@ const testimonials = [
     name: "Mark Buchholz",
     title: "Chefcoach - Fight Lounge",
     quote:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Doloribus velit alias perspiciatis? Optio laboriosam alias remquasi consequatur quo quisquam, dignissimos delectus nam nemo,mollitia porro iusto blanditii"
+      "Legarti hat uns mit den Videos begeistert! Die Zusammenarbeit war absolut stressfrei und reibungslos. Zusagen wurden eingehalten und die Videos habe alle durchweg positives Feedback von unseren Mitgliedern gebracht."
   },
   {
     projectName: "ucs",
