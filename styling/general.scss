@@ -345,6 +345,10 @@ a.email {
   }
 }
 
+.opacity-zero {
+  opacity: 0;
+}
+
 // container
 .halfContainer {
   display: grid;
@@ -355,6 +359,24 @@ a.email {
   }
 }
 
+.onethirdContainer {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+  @media only screen and (min-width: 980px) {
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+.onethirdContainerReverse {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+  @media only screen and (min-width: 980px) {
+    grid-template-columns: 3fr 1fr;
+  }
+}
+
 .quarterContainer {
   display: grid;
   grid-template-rows: 1fr;
@@ -362,6 +384,21 @@ a.email {
   @media only screen and (min-width: 980px) {
     grid-template-rows: 1fr 1fr;
     grid-gap: 10px;
+  }
+}
+
+.videoContainer {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
