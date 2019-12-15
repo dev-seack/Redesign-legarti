@@ -15,11 +15,11 @@ $(document).ready(function() {
       imageSrc: "/assets/team/friends-1.jpg"
     },
     {
-      value: "Entwicklung selbst bestimmen.",
+      value: "Im Ruhrpott hat man gelernt anzupacken.",
       imageSrc: "/assets/team/friends-2.jpg"
     },
     {
-      value: "Im Ruhrpott hat man gelernt anzupacken.",
+      value: "Entwicklung selbst bestimmen.",
       imageSrc: "/assets/team/friends-3.jpg"
     }
   ];

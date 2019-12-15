@@ -4,7 +4,7 @@ const testimonials = [
     name: "Johannes Koch",
     title: "Geschäftsführer - GZ Koch",
     quote:
-      "Ein großes Dank geht an Legarti: Für die unkomplizierte und gute Zusammenarbeit und für das tolle Endergebnis! Wir bleiben in Kontakt für weitere Aufträge"
+      "Ein großes Dankeschön geht an Legarti: Für die unkomplizierte und gute Zusammenarbeit und für das tolle Endergebnis! Wir bleiben in Kontakt für weitere Aufträge."
   },
 
   {
@@ -107,7 +107,7 @@ setupTestimonial = (testiContainer, index) => {
 };
 
 // create pagination-items dynamically
-setupPaginations = (pagiContainer) => {
+setupPaginations = pagiContainer => {
   testimonials.forEach((ele, index) => {
     newPagiItem = $(`<div data-index="${index}" class="pagiItem"></div>`);
 
