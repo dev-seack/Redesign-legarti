@@ -1273,7 +1273,7 @@ body#fl.showcase .showcaseDescription {
 body#fl.showcase .showcaseContainer .showcaseWebContainer .targetContainer .targetList li.marked:after {
   background: url("/pages/portfolio/fl/assets/marker.svg") center center no-repeat; }
 body#fl.showcase .showcaseHeader .showcaseLogoContainer img {
-  max-width: 650px; }
+  max-width: 600px; }
 
 body#gzk.showcase .showcaseContainer .sectionHeading .subheading:before,
 body#gzk.showcase .showcaseContainer .secondaryLink span:before,
