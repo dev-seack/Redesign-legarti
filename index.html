@@ -129,7 +129,7 @@
       <div class="contentContainer">
         <p class="readText mlrauto textCenter">
           Guter Eindruck ist kein Zufall - Das wichtigste f&uuml;r uns ist, dass
-          die Werte & Identität unserer Kunden widerspiegelt wird und ihnen ein
+          die Werte & Identität unserer Kunden widergespiegelt wird und ihnen ein
           sicheres Gefühl gibt, ihre Idee nach Außen zu kommunizieren. Unser
           Ziel ist es, mit den gegebenen M&ouml;glichkeiten, z. B. das Budget, zu
           arbeiten und das Beste daraus zu machen. Uns ist es egal wie
