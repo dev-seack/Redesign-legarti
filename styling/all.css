@@ -732,11 +732,11 @@ a.email {
       justify-content: center;
       margin-top: 2.5em; }
       #heroSection .contentContainer .buttonContainer .team,
-      #heroSection .contentContainer .buttonContainer .talk {
+      #heroSection .contentContainer .buttonContainer .portfolio {
         display: none; }
         @media only screen and (min-width: 980px) {
           #heroSection .contentContainer .buttonContainer .team,
-          #heroSection .contentContainer .buttonContainer .talk {
+          #heroSection .contentContainer .buttonContainer .portfolio {
             display: flex !important; } }
       #heroSection .contentContainer .buttonContainer .team {
         margin: 0 10%; }
